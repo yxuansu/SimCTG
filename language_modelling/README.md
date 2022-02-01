@@ -31,6 +31,7 @@
 * [表情](#表情)
 * [diff语法](#diff语法)
 
+****
 <span id='data_preparation'/>
 
 #### 1. Data Preparation:
