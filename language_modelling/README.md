@@ -3,35 +3,9 @@
 ## Catalogue:
 * <a href='#data_preparation'>1. Data Preparation</a>
 * <a href='#generate_results'>3. Generate Result with Different Decoding Methods</a>
-    * <a href='#contrastive_search'>3.1 Contrastive Search</a>
-* [标题](#标题)
-* [文本](#文本)
-    * 普通文本
-    * 单行文本
-    * 多行文本
-    * 文字高亮
-    * 换行
-    * 斜体
-    * 粗体
-    * 删除线
-* [图片](#图片)
-    * 来源于网络的图片
-    * GitHub仓库中的图片
-* [链接](#链接) 
-    * 文字超链接
-        *  链接外部URL
-        *  链接本仓库里的URL
-    *  锚点
-    * [图片链接](#图片链接)
-* [列表](#列表)
-    * 无序列表
-    * 有序列表
-    * 复选框列表
-* [块引用](#块引用)
-* [代码高亮](#代码高亮)
-* [表格](#表格) 
-* [表情](#表情)
-* [diff语法](#diff语法)
+    * <a href='#contrastive_search'>3.1. Contrastive Search</a>
+    * <a href='#diverse_contrastive_search'>3.2. Diverse Contrastive Search</a>
+
 
 ****
 <span id='data_preparation'/>
@@ -75,7 +49,7 @@ input_ids = torch.LongTensor(input_ids).view(1,-1)
 ```
 <span id='contrastive_search'/>
 
-##### 3.1 Contrastive Search:
+##### 3.1. Contrastive Search:
 ```python
 # use contrastive search to generate the result
 beam_width, alpha, decoding_len = 8, 0.6, 128
@@ -92,7 +66,9 @@ The arguments are as follows:
 
 **[Note]** We provide two implementations of contrastive search: (1) fast_contrastive_search and (2) slow_contrastive_search. These two implementations produce the same result, but the fast version is properly optimized and is much faster than the slow version. On the other hand, the implementation details of the slow version is more straightforward. We recommend you to rewrite the slow version first if you want to adapt contrastive search to your specific research task.
 
-##### (2) Diverse Contrastive Search:
+<span id='diverse_contrastive_search'/>
+
+##### 3.2. Diverse Contrastive Search:
 We also provide a stochastic version of contrastive search which can generate diverse results by combining nucleus sampling and contrastive search. More details can be found in Appendix E of the [paper]().
 ```python
 # use diverse contrastive search to generate the result
