@@ -33,6 +33,22 @@ To download the data, please follow the instructions [here](https://github.com/y
 <span id='train_simctg'/>
 
 #### 2. Train SimCTG:
+To train a SimCTG model on Wikitext-103, please run the following commands:
+```yaml
+chmod +x ./train.sh
+./train.sh
+```
+The arguments are as follows:
+* `--model_name`: The name of huggingface pre-trained gpt model (e.g. gpt2, gpt-large).
+* `--train_path`: The file path of training set.
+* `--dev_path`: The file path of validation set.
+* `--test_path`: The file path of test set.
+* `--margin`: The contrastive margin $\rho$.
+* `--test_path`: The file path of test set.
+* `--test_path`: The file path of test set.
+* `--decoding_len`: Number of tokens to generate.
+
+
 
 ****
 <span id='generate_results'/>
