@@ -15,6 +15,6 @@ To download the data, please follow the instructions [here](https://github.com/y
 
 #### 2. Train SimCTG:
 
-#### 3. Decode Result:
+#### 3. Generate Results:
 
 
