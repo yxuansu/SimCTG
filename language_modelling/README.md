@@ -33,7 +33,7 @@ tokens = tokenizer.tokenize(text)
 input_ids = tokenizer.convert_tokens_to_ids(tokens)
 input_ids = torch.LongTensor(input_ids).view(1,-1)
 ```
-##### (1) contrastive search:
+##### (1) Contrastive Search:
 ```python
 # use contrastive search to generate the result
 beam_width, alpha, decoding_len = 8, 0.6, 128
