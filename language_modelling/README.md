@@ -32,5 +32,11 @@ text = r"Butt criticized Donald 's controls in certain situations in the game , 
 tokens = tokenizer.tokenize(text)
 input_ids = tokenizer.convert_tokens_to_ids(tokens)
 input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+# use contrastive search to generate the result
+beam_width, alpha, decoding_len = 8, 0.6, 128
+output = model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len)
+print("Output:\n" + 100 * '-')
+print(tokenizer.decode(output))
 ```
 
