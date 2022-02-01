@@ -15,7 +15,7 @@ To download the data, please follow the instructions [here](https://github.com/y
 
 #### 2. Train SimCTG:
 
-#### 3. Generate Results:
+#### 3. Generate result with different decoding methods:
 Here, we use the prefix in Table 3 of the [paper]() to illustrate how to use different decoding methods to generate the result. 
 ```python
 import torch
