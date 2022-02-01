@@ -2,7 +2,7 @@
 #### 1. Data Preparation:
 To download the data, please follow the instructions [here](https://github.com/yxuansu/SimCTG/tree/main/data).
 
-> **** The dataset contains three files:
+> **** The dataset contains the following three files:
 
     .
     ├── wikitext103                       
