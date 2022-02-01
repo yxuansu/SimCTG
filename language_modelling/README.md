@@ -10,6 +10,9 @@ To download the data, please follow the instructions [here](https://github.com/y
         ├── wikitext103_raw_v1_validation.txt     # Validation Set
         └── wikitext103_raw_v1_test.txt           # Test Set
 
+**Data Format**: In the files, each line represents a full document.
+
+
 #### 2. Train SimCTG:
 
 #### 3. Decode Result:
