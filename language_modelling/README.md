@@ -17,4 +17,20 @@ To download the data, please follow the instructions [here](https://github.com/y
 
 #### 3. Generate Results:
 Here, we use the prefix in Table 3 of the [paper]() to illustrate how to use different decoding methods to generate the result. 
+```python
+import torch
+from simctg import SimCTG
+from transformers import AutoTokenizer
+# load model and tokenizer
+model_path = r'cambridgeltl/simctg_wikitext103'
+tokenizer = AutoTokenizer.from_pretrained(model_path)
+model = SimCTG(model_path, tokenizer.pad_token_id)
+model.eval()
+
+# prepare prefix input
+text = r"Butt criticized Donald 's controls in certain situations in the game , as well as the difficulty of some levels and puzzles . Buchanan also criticized the controls , calling"
+tokens = tokenizer.tokenize(text)
+input_ids = tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+```
 
