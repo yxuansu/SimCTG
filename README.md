@@ -7,12 +7,14 @@ Code of our paper: [A Simple Contrastive Learning Framework for Neural Text Gene
 ## Introduction
 
 ****
+## Huggingface Models
+### (1) Wikitext-103:
+
+****
 ## Catalogue:
 * <a href='#example_usage'>1. Example Usage</a>
 * <a href='#overall_tutorial'>2. Tutorial on how to reproduce the results in our paper</a>
-
-
-
+    * <a href='#wikitext103_tutorial'>2.1 Wikitext-103</a>
 
 ****
 <span id='example_usage'/>
@@ -55,3 +57,7 @@ More detailed tutorial on how to use contrastive search/diverse contrastive sear
 <span id='overall_tutorial'/>
 
 ### 2. Tutorial on how to reproduce the results in our paper:
+
+<span id='wikitext103_tutorial'/>
+#### 2.1 Wikitext-103:
+The detailed tutorial is provided [here](https://github.com/yxuansu/SimCTG/tree/main/language_modelling).
