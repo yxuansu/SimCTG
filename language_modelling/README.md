@@ -42,5 +42,10 @@ output = model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_le
 print("Output:\n" + 100 * '-')
 print(tokenizer.decode(output))
 ```
+The arguments are as follows:
+* `--input_ids`: The ids of the prefix sequence.
+* `--beam_width`: k in the contrastive search, which is typically set within the range of [0.5,0.8].
+* `--alpha`: alpha in the contrastive search, which is typically set within the range of [5,10].
+* `--decoding_len`: Number of tokens to generate.
 
 
