@@ -2,6 +2,7 @@
 ****
 ### Catalogue:
 * <a href='#data_preparation'>1. Data Preparation</a>
+* <a href='#train_simctg'>2. Train SimCTG</a>
 * <a href='#generate_results'>3. Generate Result with Different Decoding Methods</a>
     * <a href='#contrastive_search'>3.1. Contrastive Search</a>
     * <a href='#diverse_contrastive_search'>3.2. Diverse Contrastive Search</a>
@@ -27,6 +28,9 @@ To download the data, please follow the instructions [here](https://github.com/y
 **Data Format**: In the files, each line represents a full document.
 
 ****
+
+<span id='train_simctg'/>
+
 #### 2. Train SimCTG:
 
 ****
