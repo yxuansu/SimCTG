@@ -17,19 +17,28 @@ Code of our paper: [A Simple Contrastive Learning Framework for Neural Text Gene
 
 ****
 ## Catalogue:
-* <a href='#example_usage'>1. Example Usage of Contrastive Search</a>
-* <a href='#overall_tutorial'>2. Tutorial on how to reproduce the results in our paper</a>
-    * <a href='#environment_setup'>2.1. Environment Setup</a>
-    * <a href='#wikitext103_tutorial'>2.2 Experiment on Wikitext-103</a>
-
-
+* <a href='#overall_tutorial'>1. Tutorial on how to reproduce the results in our paper</a>
+    * <a href='#environment_setup'>1.1. Environment Setup</a>
+    * <a href='#example_usage'>1.2. Example Usage of Contrastive Search</a>
+    * <a href='#wikitext103_tutorial'>1.3 Experiment on Wikitext-103</a>
 
 
 ****
+<span id='overall_tutorial'/>
+
+### 1. Tutorial on how to reproduce the results in our paper:
+
+<span id='environment_setup'/>
+
+#### 1.1. Environment Setup:
+```yaml
+python version: 3.8
+pip3 install -r requirements.txt
+```
+
 <span id='example_usage'/>
 
-
-### 1. Example Usage of Contrastive Search:
+#### 1.2 Example Usage of Contrastive Search:
 Here, we show how to reproduce the result in Table 3 of our paper.
 ```python
 import torch
@@ -62,20 +71,8 @@ print(tokenizer.decode(output))
 ```
 More detailed tutorial on how to use contrastive search/diverse contrastive search can be found [here](https://github.com/yxuansu/SimCTG/tree/main/language_modelling).
 
-****
-<span id='overall_tutorial'/>
-
-### 2. Tutorial on how to reproduce the results in our paper:
-
-<span id='environment_setup'/>
-
-#### 2.1. Environment Setup:
-```yaml
-python version: 3.8
-pip3 install -r requirements.txt
-```
 
 <span id='wikitext103_tutorial'/>
 
-#### 2.2 Experiment on Wikitext-103:
+#### 1.3 Experiment on Wikitext-103:
 The detailed tutorial is provided [here](https://github.com/yxuansu/SimCTG/tree/main/language_modelling).
