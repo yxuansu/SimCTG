@@ -2,6 +2,7 @@
 ****
 ## Catalogue:
 * <a href='#data_preparation'>1. Data Preparation</a>
+* <a href='#generate_results'>3. Generate Result with Different Decoding Methods</a>
 * [标题](#标题)
 * [文本](#文本)
     * 普通文本
@@ -51,7 +52,9 @@ To download the data, please follow the instructions [here](https://github.com/y
 #### 2. Train SimCTG:
 
 ****
-#### 3. Generate result with different decoding methods:
+<span id='generate_results'/>
+
+#### 3. Generate Result with Different Decoding Methods:
 Here, we use the prefix in Table 3 of the [paper]() to illustrate how to use different decoding methods to generate the result. 
 ```python
 import torch
