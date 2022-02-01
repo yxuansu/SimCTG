@@ -23,7 +23,7 @@ Code of our paper: [A Simple Contrastive Learning Framework for Neural Text Gene
     * <a href='#wikitext103_tutorial'>2.2 Experiment on Wikitext-103</a>
 
 
-#### 2.1. Environment Setup:
+
 
 ****
 <span id='example_usage'/>
