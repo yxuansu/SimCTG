@@ -4,6 +4,11 @@
 Code of our paper: [A Simple Contrastive Learning Framework for Neural Text Generation]()
 
 ****
+
+### News:
+[2022//] SimCTG is publicly released!
+
+****
 ## Introduction
 
 ****
