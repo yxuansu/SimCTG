@@ -137,7 +137,7 @@ The arguments are as follows:
 
 ****
 
-* <a href='#visualize_token_similarity_matrix'>4. Visualize Token Similarity Matrix</a>
+<span id='visualize_token_similarity_matrix'/>
 
 #### 4. Visualize Token Similarity Matrix
 Here, we show how to reproduce the token similarity matrix visualization (Figure 6 of the paper).
