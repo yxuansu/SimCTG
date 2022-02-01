@@ -105,7 +105,7 @@ The arguments are as follows:
 
 <span id='greedy_search'/>
 
-##### (4) Greedy Search:
+##### 3.4. Greedy Search:
 ```python
 decoding_len = 128
 output = model.greedy_search(input_ids, decoding_len)
@@ -118,7 +118,7 @@ The arguments are as follows:
 
 <span id='beam_search'/>
 
-##### (5) Beam Search:
+##### 3.5. Beam Search:
 ```python
 beam_width, decoding_len = 10, 128
 output = model.beam_search(input_ids, beam_width, decoding_len)
