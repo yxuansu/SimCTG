@@ -166,5 +166,5 @@ model.save_token_similarity_map(output, save_name='token_similarity_matrix_visua
 ```
 The arguments are as follows:
 * `--output`: The ids of decoded result.
-* `--save_name`: The saved name of the visualization.
+* `--save_name`: The saved name of the visualization result.
 
