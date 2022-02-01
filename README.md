@@ -59,5 +59,6 @@ More detailed tutorial on how to use contrastive search/diverse contrastive sear
 ### 2. Tutorial on how to reproduce the results in our paper:
 
 <span id='wikitext103_tutorial'/>
+
 #### 2.1 Wikitext-103:
 The detailed tutorial is provided [here](https://github.com/yxuansu/SimCTG/tree/main/language_modelling).
