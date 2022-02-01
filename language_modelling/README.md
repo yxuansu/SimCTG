@@ -3,6 +3,7 @@
 ## Catalogue:
 * <a href='#data_preparation'>1. Data Preparation</a>
 * <a href='#generate_results'>3. Generate Result with Different Decoding Methods</a>
+    * <a href='#contrastive_search'>3.1 Contrastive Search</a>
 * [标题](#标题)
 * [文本](#文本)
     * 普通文本
@@ -72,7 +73,9 @@ tokens = tokenizer.tokenize(text)
 input_ids = tokenizer.convert_tokens_to_ids(tokens)
 input_ids = torch.LongTensor(input_ids).view(1,-1)
 ```
-##### (1) Contrastive Search:
+<span id='contrastive_search'/>
+
+##### 3.1 Contrastive Search:
 ```python
 # use contrastive search to generate the result
 beam_width, alpha, decoding_len = 8, 0.6, 128
