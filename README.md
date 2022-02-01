@@ -12,7 +12,7 @@ Code of our paper: [A Simple Contrastive Learning Framework for Neural Text Gene
 
 ****
 ## Catalogue:
-* <a href='#example_usage'>1. Example Usage</a>
+* <a href='#example_usage'>1. Example Usage of Contrastive Search</a>
 * <a href='#overall_tutorial'>2. Tutorial on how to reproduce the results in our paper</a>
     * <a href='#wikitext103_tutorial'>2.1 Experiment on Wikitext-103</a>
 
@@ -20,7 +20,7 @@ Code of our paper: [A Simple Contrastive Learning Framework for Neural Text Gene
 <span id='example_usage'/>
 
 
-### 1. Example Usage:
+### 1. Example Usage of Contrastive Search:
 Here, we show how to reproduce the result in Table 3 of our paper.
 ```python
 import torch
