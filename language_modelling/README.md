@@ -9,6 +9,7 @@
     * <a href='#nucleus_sampling'>3.3. Nucleus Sampling</a>
     * <a href='#greedy_search'>3.4. Greedy Search</a>
     * <a href='#beam_search'>3.5. Beam Search</a>
+* <a href='#visualize_token_similarity_matrix'>4. Visualize Token Similarity Matrix</a>
 
 
 ****
@@ -133,4 +134,34 @@ The arguments are as follows:
 * `--input_ids`: The ids of the prefix sequence.
 * `--beam_width`: The beam width of beam search.
 * `--decoding_len`: Number of tokens to generate.
+
+****
+
+* <a href='#visualize_token_similarity_matrix'>4. Visualize Token Similarity Matrix</a>
+
+#### 4. Visualize Token Similarity Matrix
+Here, we show how to reproduce the token similarity matrix visualization (Figure 6 of the paper).
+```python
+import torch
+from simctg import SimCTG
+from transformers import AutoTokenizer
+# load model and tokenizer
+model_path = r'cambridgeltl/simctg_wikitext103'
+tokenizer = AutoTokenizer.from_pretrained(model_path)
+model = SimCTG(model_path, tokenizer.pad_token_id)
+model.eval()
+
+# prepare prefix input
+text = r"Butt criticized Donald 's controls in certain situations in the game , as well as the difficulty of some levels and puzzles . Buchanan also criticized the controls , calling"
+tokens = tokenizer.tokenize(text)
+input_ids = tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+# use contrastive search to generate the result
+beam_width, alpha, decoding_len = 8, 0.6, 128
+output = model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len)
+
+# save the visualization result
+model.save_token_similarity_map(output, save_name='token_similarity_matrix_visualization.png')
+```
 
