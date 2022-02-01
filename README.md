@@ -6,12 +6,16 @@ Code of our paper: [A Simple Contrastive Learning Framework for Neural Text Gene
 ****
 ## Catalogue:
 * <a href='#example_usage'>1. Example Usage</a>
+* <a href='#overall_tutorial'>2. Tutorial on how to reproduce the results in our paper</a>
+
+
+
 
 ****
 <span id='example_usage'/>
 
 
-## 1. Example Usage:
+### 1. Example Usage:
 Here, we show how to reproduce the result in Table 3 of our paper.
 ```python
 import torch
@@ -42,6 +46,9 @@ output = model.diverse_contrastive_search(input_ids, sample_step, nucleus_p, bea
 print("Output:\n" + 100 * '-')
 print(tokenizer.decode(output))
 ```
-More detailed tutorial on how to apply contrastive search/diverse contrastive search can be found [here](https://github.com/yxuansu/SimCTG/tree/main/language_modelling).
+More detailed tutorial on how to use contrastive search/diverse contrastive search can be found [here](https://github.com/yxuansu/SimCTG/tree/main/language_modelling).
 
-## Tutorial on how to reproduce the results in our paper:
+****
+<span id='overall_tutorial'/>
+
+### 2. Tutorial on how to reproduce the results in our paper:
