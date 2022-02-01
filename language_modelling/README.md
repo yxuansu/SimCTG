@@ -2,7 +2,7 @@
 
 ****
 ## 目录
-* <a href='#data_preparation'>Data Preparation</a>
+* <a href='#data_preparation'>1. Data Preparation</a>
 * [标题](#标题)
 * [文本](#文本)
     * 普通文本
@@ -32,8 +32,8 @@
 * [表情](#表情)
 * [diff语法](#diff语法)
 
-#### Data Preparation:
 <span id='data_preparation'/>
+#### 1. Data Preparation:
 To download the data, please follow the instructions [here](https://github.com/yxuansu/SimCTG/tree/main/data).
 
 > **** The dataset contains the following three files:
