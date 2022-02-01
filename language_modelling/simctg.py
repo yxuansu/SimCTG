@@ -48,8 +48,7 @@ class SimCTG(nn.Module):
         norm_rep = last_hidden_states / last_hidden_states.norm(dim=2, keepdim=True)
         cosine_scores = torch.matmul(norm_rep, norm_rep.transpose(1,2)) 
         assert cosine_scores.size() == torch.Size([bsz, seqlen, seqlen])
-        cl_loss = contrastive_loss(margin, cosine_scores, input_ids, self.pad_token_id,
-            prefix_len=0)
+        cl_loss = contrastive_loss(margin, cosine_scores, input_ids, self.pad_token_id, prefix_len=0)
         return mle_loss, cl_loss
 
     def eval_loss(self, input_ids, labels):
