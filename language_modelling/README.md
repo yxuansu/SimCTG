@@ -44,11 +44,16 @@ The arguments are as follows:
 * `--dev_path`: The file path of validation set.
 * `--test_path`: The file path of test set.
 * `--margin`: The contrastive margin $\rho$.
-* `--test_path`: The file path of test set.
-* `--test_path`: The file path of test set.
-* `--decoding_len`: Number of tokens to generate.
-
-
+* `--max_len`: The maximum length of training samples.
+* `--number_of_gpu`: The number of available GPUs.
+* `--batch_size_per_gpu`: The batch size for each GPU.
+* `--gradient_accumulation_steps`: How many forward computations between two gradient updates.
+* `--effective_batch_size`: The overall batch size. It equals to batch_size_per_gpu x gradient_accumulation_steps x number_of_gpu.
+* `--total_steps`: The number of total gradient update steps.
+* `--print_every`: Have many steps to show the intermediate results.
+* `--save_every`: How many steps to save one checkpoint.
+* `--learning_rate`: The learning rate.
+* `--save_path_prefix`: Where to save the checkpoints.
 
 ****
 <span id='generate_results'/>
