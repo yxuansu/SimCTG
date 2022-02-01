@@ -4,6 +4,9 @@
 Code of our paper: [A Simple Contrastive Learning Framework for Neural Text Generation]()
 
 ****
+## Introduction
+
+****
 ## Catalogue:
 * <a href='#example_usage'>1. Example Usage</a>
 * <a href='#overall_tutorial'>2. Tutorial on how to reproduce the results in our paper</a>
