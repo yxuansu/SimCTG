@@ -50,3 +50,5 @@ The arguments are as follows:
 
 **[Note]** We provide two implementations of contrastive search: (1) fast_contrastive_search and (2) slow_contrastive_search. These two implementations produce the same result, but the fast version is properly optimized and is much faster than the slow version. On the other hand, the implementation details of the slow version is more straightforward. We recommend you to rewrite the slow version first if you want to adapt contrastive search to your specific research task.
 
+##### (2) Diverse Contrastive Search:
+
