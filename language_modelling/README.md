@@ -20,4 +20,3 @@ To download the data, please follow the instructions [here](https://github.com/y
     │   ├── benchmarks          # Load and stress tests
     │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
     │   └── unit                # Unit tests
-    └── ...
