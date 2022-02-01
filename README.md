@@ -14,7 +14,11 @@ Code of our paper: [A Simple Contrastive Learning Framework for Neural Text Gene
 ## Catalogue:
 * <a href='#example_usage'>1. Example Usage of Contrastive Search</a>
 * <a href='#overall_tutorial'>2. Tutorial on how to reproduce the results in our paper</a>
-    * <a href='#wikitext103_tutorial'>2.1 Experiment on Wikitext-103</a>
+    * <a href='#environment_setup'>2.1. Environment Setup</a>
+    * <a href='#wikitext103_tutorial'>2.2 Experiment on Wikitext-103</a>
+
+
+#### 2.1. Environment Setup:
 
 ****
 <span id='example_usage'/>
@@ -58,7 +62,15 @@ More detailed tutorial on how to use contrastive search/diverse contrastive sear
 
 ### 2. Tutorial on how to reproduce the results in our paper:
 
+<span id='environment_setup'/>
+
+#### 2.1. Environment Setup:
+```yaml
+python version: 3.8
+pip3 install -r requirements.txt
+```
+
 <span id='wikitext103_tutorial'/>
 
-#### 2.1 Experiment on Wikitext-103:
+#### 2.2 Experiment on Wikitext-103:
 The detailed tutorial is provided [here](https://github.com/yxuansu/SimCTG/tree/main/language_modelling).
