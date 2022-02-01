@@ -2,7 +2,7 @@
 #### 1. Data Preparation:
 To download the data, please follow the instructions [here](https://github.com/yxuansu/SimCTG/tree/main/data).
 
-The dataset contains three files:
+
     ├── wikitext103                    
     │   ├── wikitext103_raw_v1_train.txt          # Training Set
     │   ├── wikitext103_raw_v1_validation.txt     # Validation Set
@@ -13,7 +13,7 @@ The dataset contains three files:
 
 #### 3. Decode Result:
 
-> **A:** Because you don't want to test the code, you want to test the *program*.
+> **** The dataset contains three files:
 
     .
     ├── ...
