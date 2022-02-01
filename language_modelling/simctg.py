@@ -78,7 +78,7 @@ class SimCTG(nn.Module):
         # save tokenizer
         self.tokenizer.save_pretrained(ckpt_save_path)
 
-    # sampling functions
+    # decoding functions
     # ------------------------------------------------------- #
     def slow_contrastive_search(self, input_ids, beam_width, alpha, decoding_len):
         '''
