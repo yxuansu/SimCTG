@@ -13,7 +13,7 @@ Code of our paper: [A Simple Contrastive Learning Framework for Neural Text Gene
 
 ****
 ## Huggingface Models
-### (1) Wikitext-103:
+### Wikitext-103:
 
 ****
 ## Catalogue:
