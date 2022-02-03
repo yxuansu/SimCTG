@@ -118,7 +118,7 @@ def model_training(args, data, model, total_steps, print_every, save_every, ckpt
 
             train_loss, train_cl_loss = 0., 0.
 
-            if one_val_loss < min_val_loss or stage == 'finetune':
+            if one_val_loss < min_val_loss:
                 # in finetuning stage, we always save the model
                 min_val_loss = min(one_val_loss, min_val_loss)
                 print ('Saving model...')
