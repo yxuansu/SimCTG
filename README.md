@@ -20,7 +20,7 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 * <a href='#environment_setup'>1. Environment Setup</a>
 * <a href='#example_usage'>2. Example Usage of Contrastive Search</a>
 * <a href='#wikitext103_tutorial'>3. Document Generation</a>
-* <a href='#dialogue_tutorial'>4. Dialogue Generation>
+* <a href='#dialogue_tutorial'>4. Open-domain Dialogue Generation>
 
 
 ****
@@ -72,9 +72,9 @@ More detailed tutorial on how to use contrastive search/diverse contrastive sear
 <span id='wikitext103_tutorial'/>
 
 #### 3. Document Generation:
-The detailed tutorial of experiment on Wikitext-103 is provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
+The detailed tutorial of experiment on document generation is provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
 
 <span id='dialogue_tutorial'/>
 
-#### 4. Dialogue Generation:
-The detailed tutorial 
+#### 4. Open-domain Dialogue Generation:
+The detailed tutorial of experiment on open-domain dialogue generation provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/dialogue_generation).
