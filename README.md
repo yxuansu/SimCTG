@@ -17,21 +17,17 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 
 ****
 ## Catalogue:
-* <a href='#overall_tutorial'>1. Tutorial on how to reproduce the results in our paper</a>
-    * <a href='#environment_setup'>1.1. Environment Setup</a>
-    * <a href='#example_usage'>1.2. Example Usage of Contrastive Search</a>
-    * <a href='#wikitext103_tutorial'>1.3. Document Generation</a>
-    * <a href='#dialogue_tutorial'>1.4. Dialogue Generation>
+* <a href='#environment_setup'>1. Environment Setup</a>
+* <a href='#example_usage'>2. Example Usage of Contrastive Search</a>
+* <a href='#wikitext103_tutorial'>3. Document Generation</a>
+* <a href='#dialogue_tutorial'>4. Dialogue Generation>
 
 
 ****
-<span id='overall_tutorial'/>
-
-### 1. Tutorial on how to reproduce the results in our paper:
 
 <span id='environment_setup'/>
 
-#### 1.1. Environment Setup:
+#### 1. Environment Setup:
 ```yaml
 python version: 3.8
 pip3 install -r requirements.txt
@@ -39,7 +35,7 @@ pip3 install -r requirements.txt
 
 <span id='example_usage'/>
 
-#### 1.2. Example Usage of Contrastive Search:
+#### 2. Example Usage of Contrastive Search:
 Here, we show how to reproduce the result in Table 3 of our paper.
 ```python
 import torch
@@ -75,10 +71,10 @@ More detailed tutorial on how to use contrastive search/diverse contrastive sear
 
 <span id='wikitext103_tutorial'/>
 
-#### 1.3. Document Generation:
+#### 3. Document Generation:
 The detailed tutorial of experiment on Wikitext-103 is provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
 
 <span id='dialogue_tutorial'/>
 
-#### 1.4. Dialogue Generation:
+#### 4. Dialogue Generation:
 The detailed tutorial 
