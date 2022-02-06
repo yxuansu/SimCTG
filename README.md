@@ -75,4 +75,4 @@ More detailed tutorial on how to use contrastive search/diverse contrastive sear
 <span id='wikitext103_tutorial'/>
 
 #### 1.3. Document Generation:
-The detailed tutorial is provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
+The detailed tutorial of experiment on Wikitext-103 is provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
