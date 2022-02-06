@@ -57,7 +57,6 @@ The arguments are as follows:
 * `--save_path_prefix`: Where to save the checkpoints.
 
 
-
 ****
 
 <span id='inference'/>
@@ -77,6 +76,8 @@ The arguments are as follows:
 * `--k`: The k in contrastive search.
 * `--alpha`: The \alpha in contrastive search.
 * `--save_path`: Where to the generated result.
+
+We provide our generated file in ./simctg_contrastive.json.
 
 
 
