@@ -90,7 +90,7 @@ print(tokenizer.decode(output))
 ```
 The arguments are as follows:
 * `--input_ids`: The ids of the prefix sequence.
-* `--beam_width`: k in the contrastive search, which is typically set within the range of [5,10].
+* `--beam_width`: k in the contrastive search, which is typically set within the range of [3,10].
 * `--alpha`: alpha in the contrastive search, which is typically set within the range of [0.5,0.8].
 * `--decoding_len`: Number of tokens to generate.
 
