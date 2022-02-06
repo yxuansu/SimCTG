@@ -81,12 +81,16 @@ We provide our generated file in ./simctg_contrastive.json.
 
 The generated file is a list of dictionary, where the data format of each dictionary is:
 
+```python
    {  
     'jen': 'python',    
     'sarah': 'c',    
     'edward': 'ruby',    
     'phil': 'python',    
     }
+```
+
+
 
 
 ****
