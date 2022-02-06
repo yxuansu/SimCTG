@@ -163,6 +163,16 @@ The arguments are as follows:
 <span id='inference'/>
 
 #### 4. Inference with SimCTG
+Here we show how to use SimCTG to perform inference with prefixes from validation and test sets.
+```yaml
+chmod +x ./inference.sh
+./inference.sh
+```
+The arguments are as follows:
+* `--input_ids`: The ids of the prefix sequence.
+* `--beam_width`: The beam width of beam search.
+* `--decoding_len`: Number of tokens to generate.
+
 
 
 ****
