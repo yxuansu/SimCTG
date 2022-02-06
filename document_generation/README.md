@@ -84,12 +84,12 @@ The generated file is a list of dictionary, where the data format of each dictio
    "prefix_text": The human-written prefix,    
    "reference_text": The reference document (prefix + reference text continuation).
    "reference_continuation_text": The reference text continuation.   
-        "generated_result": {
-            "0": {
-                "full_text": The prefix + generated continuation,
-                "continuation": The generated continuation
-                 }
+   "generated_result": {
+       "0": {
+           "full_text": The prefix + generated continuation,
+           "continuation": The generated continuation
             }
+       }
 }
 ```
 
