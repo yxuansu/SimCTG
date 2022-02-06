@@ -86,14 +86,14 @@ The generated file is a list of dictionary, where the data format of each dictio
    "reference_continuation_text": The reference text continuation.   
    "generated_result": {
        "0": {
-           "full_text": The prefix + generated continuation,
-           "continuation": The generated continuation
+           "full_text": The prefix + generated continuation.
+           "continuation": The generated continuation.
             }
        }
 }
 ```
 
-We provide our generated file in ./simctg_contrastive.json.
+**[Note]** We provide our generated file in ./simctg_contrastive.json.
 
 ****
 <span id='generate_results'/>
