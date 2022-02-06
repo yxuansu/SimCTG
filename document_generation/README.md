@@ -3,13 +3,14 @@
 ### Catalogue:
 * <a href='#data_preparation'>1. Data Preparation</a>
 * <a href='#train_simctg'>2. Train SimCTG</a>
-* <a href='#generate_results'>3. Generate Result with Different Decoding Methods</a>
-    * <a href='#contrastive_search'>3.1. Contrastive Search</a>
-    * <a href='#diverse_contrastive_search'>3.2. Diverse Contrastive Search</a>
-    * <a href='#nucleus_sampling'>3.3. Nucleus Sampling</a>
-    * <a href='#greedy_search'>3.4. Greedy Search</a>
-    * <a href='#beam_search'>3.5. Beam Search</a>
-* <a href='#inference'>4. Inference with SimCTG</a>
+* <a href='#inference'>3. Inference with SimCTG</a>
+* <a href='#generate_results'>4. Generate Result with Different Decoding Methods</a>
+    * <a href='#contrastive_search'>4.1. Contrastive Search</a>
+    * <a href='#diverse_contrastive_search'>4.2. Diverse Contrastive Search</a>
+    * <a href='#nucleus_sampling'>4.3. Nucleus Sampling</a>
+    * <a href='#greedy_search'>4.4. Greedy Search</a>
+    * <a href='#beam_search'>4.5. Beam Search</a>
+
 * <a href='#visualize_token_similarity_matrix'>5. Visualize Token Similarity Matrix</a>
 
 
@@ -56,10 +57,29 @@ The arguments are as follows:
 * `--learning_rate`: The learning rate.
 * `--save_path_prefix`: Where to save the checkpoints.
 
+
+
+****
+
+<span id='inference'/>
+
+#### 3. Inference with SimCTG
+Here we show how to use SimCTG to perform inference with prefixes from validation and test sets.
+```yaml
+chmod +x ./inference.sh
+./inference.sh
+```
+The arguments are as follows:
+* `--ckpt_path`: The path of trained checkpoint. You can either use off-the-shelf checkpoint (cambridgeltl/simctg_wikitext103) or newly trained model that can be found in the --save_path_prefix argument of train.sh.
+* `--beam_width`: The beam width of beam search.
+* `--decoding_len`: Number of tokens to generate.
+
+
+
 ****
 <span id='generate_results'/>
 
-#### 3. Generate Result with Different Decoding Methods:
+#### 4. Generate Result with Different Decoding Methods:
 Here, we use the prefix in Table 3 of the [paper]() to illustrate how to use different decoding methods to generate the result. 
 ```python
 import torch
@@ -79,7 +99,7 @@ input_ids = torch.LongTensor(input_ids).view(1,-1)
 ```
 <span id='contrastive_search'/>
 
-##### 3.1. Contrastive Search:
+##### 4.1. Contrastive Search:
 ```python
 # use contrastive search to generate the result
 beam_width, alpha, decoding_len = 8, 0.6, 128
@@ -98,7 +118,7 @@ The arguments are as follows:
 
 <span id='diverse_contrastive_search'/>
 
-##### 3.2. Diverse Contrastive Search:
+##### 4.2. Diverse Contrastive Search:
 We also provide a stochastic version of contrastive search which can generate diverse results by combining nucleus sampling and contrastive search. More details can be found in Appendix E of the [paper]().
 ```python
 # use diverse contrastive search to generate the result
@@ -118,7 +138,7 @@ The arguments are as follows:
 
 <span id='nucleus_sampling'/>
 
-##### 3.3. Nucleus Sampling:
+##### 4.3. Nucleus Sampling:
 ```python
 nucleus_p, decoding_len = 0.95, 128
 output = model.nucleus_sampling(input_ids, nucleus_p, decoding_len)
@@ -132,7 +152,7 @@ The arguments are as follows:
 
 <span id='greedy_search'/>
 
-##### 3.4. Greedy Search:
+##### 4.4. Greedy Search:
 ```python
 decoding_len = 128
 output = model.greedy_search(input_ids, decoding_len)
@@ -145,7 +165,7 @@ The arguments are as follows:
 
 <span id='beam_search'/>
 
-##### 3.5. Beam Search:
+##### 4.5. Beam Search:
 ```python
 beam_width, decoding_len = 10, 128
 output = model.beam_search(input_ids, beam_width, decoding_len)
@@ -158,20 +178,6 @@ The arguments are as follows:
 * `--decoding_len`: Number of tokens to generate.
 
 
-****
-
-<span id='inference'/>
-
-#### 4. Inference with SimCTG
-Here we show how to use SimCTG to perform inference with prefixes from validation and test sets.
-```yaml
-chmod +x ./inference.sh
-./inference.sh
-```
-The arguments are as follows:
-* `--ckpt_path`: The path of trained checkpoint. You can either use off-the-shelf checkpoint (cambridgeltl/simctg_wikitext103) or newly trained model that can be found in the --save_path_prefix argument of train.sh.
-* `--beam_width`: The beam width of beam search.
-* `--decoding_len`: Number of tokens to generate.
 
 
 
