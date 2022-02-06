@@ -21,7 +21,7 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
     * <a href='#environment_setup'>1.1. Environment Setup</a>
     * <a href='#example_usage'>1.2. Example Usage of Contrastive Search</a>
     * <a href='#wikitext103_tutorial'>1.3. Document Generation</a>
-    * <a href='#dialogue_tutorial'1.4. Dialogue Generation>
+    * <a href='#dialogue_tutorial'>1.4. Dialogue Generation>
 
 
 ****
