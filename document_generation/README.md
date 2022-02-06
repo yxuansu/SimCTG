@@ -9,7 +9,7 @@
     * <a href='#nucleus_sampling'>3.3. Nucleus Sampling</a>
     * <a href='#greedy_search'>3.4. Greedy Search</a>
     * <a href='#beam_search'>3.5. Beam Search</a>
-* <a href='#inference'>4. Inference</a>
+* <a href='#inference'>4. Inference with SimCTG</a>
 * <a href='#visualize_token_similarity_matrix'>5. Visualize Token Similarity Matrix</a>
 
 
@@ -162,7 +162,7 @@ The arguments are as follows:
 
 <span id='inference'/>
 
-#### 4. Inference
+#### 4. Inference with SimCTG
 
 
 ****
