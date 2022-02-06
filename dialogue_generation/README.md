@@ -1,4 +1,4 @@
-## This repo describes the experimental details on Wikitext-103 benchmark.
+## This repo describes the experimental details on LCCC benchmark.
 ****
 ### Catalogue:
 * <a href='#data_preparation'>1. Data Preparation</a>
