@@ -80,6 +80,14 @@ The arguments are as follows:
 We provide our generated file in ./simctg_contrastive.json.
 
 
+favorite_languages = {  
+
+    'jen': 'python',    
+    'sarah': 'c',    
+    'edward': 'ruby',    
+    'phil': 'python',    
+    }
+
 
 ****
 <span id='generate_results'/>
