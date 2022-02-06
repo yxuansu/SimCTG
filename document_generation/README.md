@@ -81,7 +81,7 @@ The generated file is a list of dictionary, where the data format of each dictio
 
 ```yaml
 {  
-   "prefix_text": The human-written prefix,    
+   "prefix_text": The human-written prefix.
    "reference_text": The reference document (prefix + reference text continuation).
    "reference_continuation_text": The reference text continuation.   
    "generated_result": {
