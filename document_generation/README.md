@@ -81,7 +81,7 @@ We provide our generated file in ./simctg_contrastive.json.
 
 The generated file is a list of dictionary, where the data format of each dictionary is:
 
-```python
+```yaml
 {  
    "prefix_text": The human-written prefix,    
    "reference_text": The reference document (prefix + reference text continuation).
@@ -90,7 +90,9 @@ The generated file is a list of dictionary, where the data format of each dictio
             "0": {
                 "full_text": The prefix + generated continuation,
                 "continuation": The generated continuation
+                 }
             }
+}
 ```
 
 
