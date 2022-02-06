@@ -9,7 +9,8 @@
     * <a href='#nucleus_sampling'>3.3. Nucleus Sampling</a>
     * <a href='#greedy_search'>3.4. Greedy Search</a>
     * <a href='#beam_search'>3.5. Beam Search</a>
-* <a href='#visualize_token_similarity_matrix'>4. Visualize Token Similarity Matrix</a>
+* <a href='#inference'>4. Inference</a>
+* <a href='#visualize_token_similarity_matrix'>5. Visualize Token Similarity Matrix</a>
 
 
 ****
@@ -156,11 +157,19 @@ The arguments are as follows:
 * `--beam_width`: The beam width of beam search.
 * `--decoding_len`: Number of tokens to generate.
 
+
+****
+
+<span id='inference'/>
+
+#### 4. Inference
+
+
 ****
 
 <span id='visualize_token_similarity_matrix'/>
 
-#### 4. Visualize Token Similarity Matrix
+#### 5. Visualize Token Similarity Matrix
 Here, we show how to reproduce the token similarity matrix visualization (Figure 6 of the paper).
 ```python
 import torch
