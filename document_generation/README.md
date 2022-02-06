@@ -80,7 +80,8 @@ The arguments are as follows:
 We provide our generated file in ./simctg_contrastive.json.
 
 The generated file is a list of dictionary, where the data format of each dictionary is:
-favorite_languages = {  
+
+   {  
     'jen': 'python',    
     'sarah': 'c',    
     'edward': 'ruby',    
