@@ -69,7 +69,7 @@ output = model.diverse_contrastive_search(input_ids, sample_step, nucleus_p, bea
 print("Output:\n" + 100 * '-')
 print(tokenizer.decode(output))
 ```
-More detailed tutorial on how to use contrastive search/diverse contrastive search can be found [here](https://github.com/yxuansu/SimCTG/tree/main/language_modelling).
+More detailed tutorial on how to use contrastive search/diverse contrastive search can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
 
 
 <span id='wikitext103_tutorial'/>
