@@ -75,7 +75,7 @@ The arguments are as follows:
 * `--decoding_len`: The length of generated text continuation.
 * `--k`: The k in contrastive search.
 * `--alpha`: The \alpha in contrastive search.
-* `--save_path`: Where to the generated result.
+* `--save_path`: Where to save the generated result.
 
 The generated file is a list of dictionary, where the data format of each dictionary is:
 
