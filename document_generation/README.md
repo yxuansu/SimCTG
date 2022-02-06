@@ -77,8 +77,6 @@ The arguments are as follows:
 * `--alpha`: The \alpha in contrastive search.
 * `--save_path`: Where to the generated result.
 
-We provide our generated file in ./simctg_contrastive.json.
-
 The generated file is a list of dictionary, where the data format of each dictionary is:
 
 ```yaml
@@ -95,8 +93,7 @@ The generated file is a list of dictionary, where the data format of each dictio
 }
 ```
 
-
-
+We provide our generated file in ./simctg_contrastive.json.
 
 ****
 <span id='generate_results'/>
