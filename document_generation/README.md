@@ -69,7 +69,7 @@ chmod +x ./inference.sh
 ./inference.sh
 ```
 The arguments are as follows:
-* `--ckpt_path`: The path of trained checkpoint. You can either use the off-the-shelf checkpoint (cambridgeltl/simctg_wikitext103) or newly trained model that can be found in the * `--save_path_prefix` argument of train.sh.
+* `--ckpt_path`: The path of trained checkpoint. You can either use the off-the-shelf checkpoint (cambridgeltl/simctg_wikitext103) or newly trained model that can be found in the `--save_path_prefix` argument of train.sh.
 * `--beam_width`: The beam width of beam search.
 * `--decoding_len`: Number of tokens to generate.
 
