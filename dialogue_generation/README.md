@@ -48,7 +48,6 @@ The arguments are as follows:
 * `--max_len`: The maximum length of training samples.
 * `--eos_token`: The special token used to indicate the boundary between different utterances. For Chinese and English dataset, use '[SEP]' and 'endoftext', respectively.
 * `--pad_token`: The special token used to pad the training batch during the training process.
-* `--max_len`: The maximum length of training samples.
 * `--number_of_gpu`: The number of available GPUs.
 * `--batch_size_per_gpu`: The batch size for each GPU.
 * `--gradient_accumulation_steps`: How many forward computations between two gradient updates.
