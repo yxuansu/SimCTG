@@ -87,12 +87,10 @@ print (model.contrastive_search(dialogue_context, beam_width, alpha, decoding_le
 # '哈哈哈我也是大专毕业，现在工作在外地，我妈说我要考研，我不知道怎么办，真的好难过'
 ```
 The arguments are as follows:
-* `--input_ids`: The ids of the prefix sequence.
-* `--beam_width`: k in the contrastive search, which is typically set within the range of [5,10].
+* `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
+* `--beam_width`: k in the contrastive search, which is typically set within the range of [3,10].
 * `--alpha`: alpha in the contrastive search, which is typically set within the range of [0.5,0.8].
 * `--decoding_len`: Number of tokens to generate.
-
-**[Note]** We provide two implementations of contrastive search: (1) fast_contrastive_search and (2) slow_contrastive_search. These two implementations produce the same result, but the fast version is properly optimized and is much faster than the slow version. On the other hand, the implementation details of the slow version is more straightforward. We recommend you to rewrite the slow version first if you want to adapt contrastive search to your specific research task.
 
 <span id='diverse_contrastive_search'/>
 
