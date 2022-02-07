@@ -9,7 +9,6 @@
     * <a href='#nucleus_sampling'>3.3. Nucleus Sampling</a>
     * <a href='#greedy_search'>3.4. Greedy Search</a>
     * <a href='#beam_search'>3.5. Beam Search</a>
-* <a href='#visualize_token_similarity_matrix'>4. Visualize Token Similarity Matrix</a>
 
 
 ****
@@ -64,7 +63,7 @@ The arguments are as follows:
 <span id='generate_results'/>
 
 #### 3. Generate Result with Different Decoding Methods:
-Here, we use the prefix in Table 3 of the [paper]() to illustrate how to use different decoding methods to generate the result. 
+Here, we show how to use SimCTG to generate dialogue response with different decoding methods.
 ```python
 import torch
 from simctg import SimCTG
@@ -186,11 +185,4 @@ input_ids = torch.LongTensor(input_ids).view(1,-1)
 # use contrastive search to generate the result
 beam_width, alpha, decoding_len = 8, 0.6, 128
 output = model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len)
-
-# save the visualization result
-model.save_token_similarity_map(output, save_name='token_similarity_matrix_visualization.png')
-```
-The arguments are as follows:
-* `--output`: The ids of decoded result.
-* `--save_name`: The saved name of the visualization result.
 
