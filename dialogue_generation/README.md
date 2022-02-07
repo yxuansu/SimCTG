@@ -82,11 +82,9 @@ dialogue_context = ['买书，买参考材料，毕竟读的是大专，再不�
 ##### 3.1. Contrastive Search:
 ```python
 # use contrastive search to generate the result
-beam_width, alpha, decoding_len = 8, 0.6, 128
-output = model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len)
-#output = model.slow_contrastive_search(input_ids, beam_width, alpha, decoding_len)
-print("Output:\n" + 100 * '-')
-print(tokenizer.decode(output))
+beam_width, alpha, decoding_len = 3, 0.6, 64
+print (model.contrastive_search(dialogue_context, beam_width, alpha, decoding_len))
+# '哈哈哈我也是大专毕业，现在工作在外地，我妈说我要考研，我不知道怎么办，真的好难过'
 ```
 The arguments are as follows:
 * `--input_ids`: The ids of the prefix sequence.
