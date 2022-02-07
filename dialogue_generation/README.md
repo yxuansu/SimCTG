@@ -27,7 +27,7 @@ To download the data, please follow the instructions [here](https://github.com/y
         ├── LCCC-base_dev.txt          # Validation set
         └── LCCC-base_test.txt         # Test set
 
-**Data Format**: In the files, each line represents a full document.
+**Data Format**: In the files, each line represents a complete dialogue session, where the utterances are seperated by '\t'.
 
 ****
 
