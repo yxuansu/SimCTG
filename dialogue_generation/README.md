@@ -66,19 +66,16 @@ The arguments are as follows:
 Here, we show how to use SimCTG to generate dialogue response with different decoding methods.
 ```python
 import torch
-from simctg import SimCTG
-from transformers import AutoTokenizer
-# load model and tokenizer
-model_path = r'cambridgeltl/simctg_wikitext103'
-tokenizer = AutoTokenizer.from_pretrained(model_path)
-model = SimCTG(model_path, tokenizer.pad_token_id)
+from simctgdialogue import SimCTGDialogue
+# load model
+model_path = r'cambridgeltl/simctg_lccc'
+eos_token, pad_token = '[SEP]', '[PAD]'
+model = SimCTGDialogue(model_path, eos_token, pad_token)
+tokenizer = model.tokenizer
 model.eval()
 
-# prepare prefix input
-text = r"Butt criticized Donald 's controls in certain situations in the game , as well as the difficulty of some levels and puzzles . Buchanan also criticized the controls , calling"
-tokens = tokenizer.tokenize(text)
-input_ids = tokenizer.convert_tokens_to_ids(tokens)
-input_ids = torch.LongTensor(input_ids).view(1,-1)
+# prepare dailogue context
+dialogue_context = ['买书，买参考材料，毕竟读的是大专，再不努力就真的没救了']
 ```
 <span id='contrastive_search'/>
 
