@@ -75,7 +75,7 @@ tokenizer = model.tokenizer
 model.eval()
 
 # prepare dailogue context
-context_list = ['买书，买参考材料，毕竟读的是大专，再不努力就真的没救了']
+context_list = ['都有什么好玩的哇', '没啥好玩的、一点儿意思都没有', '那跟沈阳差不多，还是大连好']
 ```
 <span id='contrastive_search'/>
 
@@ -84,7 +84,7 @@ context_list = ['买书，买参考材料，毕竟读的是大专，再不努力
 # use contrastive search to generate the result
 beam_width, alpha, decoding_len = 3, 0.6, 64
 print (model.contrastive_search(context_list, beam_width, alpha, decoding_len))
-# '哈哈哈我也是大专毕业，现在工作在外地，我妈说我要考研，我不知道怎么办，真的好难过'
+# '哈哈，我觉得沈阳比大连好玩多了'
 ```
 The arguments are as follows:
 * `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
