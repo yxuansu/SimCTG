@@ -15,7 +15,7 @@
 <span id='data_preparation'/>
 
 #### 1. Data Preparation:
-To download the data, please follow the instructions [here](https://github.com/yxuansu/SimCTG/tree/main/data).
+To download the data, please follow the instructions [[here]](https://github.com/yxuansu/SimCTG/tree/main/data).
 
 > **** The dataset contains the following files:
 
