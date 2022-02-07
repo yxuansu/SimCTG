@@ -33,7 +33,7 @@ To download the data, please follow the instructions [here](https://github.com/y
 <span id='train_simctg'/>
 
 #### 2. Train SimCTG:
-To train a SimCTG model on Wikitext-103, please run the following commands:
+To train a SimCTG model on LCCC dataset, please run the following commands:
 ```yaml
 chmod +x ./train.sh
 ./train.sh
