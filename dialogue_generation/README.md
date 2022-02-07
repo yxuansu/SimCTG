@@ -101,7 +101,7 @@ We also provide a stochastic version of contrastive search which can generate di
 sample_step, nucleus_p = 1, 0.95
 beam_width, alpha, decoding_len = 3, 0.6, 64
 print (model.diverse_contrastive_search(context_list, sample_step, nucleus_p, beam_width, alpha, decoding_len))
-# '大专不是很好找工作吗'
+# '沈阳也不错啊'
 ```
 The arguments are as follows:
 * `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
@@ -115,13 +115,12 @@ The arguments are as follows:
 
 ##### 3.3. Nucleus Sampling:
 ```python
-nucleus_p, decoding_len = 0.95, 128
-output = model.nucleus_sampling(input_ids, nucleus_p, decoding_len)
-print("Output:\n" + 100 * '-')
-print(tokenizer.decode(output))
+nucleus_p, decoding_len = 0.95, 64
+print (model.nucleus_sampling(context_list, nucleus_p, decoding_len))
+# '你说沈阳，我就说大连了'
 ```
 The arguments are as follows:
-* `--input_ids`: The ids of the prefix sequence.
+* `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
 * `--nucleus_p`: The probability in nucleus sampling.
 * `--decoding_len`: Number of tokens to generate.
 
@@ -129,26 +128,24 @@ The arguments are as follows:
 
 ##### 3.4. Greedy Search:
 ```python
-decoding_len = 128
-output = model.greedy_search(input_ids, decoding_len)
-print("Output:\n" + 100 * '-')
-print(tokenizer.decode(output))
+decoding_len = 64
+print (model.greedy_search(context_list, decoding_len))
+# '我也觉得'
 ```
 The arguments are as follows:
-* `--input_ids`: The ids of the prefix sequence.
+* `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
 * `--decoding_len`: Number of tokens to generate.
 
 <span id='beam_search'/>
 
 ##### 3.5. Beam Search:
 ```python
-beam_width, decoding_len = 10, 128
-output = model.beam_search(input_ids, beam_width, decoding_len)
-print("Output:\n" + 100 * '-')
-print(tokenizer.decode(output))
+beam_width, decoding_len = 10, 64
+print (model.beam_search(context_list, beam_width, decoding_len))
+# '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈'
 ```
 The arguments are as follows:
-* `--input_ids`: The ids of the prefix sequence.
+* `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
 * `--beam_width`: The beam width of beam search.
 * `--decoding_len`: Number of tokens to generate.
 
