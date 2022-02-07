@@ -126,6 +126,11 @@ output = model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_le
 #output = model.slow_contrastive_search(input_ids, beam_width, alpha, decoding_len)
 print("Output:\n" + 100 * '-')
 print(tokenizer.decode(output))
+
+'''
+Butt criticized Donald's controls in certain situations in the game, as well as the difficulty of some levels and puzzles. Buchanan also criticized the controls, calling them " unimpressive " and a " nightmare " of an experience to play with players unfamiliar with Tetris. On the other hand, his opinion was shared by other reviewers, and some were critical of the game's technical design for the Wii version of Tetris. In addition, Tintin's review included a quote from Roger Ebert, who said that Tetris was better than the original game due to its simplicity and ease of play. Ebert's comments were included in the game's DVD commentary, released on March 22, 2010. It is unclear if any of the video commentary was taken from the DVD
+'''
+
 ```
 The arguments are as follows:
 * `--input_ids`: The ids of the prefix sequence.
