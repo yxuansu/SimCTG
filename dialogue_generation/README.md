@@ -46,7 +46,7 @@ The arguments are as follows:
 * `--margin`: The contrastive margin $\rho$.
 * `--min_len`: The minimum length of training samples.
 * `--max_len`: The maximum length of training samples.
-* `--eos_token`: The special token used to indicate the boundary between different utterances.
+* `--eos_token`: The special token used to indicate the boundary between different utterances. For Chinese and English dataset, use '[SEP]' and 'endoftext', respectively.
 * `--pad_token`: The special token used to pad the training batch during the training process.
 * `--max_len`: The maximum length of training samples.
 * `--number_of_gpu`: The number of available GPUs.
