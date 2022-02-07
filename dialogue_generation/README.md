@@ -21,10 +21,11 @@ To download the data, please follow the instructions [here](https://github.com/y
 > **** The dataset contains the following three files:
 
     .
-    ├── wikitext103                       
-        ├── wikitext103_raw_v1_train.txt          # Training Set
-        ├── wikitext103_raw_v1_validation.txt     # Validation Set
-        └── wikitext103_raw_v1_test.txt           # Test Set
+    ├── LCCC                     
+        ├── LCCC-base_train.txt        # Training set
+        ├── LCCC-base_train_1_million_lines.txt     # File contains the first one million samples of the full training set
+        └── LCCC-base_dev.txt           # Validation set
+        └── LCCC-base_test.txt           # Test set
 
 **Data Format**: In the files, each line represents a full document.
 
