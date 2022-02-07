@@ -24,8 +24,8 @@ To download the data, please follow the instructions [here](https://github.com/y
     ├── LCCC                     
         ├── LCCC-base_train.txt        # Training set
         ├── LCCC-base_train_1_million_lines.txt     # File contains the first one million samples of the full training set
-        └── LCCC-base_dev.txt           # Validation set
-        └── LCCC-base_test.txt           # Test set
+        ├── LCCC-base_dev.txt          # Validation set
+        └── LCCC-base_test.txt         # Test set
 
 **Data Format**: In the files, each line represents a full document.
 
