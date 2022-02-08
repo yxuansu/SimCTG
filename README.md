@@ -26,7 +26,7 @@ If you find our paper and resources useful, please kindly star this repo and cit
   title     = {A Contrastive Framework for Neural Text Generation},
   journal   = {CoRR},
   year      = {2022},
-  eprinttype = {arXiv},
+  eprinttype = {arXiv}
 }
 ```
 
