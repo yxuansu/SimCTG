@@ -44,6 +44,7 @@ If you find our paper and resources useful, please kindly star this repo and cit
 ## Catalogue:
 * <a href='#environment_setup'>1. Environment Setup</a>
 * <a href='#example_usage'>2. Example Usage of Contrastive Search</a>
+    * <a href='#example_usage_english_simctg'>2.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
 * <a href='#wikitext103_tutorial'>3. Document Generation</a>
 * <a href='#dialogue_tutorial'>4. Open-domain Dialogue Generation</a>
 * <a href='#pretraining'>5. General Domain Pre-training</a>
@@ -62,6 +63,10 @@ pip3 install -r requirements.txt
 <span id='example_usage'/>
 
 #### 2. Example Usage of Contrastive Search:
+
+<span id='example_usage_english_simctg'/>
+
+##### 2.1. Use SimCTG Pretrained on Wikipedia Corpus
 Here, we show how to use contrastive search to generate the result.
 ```python
 import torch
