@@ -7,9 +7,9 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python train.py\
     --batch_size_per_gpu 16\
     --gradient_accumulation_steps 2\
     --effective_batch_size 256\
-    --total_steps 100000\
-    --print_every 500\
-    --save_every 5000\
+    --total_steps 400000\
+    --print_every 1000\
+    --save_every 10000\
     --learning_rate 2e-5\
     --margin 0.5\
     --save_path_prefix ./simctg_wikipedia/
