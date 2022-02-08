@@ -9,3 +9,9 @@ chmod +x ./download_language_modelling_data.sh
 chmod +x ./download_LCCC_dataset.sh
 ./download_LCCC_dataset.sh
 ```
+
+### 3. Download the Wikipedia Pre-training Corpus:
+```yaml
+chmod +x ./download_wikipedia.sh
+./download_wikipedia.sh
+```
