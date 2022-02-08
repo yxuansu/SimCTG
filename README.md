@@ -132,6 +132,9 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
 # use nucleus sampling to generate the result
 nucleus_p, decoding_len = 0.95, 128
 print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
+'''
+  '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华传统文化，更是经济、政治、文化上的一个精神机能的全面发展。人们在生活中不仅能够充分认识到这个民族的非物质文化遗产，而且能够在此基础上追求书面化的概念。中国历史上有许多著名的「人物」，他们深深地扎根于中国历史的传统历史文化中，热爱中华文化，热爱中华文化的传承'
+'''
 # '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华传统文化，更是经济、政治、文化上的一个精神机能的全面发展。人们在生活中不仅能够充分认识到这个民族的非物质文化遗产，而且能够在此基础上追求书面化的概念。中国历史上有许多著名的「人物」，他们深深地扎根于中国历史的传统历史文化中，热爱中华文化，热爱中华文化的传承'
 ```
 
