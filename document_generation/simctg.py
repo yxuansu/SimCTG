@@ -155,7 +155,7 @@ class SimCTG(nn.Module):
                             top_p=nucleus_p,
                             top_k=0)
         # then do contrastive search
-        output = self.fast_contrastive_search(input_ids, beam_width, alpha, contrastive_step, eos_token)
+        output = self.fast_contrastive_search(input_ids, beam_width, alpha, contrastive_step)
         return output
 
     def greedy_search(self, input_ids, decoding_len):
