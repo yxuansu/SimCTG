@@ -5,9 +5,9 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 
 ****
 ### Catalogue:
-* <a href='#news'>1. News</a>
-* <a href='#introduction'>2. Introduction</a>
-* <a href='#citation'>3. Citation</a>
+* <a href='#citation'>1. Citation</a>
+* <a href='#news'>2. News</a>
+* <a href='#introduction'>3. Introduction</a>
 * <a href='#models'>4. Huggingface Models</a>
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
@@ -18,24 +18,12 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 * <a href='#pretraining'>9. Large-Scale Pre-training with SimCTG</a>
 * <a href='#contact'>10. Contact</a>
 
-****
-
-<span id='news'/>
-
-#### 1. News:
-[2022//] SimCTG is publicly released!
-
-****
-
-<span id='introduction'/>
-
-#### 2. Introduction:
 
 ****
 
 <span id='citation'/>
 
-#### 3. Citation:
+#### 1. Citation:
 If you find our paper and resources useful, please kindly star this repo and cite our paper:
 
 ```bibtex
@@ -52,6 +40,19 @@ If you find our paper and resources useful, please kindly star this repo and cit
   eprinttype = {arXiv}
 }
 ```
+
+****
+
+<span id='news'/>
+
+#### 2. News:
+[2022//] SimCTG is publicly released!
+
+****
+
+<span id='introduction'/>
+
+#### 3. Introduction:
 
 ****
 
