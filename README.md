@@ -4,15 +4,37 @@
 Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 
 ****
+### Catalogue:
+* <a href='#news'>1. News</a>
+* <a href='#introduction'>2. Introduction</a>
+* <a href='#citation'>3. Citation</a>
+* <a href='#environment_setup'>1. Environment Setup</a>
+* <a href='#example_usage'>2. Example Usage of Contrastive Search</a>
+    * <a href='#example_usage_english_simctg'>2.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
+    * <a href='#example_usage_chinese_gpt'>2.2. Use Off-the-shelf Chinese GPT</a>
+* <a href='#wikitext103_tutorial'>3. Document Generation</a>
+* <a href='#dialogue_tutorial'>4. Open-domain Dialogue Generation</a>
+* <a href='#pretraining'>5. Large-Scale Pre-training with SimCTG</a>
 
-### News:
+
+****
+
+<span id='news'/>
+
+#### 1. News:
 [2022//] SimCTG is publicly released!
 
 ****
-## Introduction
+
+<span id='introduction'/>
+
+#### 2. Introduction
 
 ****
-### Citation:
+
+<span id='citation'/>
+
+#### Citation:
 If you find our paper and resources useful, please kindly star this repo and cite our paper:
 
 ```bibtex
@@ -38,16 +60,6 @@ If you find our paper and resources useful, please kindly star this repo and cit
 |**cambridgeltl/simctg_wikitext103**|Document Generation|English|Wikitext-103 (529MB)|[[link]](https://huggingface.co/cambridgeltl/simctg_wikitext103/)|
 |**cambridgeltl/simctg_lccc**|Open-domain Dialogue Generation|Chinese|LCCC (708MB)|[[link]](https://huggingface.co/cambridgeltl/simctg_lccc/)|
 |**cambridgeltl/simctg_english_wikipedia**|General Domain Pre-training|English|Wikipedia (14.11GB)|[[link]](https://huggingface.co/cambridgeltl/simctg_english_wikipedia/)|
-
-****
-## Catalogue:
-* <a href='#environment_setup'>1. Environment Setup</a>
-* <a href='#example_usage'>2. Example Usage of Contrastive Search</a>
-    * <a href='#example_usage_english_simctg'>2.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
-    * <a href='#example_usage_chinese_gpt'>2.2. Use Off-the-shelf Chinese GPT</a>
-* <a href='#wikitext103_tutorial'>3. Document Generation</a>
-* <a href='#dialogue_tutorial'>4. Open-domain Dialogue Generation</a>
-* <a href='#pretraining'>5. Large-Scale Pre-training with SimCTG</a>
 
 
 ****
