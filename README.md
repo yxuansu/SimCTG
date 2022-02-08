@@ -100,13 +100,40 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
    farming is by hand-cropping, which consists of cutting a hole in the ground and using a saw
 '''
 ```
-More details on how to pre-train SimCTG on large-scale corpus can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
+More details on how to pre-train SimCTG on large-scale corpus and the detals of contrastive search can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
 
 
 <span id='example_usage_chinese_gpt'/>
 
 ##### 2.2. Use Off-the-shelf Chinese GPT:
 Interestingly, we found that the contrastive search can work surprisingly well with Chinese GPT (**even without contrastive training!**). Below, we show how to apply contrastive search with an off-the-shelf Chinese GPT model. (More analysis of why contrastive search works well on vanilla Chinese GPT can be found in the paper.)
+```python
+import torch
+import sys
+sys.path.append(r'./pretraining')
+from simctg import SimCTGPretraining
+# load an off-the-shelf Chinese GPT
+model_path = r'uer/gpt2-chinese-cluecorpussmall'
+model = SimCTGPretraining(model_path)
+model.eval()
+
+# prepare text prefix input
+text = r'百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华'
+tokens = model.tokenizer.tokenize(text)
+input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+# use contrastive search to generate the result
+beam_width, alpha, decoding_len = 3, 0.6, 128
+eos_token = '[SEP]'
+print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
+# '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华文化精髓，也表现了人民群众生活水平的提高和对美好生活的向往。'
+
+# use nucleus sampling to generate the result
+nucleus_p, decoding_len = 0.95, 128
+print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
+# '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华传统文化，更是经济、政治、文化上的一个精神机能的全面发展。人们在生活中不仅能够充分认识到这个民族的非物质文化遗产，而且能够在此基础上追求书面化的概念。中国历史上有许多著名的「人物」，他们深深地扎根于中国历史的传统历史文化中，热爱中华文化，热爱中华文化的传承'
+```
 
 
 
