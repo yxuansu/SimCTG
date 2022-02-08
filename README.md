@@ -60,6 +60,7 @@ If you find our paper and resources useful, please kindly star this repo and cit
 python version: 3.8
 pip3 install -r requirements.txt
 ```
+****
 
 <span id='example_usage'/>
 
@@ -161,19 +162,26 @@ print (model.beam_search(input_ids, 10, decoding_len, eos_token))
    史使命，不仅体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历'
 '''
 ```
+More details on how to use different decoding methods to generate the result can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
 
 
-
+****
 
 <span id='wikitext103_tutorial'/>
 
 #### 3. Document Generation:
 The detailed tutorial of experiment on document generation is provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
 
+****
+
 <span id='dialogue_tutorial'/>
 
 #### 4. Open-domain Dialogue Generation:
 The detailed tutorial of experiment on open-domain dialogue generation provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/dialogue_generation).
+
+<span id='dialogue_tutorial'/>
+
+* <a href='#pretraining'>5. General Domain Pre-training</a>
 
 
 ### Contact
