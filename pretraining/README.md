@@ -59,12 +59,9 @@ The arguments are as follows:
 Here, we show how to use SimCTG to generate dialogue response with different decoding methods.
 ```python
 import torch
-from simctgdialogue import SimCTGDialogue
-# load model
-model_path = r'cambridgeltl/simctg_lccc'
-eos_token, pad_token = '[SEP]', '[PAD]'
-model = SimCTGDialogue(model_path, eos_token, pad_token)
-tokenizer = model.tokenizer
+from simctg import SimCTGPretraining
+model_path = r'./simctg_english_wikipedia/'
+model = SimCTGPretraining(model_path)
 model.eval()
 
 # prepare dailogue context
