@@ -64,20 +64,25 @@ model_path = r'cambridgeltl/simctg_english_wikipedia'
 model = SimCTGPretraining(model_path)
 model.eval()
 
+# prepare text prefix
+text = r'Insect farming is the practice of raising and breeding insects as livestock, also referred to as minilivestock or micro stock. Insects may be farmed for the commodities'
+tokens = model.tokenizer.tokenize(text)
+input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
 
-
-
-# prepare dailogue context
-context_list = ['都有什么好玩的哇', '没啥好玩的、一点儿意思都没有', '那跟沈阳差不多，还是大连好']
 ```
 <span id='contrastive_search'/>
 
 ##### 3.1. Contrastive Search:
 ```python
 # use contrastive search to generate the result
-beam_width, alpha, decoding_len = 3, 0.6, 64
-print (model.contrastive_search(context_list, beam_width, alpha, decoding_len))
-# '哈哈，我觉得沈阳比大连好玩多了'
+beam_width, alpha, decoding_len = 5, 0.6, 128
+eos_token = '<|endoftext|>'
+print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
+'''
+   Insect farming is the practice of raising and breeding insects as livestock, also referred to as minilivestock or micro stock. Insects may be farmed for the   commodities they produce, such as honey, corn, sorghum, and other crops. In some cases, the production of insects is a way to increase income for the owner or his family. This type of farming has been described as "an economic system that benefits all people regardless of race, sex, or social status" (p.\xa09). A large number of farmers in North America, Europe, and South America have used the method of farming for food production in order to feed their families and livestock. The most common method of farming is by hand-cropping, which consists of cutting a hole in the ground and using a saw
+'''
+
 ```
 The arguments are as follows:
 * `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
