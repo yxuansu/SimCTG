@@ -62,6 +62,40 @@ pip3 install -r requirements.txt
 <span id='example_usage'/>
 
 #### 2. Example Usage of Contrastive Search:
+Here, we show how to use contrastive search to generate the result.
+```python
+import torch
+import sys
+sys.path.append(r'./pretraining')
+from simctg import SimCTGPretraining
+# load SimCTG model pretrained on Wikipedia corpus
+model_path = r'cambridgeltl/simctg_english_wikipedia'
+model = SimCTGPretraining(model_path)
+model.eval()
+
+# prepare the text prefix input
+text = r'Insect farming is the practice of raising and breeding insects as livestock, also referred to as minilivestock or micro stock. Insects may be farmed for the commodities'
+tokens = model.tokenizer.tokenize(text)
+input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+# use contrastive search to generate the result
+beam_width, alpha, decoding_len = 5, 0.6, 128
+eos_token = '<|endoftext|>'
+print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
+
+'''
+   Insect farming is the practice of raising and breeding insects as livestock, also referred to as minilivestock
+   or micro stock. Insects may be farmed for the  commodities they produce, such as honey, corn, sorghum, and 
+   other crops. In some cases, the production of insects is a way to increase income for the owner or his family. 
+   This type of farming has been described as "an economic system that benefits all people regardless of race, sex, 
+   or social status" (p.\xa09). A large number of farmers in North America, Europe, and South America have used the 
+   method of farming for food production in order to feed their families and livestock. The most common method of 
+   farming is by hand-cropping, which consists of cutting a hole in the ground and using a saw
+'''
+```
+
+
 Here, we show how to reproduce the result in Table 3 of our paper.
 ```python
 import torch
