@@ -48,7 +48,7 @@ If you find our paper and resources useful, please kindly star this repo and cit
     * <a href='#example_usage_chinese_gpt'>2.2. Use Off-the-shelf Chinese GPT</a>
 * <a href='#wikitext103_tutorial'>3. Document Generation</a>
 * <a href='#dialogue_tutorial'>4. Open-domain Dialogue Generation</a>
-* <a href='#pretraining'>Large-Scale Pre-training with SimCTG</a>
+* <a href='#pretraining'>5. Large-Scale Pre-training with SimCTG</a>
 
 
 ****
