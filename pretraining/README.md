@@ -60,9 +60,12 @@ Here, we show how to use SimCTG to generate dialogue response with different dec
 ```python
 import torch
 from simctg import SimCTGPretraining
-model_path = r'./simctg_english_wikipedia/'
+model_path = r'cambridgeltl/simctg_english_wikipedia'
 model = SimCTGPretraining(model_path)
 model.eval()
+
+
+
 
 # prepare dailogue context
 context_list = ['都有什么好玩的哇', '没啥好玩的、一点儿意思都没有', '那跟沈阳差不多，还是大连好']
