@@ -48,7 +48,7 @@ If you find our paper and resources useful, please kindly star this repo and cit
     * <a href='#example_usage_chinese_gpt'>2.2. Use Off-the-shelf Chinese GPT</a>
 * <a href='#wikitext103_tutorial'>3. Document Generation</a>
 * <a href='#dialogue_tutorial'>4. Open-domain Dialogue Generation</a>
-* <a href='#pretraining'>5. General Domain Pre-training</a>
+* <a href='#pretraining'>Large-Scale Pre-training with SimCTG</a>
 
 
 ****
@@ -179,10 +179,15 @@ The detailed tutorial of experiment on document generation is provided [[here]](
 #### 4. Open-domain Dialogue Generation:
 The detailed tutorial of experiment on open-domain dialogue generation provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/dialogue_generation).
 
-<span id='dialogue_tutorial'/>
+****
 
-* <a href='#pretraining'>5. General Domain Pre-training</a>
+<span id='pretraining'/>
 
+#### 5. Large-Scale Pre-training with SimCTG
+In addition to fine-tuning on downstream tasks (e.g. document generation, open-domain dialogue generation), we can also use a large-scale general domain corpus (e.g. Wikipedia) to pre-train a SimCTG model. [In this part](https://github.com/yxuansu/SimCTG/tree/main/pretraining), we show the details of how to pre-train SimCTG using a large-scale English Wikipedia corpus.
+
+
+****
 
 ### Contact
 If you have any questions, feel free to contact me via (ys484 at cam.ac.uk).
