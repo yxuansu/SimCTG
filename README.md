@@ -45,6 +45,7 @@ If you find our paper and resources useful, please kindly star this repo and cit
 * <a href='#environment_setup'>1. Environment Setup</a>
 * <a href='#example_usage'>2. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>2.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
+    * <a href='#example_usage_chinese_gpt'>2.2. Use Off-the-shelf Chinese GPT</a>
 * <a href='#wikitext103_tutorial'>3. Document Generation</a>
 * <a href='#dialogue_tutorial'>4. Open-domain Dialogue Generation</a>
 * <a href='#pretraining'>5. General Domain Pre-training</a>
@@ -66,7 +67,7 @@ pip3 install -r requirements.txt
 
 <span id='example_usage_english_simctg'/>
 
-##### 2.1. Use SimCTG Pretrained on Wikipedia Corpus
+##### 2.1. Use SimCTG Pretrained on Wikipedia Corpus:
 Here, we show how to use contrastive search to generate the result.
 ```python
 import torch
@@ -102,37 +103,11 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
 More details on how to pre-train SimCTG on large-scale corpus can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
 
 
-Here, we show how to reproduce the result in Table 3 of our paper.
-```python
-import torch
-from simctg import SimCTG
-from transformers import AutoTokenizer
-# load model and tokenizer
-model_path = r'cambridgeltl/simctg_wikitext103'
-tokenizer = AutoTokenizer.from_pretrained(model_path)
-model = SimCTG(model_path, tokenizer.pad_token_id)
-model.eval()
+<span id='example_usage_chinese_gpt'/>
 
-# prepare prefix input
-text = r"Butt criticized Donald 's controls in certain situations in the game , as well as the difficulty of some levels and puzzles . Buchanan also criticized the controls , calling"
-tokens = tokenizer.tokenize(text)
-input_ids = tokenizer.convert_tokens_to_ids(tokens)
-input_ids = torch.LongTensor(input_ids).view(1,-1)
+##### 2.2. Use Off-the-shelf Chinese GPT:
+Interestingly, we found the contrastive search can work surprisingly well with Chinese GPT (**without contrastive training!**). 
 
-# use contrastive search to generate the result
-beam_width, alpha, decoding_len = 8, 0.6, 128
-output = model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len)
-print("Output:\n" + 100 * '-')
-print(tokenizer.decode(output))
-
-# use diverse contrastive search to generate the result
-sample_step, nucleus_p = 2, 0.95
-beam_width, alpha, decoding_len = 8, 0.6, 128
-output = model.diverse_contrastive_search(input_ids, sample_step, nucleus_p, beam_width, alpha, decoding_len)
-print("Output:\n" + 100 * '-')
-print(tokenizer.decode(output))
-```
-More detailed tutorial on how to use contrastive search/diverse contrastive search can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
 
 
 <span id='wikitext103_tutorial'/>
