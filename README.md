@@ -9,14 +9,14 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 * <a href='#introduction'>2. Introduction</a>
 * <a href='#citation'>3. Citation</a>
 * <a href='#models'>4. Huggingface Models</a>
-* <a href='#environment_setup'>1. Environment Setup</a>
-* <a href='#example_usage'>2. Example Usage of Contrastive Search</a>
-    * <a href='#example_usage_english_simctg'>2.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
-    * <a href='#example_usage_chinese_gpt'>2.2. Use Off-the-shelf Chinese GPT</a>
-* <a href='#wikitext103_tutorial'>3. Document Generation</a>
-* <a href='#dialogue_tutorial'>4. Open-domain Dialogue Generation</a>
-* <a href='#pretraining'>5. Large-Scale Pre-training with SimCTG</a>
-
+* <a href='#environment_setup'>5. Environment Setup</a>
+* <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
+    * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
+    * <a href='#example_usage_chinese_gpt'>6.2. Use Off-the-shelf Chinese GPT</a>
+* <a href='#wikitext103_tutorial'>7. Document Generation</a>
+* <a href='#dialogue_tutorial'>8. Open-domain Dialogue Generation</a>
+* <a href='#pretraining'>9. Large-Scale Pre-training with SimCTG</a>
+* <a href='#contact'>10. Contact</a>
 
 ****
 
@@ -29,7 +29,7 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 
 <span id='introduction'/>
 
-#### 2. Introduction
+#### 2. Introduction:
 
 ****
 
@@ -57,7 +57,7 @@ If you find our paper and resources useful, please kindly star this repo and cit
 
 <span id='models'/>
 
-#### 4. Huggingface Models
+#### 4. Huggingface Models:
 
 |Model Name|Task|Language|Training Corpus (Size)|Model Address|
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
@@ -70,7 +70,7 @@ If you find our paper and resources useful, please kindly star this repo and cit
 
 <span id='environment_setup'/>
 
-#### 1. Environment Setup:
+#### 5. Environment Setup:
 ```yaml
 python version: 3.8
 pip3 install -r requirements.txt
@@ -79,11 +79,11 @@ pip3 install -r requirements.txt
 
 <span id='example_usage'/>
 
-#### 2. Example Usage of Contrastive Search:
+#### 6. Example Usage of Contrastive Search:
 
 <span id='example_usage_english_simctg'/>
 
-##### 2.1. Use SimCTG Pretrained on Wikipedia Corpus:
+##### 6.1. Use SimCTG Pretrained on Wikipedia Corpus:
 Here, we show how to use contrastive search to generate the result.
 ```python
 import torch
@@ -121,7 +121,7 @@ More details on how to pre-train SimCTG on large-scale corpus and the detals of 
 
 <span id='example_usage_chinese_gpt'/>
 
-##### 2.2. Use Off-the-shelf Chinese GPT:
+##### 6.2. Use Off-the-shelf Chinese GPT:
 Interestingly, we found that the contrastive search can work surprisingly well with **off-the-shelf** Chinese GPT (**even without contrastive training!**). Below, we show how to apply contrastive search with an off-the-shelf Chinese GPT model. (More analysis of why contrastive search works well on vanilla Chinese GPT can be found in the paper.)
 ```python
 import torch
@@ -184,25 +184,27 @@ More details on how to use different decoding methods to generate the result can
 
 <span id='wikitext103_tutorial'/>
 
-#### 3. Document Generation:
+#### 7. Document Generation:
 The detailed tutorial of experiment on document generation is provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
 
 ****
 
 <span id='dialogue_tutorial'/>
 
-#### 4. Open-domain Dialogue Generation:
+#### 8. Open-domain Dialogue Generation:
 The detailed tutorial of experiment on open-domain dialogue generation provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/dialogue_generation).
 
 ****
 
 <span id='pretraining'/>
 
-#### 5. Large-Scale Pre-training with SimCTG
+#### 9. Large-Scale Pre-training with SimCTG
 In addition to fine-tuning on downstream tasks (e.g. document generation and open-domain dialogue generation), we can also use a large-scale general domain corpus (e.g. Wikipedia) to pre-train a SimCTG model. [Here](https://github.com/yxuansu/SimCTG/tree/main/pretraining), we show the details of how to pre-train SimCTG using a large-scale English Wikipedia corpus.
 
 
 ****
 
-### Contact
+<span id='contact'/>
+
+#### 10. Contact
 If you have any questions, feel free to contact me via (ys484 at cam.ac.uk).
