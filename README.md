@@ -101,4 +101,4 @@ The detailed tutorial of experiment on open-domain dialogue generation provided 
 
 
 ### Contact
-If you have any questions, feel free to contact me via (ys484@cam.ac.uk).
+If you have any questions, feel free to contact me via (ys484 at cam.ac.uk).
