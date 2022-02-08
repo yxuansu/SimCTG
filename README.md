@@ -106,7 +106,8 @@ More details on how to pre-train SimCTG on large-scale corpus can be found [[her
 <span id='example_usage_chinese_gpt'/>
 
 ##### 2.2. Use Off-the-shelf Chinese GPT:
-Interestingly, we found the contrastive search can work surprisingly well with Chinese GPT (**without contrastive training!**). 
+Interestingly, we found that the contrastive search can work surprisingly well with Chinese GPT (**even without contrastive training!**). Below, we show how to apply contrastive search with an off-the-shelf Chinese GPT model. (More analysis of why contrastive search works well on vanilla Chinese GPT can be found in the paper.)
+
 
 
 
