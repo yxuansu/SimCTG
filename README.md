@@ -12,6 +12,25 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 ## Introduction
 
 ****
+## Citation:
+If you find our paper and resources useful, please kindly star this repo and cite our paper:
+
+```bibtex
+@article{SuSimCTG2022,
+  author    = {Yixuan Su and
+               Tian Lan and
+               Yan Wang and
+               Dani Yogatama and
+               Lingpeng Kong and
+               Nigel Collier},
+  title     = {A Contrastive Framework for Neural Text Generation},
+  journal   = {CoRR},
+  year      = {2022},
+  eprinttype = {arXiv},
+}
+```
+
+****
 ## Huggingface Models
 ### 1. Wikitext-103:
 
