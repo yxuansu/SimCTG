@@ -98,3 +98,7 @@ The detailed tutorial of experiment on document generation is provided [[here]](
 
 #### 4. Open-domain Dialogue Generation:
 The detailed tutorial of experiment on open-domain dialogue generation provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/dialogue_generation).
+
+
+### Contact
+If you have any questions, feel free to contact me via (ys484@cam.ac.uk).
