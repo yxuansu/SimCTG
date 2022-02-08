@@ -140,6 +140,16 @@ print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
   人们在生活中不仅能够充分认识到这个民族的非物质文化遗产，而且能够在此基础上追求书面化的概念。中国历史上有许多著名的「人物」，
   他们深深地扎根于中国历史的传统历史文化中，热爱中华文化，热爱中华文化的传承'
 '''
+
+# use greedy search to generate the result
+decoding_len = 128
+eos_token = '<|endoftext|>'
+print (model.greedy_search(input_ids, decoding_len, eos_token))
+'''
+  '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华民族的传统美德，也体现了中华民族的传统文化。[UNK]中华民族
+  的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传统
+  美德。[UNK]中华民族的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传'
+'''
 ```
 
 
