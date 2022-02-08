@@ -1,0 +1,15 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python train.py\
+    --model_name gpt2\
+    --train_path ../data/wikipedia/train_english_wikipedia.txt\
+    --dev_path ../data/wikipedia/dev_english_wikipedia.txt\
+    --seqlen 512\
+    --number_of_gpu 8\
+    --batch_size_per_gpu 16\
+    --gradient_accumulation_steps 2\
+    --effective_batch_size 256\
+    --total_steps 100000\
+    --print_every 500\
+    --save_every 5000\
+    --learning_rate 2e-5\
+    --margin 0.5\
+    --save_path_prefix ./simctg_wikipedia/
