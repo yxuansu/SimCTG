@@ -12,7 +12,7 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 ## Introduction
 
 ****
-## Citation:
+### Citation:
 If you find our paper and resources useful, please kindly star this repo and cite our paper:
 
 ```bibtex
@@ -31,8 +31,7 @@ If you find our paper and resources useful, please kindly star this repo and cit
 ```
 
 ****
-## Huggingface Models
-### 1. Wikitext-103:
+### Huggingface Models
 
 |Model Name|Task|Training Corpus (Size)|Model Address|
 |:-------------:|:-------------:|:-------------:|:-------------:|
