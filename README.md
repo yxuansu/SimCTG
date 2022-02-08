@@ -4,7 +4,7 @@
 ****
 ### Catalogue:
 * <a href='#introduction'>1. Introduction</a>
-* * <a href='#news'>2. News</a>
+* <a href='#news'>2. News</a>
 * <a href='#citation'>3. Citation</a>
 * <a href='#models'>4. Huggingface Models</a>
 * <a href='#environment_setup'>5. Environment Setup</a>
