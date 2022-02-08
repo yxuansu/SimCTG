@@ -183,7 +183,7 @@ The detailed tutorial of experiment on open-domain dialogue generation provided 
 <span id='pretraining'/>
 
 #### 5. Large-Scale Pre-training with SimCTG
-In addition to fine-tuning on downstream tasks (e.g. document generation and open-domain dialogue generation), we can also use a large-scale general domain corpus (e.g. Wikipedia) to pre-train a SimCTG model. [In this part](https://github.com/yxuansu/SimCTG/tree/main/pretraining), we show the details of how to pre-train SimCTG using a large-scale English Wikipedia corpus.
+In addition to fine-tuning on downstream tasks (e.g. document generation and open-domain dialogue generation), we can also use a large-scale general domain corpus (e.g. Wikipedia) to pre-train a SimCTG model. [Here](https://github.com/yxuansu/SimCTG/tree/main/pretraining), we show the details of how to pre-train SimCTG using a large-scale English Wikipedia corpus.
 
 
 ****
