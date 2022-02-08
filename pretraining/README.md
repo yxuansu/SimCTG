@@ -1,4 +1,4 @@
-## This repo describes the experimental details on LCCC benchmark.
+## This repo describes how to pre-train SimCTG on a large-scale pre-training corpus.
 ****
 ### Catalogue:
 * <a href='#data_preparation'>1. Data Preparation</a>
