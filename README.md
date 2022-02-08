@@ -37,7 +37,7 @@ If you find our paper and resources useful, please kindly star this repo and cit
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
 |**cambridgeltl/simctg_wikitext103**|Document Generation|English|Wikitext-103 (529MB)||
 |**cambridgeltl/simctg_lccc**|Open-domain Dialogue Generation|Chinese|LCCC (708MB)||
-|**cambridgeltl/simctg_english_wikipedia**|General Domain Pre-training|English|Wikipedia (14.1GB)|[[link]](https://huggingface.co/cambridgeltl/simctg_english_wikipedia)|
+|**cambridgeltl/simctg_english_wikipedia**|General Domain Pre-training|English|Wikipedia (14.11GB)|[[link]](https://huggingface.co/cambridgeltl/simctg_english_wikipedia)|
 
 ****
 ## Catalogue:
