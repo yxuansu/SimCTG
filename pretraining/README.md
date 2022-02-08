@@ -95,7 +95,7 @@ The arguments are as follows:
 * `--beam_width`: k in the contrastive search, which is typically set within the range of [3, 10].
 * `--alpha`: alpha in the contrastive search, which is typically set within the range of [0.5, 0.8].
 * `--decoding_len`: Number of tokens to generate.
-* `--eos_token`: The end of sequence token.
+* `--eos_token`: The token that indicates the end of sequence.
 
 <span id='diverse_contrastive_search'/>
 
