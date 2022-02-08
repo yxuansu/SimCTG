@@ -34,6 +34,12 @@ If you find our paper and resources useful, please kindly star this repo and cit
 ## Huggingface Models
 ### 1. Wikitext-103:
 
+|Model Name|Model Address|
+|:-------------:|:-------------:|
+|cambridgeltl/simctg_wikitext103 (**cambridgeltl/tacl-bert-base-uncased**)|[link](https://huggingface.co/cambridgeltl/tacl-bert-base-uncased)|
+|cambridgeltl/simctg_lccc (**cambridgeltl/tacl-bert-base-chinese**)|[link](https://huggingface.co/cambridgeltl/tacl-bert-base-chinese)|
+|cambridgeltl/simctg_english_wikipedia (**cambridgeltl/tacl-bert-base-chinese**)|[link](https://huggingface.co/cambridgeltl/tacl-bert-base-chinese)|
+
 ****
 ## Catalogue:
 * <a href='#environment_setup'>1. Environment Setup</a>
