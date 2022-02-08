@@ -8,6 +8,7 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 * <a href='#news'>1. News</a>
 * <a href='#introduction'>2. Introduction</a>
 * <a href='#citation'>3. Citation</a>
+* <a href='#models'>4. Huggingface Models</a>
 * <a href='#environment_setup'>1. Environment Setup</a>
 * <a href='#example_usage'>2. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>2.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
@@ -34,7 +35,7 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 
 <span id='citation'/>
 
-#### Citation:
+#### 3. Citation:
 If you find our paper and resources useful, please kindly star this repo and cite our paper:
 
 ```bibtex
@@ -53,7 +54,10 @@ If you find our paper and resources useful, please kindly star this repo and cit
 ```
 
 ****
-### Huggingface Models
+
+<span id='models'/>
+
+#### 4. Huggingface Models
 
 |Model Name|Task|Language|Training Corpus (Size)|Model Address|
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
