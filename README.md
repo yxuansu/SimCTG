@@ -44,7 +44,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 <span id='news'/>
 
 #### 2. News:
-[2022//] SimCTG is publicly released!
+[2022/02/14] SimCTG is publicly released!
 
 ****
 
