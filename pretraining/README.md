@@ -20,13 +20,11 @@ To download the pre-training Wikipedia corpus, please follow the instructions [[
 > **** The dataset contains the following files:
 
     .
-    ├── LCCC                     
-        ├── LCCC-base_train.txt        # Training set
-        ├── LCCC-base_train_1_million_lines.txt     # File contains the first one million samples of the full training set
-        ├── LCCC-base_dev.txt          # Validation set
-        └── LCCC-base_test.txt         # Test set
+    ├── wikipedia                   
+        ├── train_english_wikipedia.txt       # Training set
+        └── dev_english_wikipedia.txt         # Validation set
 
-**Data Format**: In the files, each line represents a complete dialogue session, where the utterances are seperated by '\t'.
+**Data Format**: In the files, each line represents a complete wikipedia article.
 
 ****
 
