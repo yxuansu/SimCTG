@@ -3,9 +3,9 @@
 
 ****
 ### Catalogue:
-* <a href='#citation'>1. Citation</a>
-* <a href='#news'>2. News</a>
-* <a href='#introduction'>3. Introduction</a>
+* <a href='#introduction'>1. Introduction</a>
+* * <a href='#news'>2. News</a>
+* <a href='#citation'>3. Citation</a>
 * <a href='#models'>4. Huggingface Models</a>
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
@@ -16,12 +16,26 @@
 * <a href='#pretraining'>9. Large-Scale Pre-training with SimCTG</a>
 * <a href='#contact'>10. Contact</a>
 
+****
+
+<span id='introduction'/>
+
+#### 1. Introduction:
+Text generation is of great importance to many natural language processing applications. However, maximization-based decoding methods (e.g. beam search) of neural language models often lead to degenerate solutions---the generated text is unnatural and contains undesirable repetitions. Existing approaches introduce stochasticity via sampling or modifies training objectives to decrease probabilities of certain tokens (e.g., unlikelihood training). However, they often lead to solutions that lack coherence. In this work, we show that an underlying reason for model degeneration is the anisotropic distribution of token representations. We present a contrastive solution: (i) SimCTG, a constrastive training objective to calibrate the model's representation space, and (ii) a decoding method---contrastive search---to encourage diversity while maintaining coherence in generated text. Extensive experiments and analyses on three benchmarks from two languages demonstrate that our proposed approach outperforms state-of-the-art text generation methods as evaluated by both human and automatic metrics.
+
+****
+
+<span id='news'/>
+
+#### 2. News:
+[2022/02/14] SimCTG is publicly released!
+
 
 ****
 
 <span id='citation'/>
 
-#### 1. Citation:
+#### 3. Citation:
 If you find our paper and resources useful, please kindly leave a star and cite our paper. Thanks!:
 
 ```bibtex
@@ -38,21 +52,6 @@ If you find our paper and resources useful, please kindly leave a star and cite 
   eprinttype = {arXiv}
 }
 ```
-
-****
-
-<span id='news'/>
-
-#### 2. News:
-[2022/02/14] SimCTG is publicly released!
-
-****
-
-<span id='introduction'/>
-
-#### 3. Introduction:
-Text generation is of great importance to many natural language processing applications. However, maximization-based decoding methods (e.g. beam search) of neural language models often lead to degenerate solutions---the generated text is unnatural and contains undesirable repetitions. Existing approaches introduce stochasticity via sampling or modifies training objectives to decrease probabilities of certain tokens (e.g., unlikelihood training). However, they often lead to solutions that lack coherence. In this work, we show that an underlying reason for model degeneration is the anisotropic distribution of token representations. We present a contrastive solution: (i) SimCTG, a constrastive training objective to calibrate the model's representation space, and (ii) a decoding method---contrastive search---to encourage diversity while maintaining coherence in generated text. Extensive experiments and analyses on three benchmarks from two languages demonstrate that our proposed approach outperforms state-of-the-art text generation methods as evaluated by both human and automatic metrics.
-
 
 ****
 
