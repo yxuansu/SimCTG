@@ -3,7 +3,7 @@
 ### Catalogue:
 * <a href='#data_preparation'>1. Data Preparation</a>
 * <a href='#train_simctg'>2. Train SimCTG</a>
-* <a href='#generate_results'>3. Generate Result with Different Decoding Methods</a>
+* <a href='#generate_results'>3. Generate Result with English SimCTG using Different Decoding Methods</a>
     * <a href='#contrastive_search'>3.1. Contrastive Search</a>
     * <a href='#diverse_contrastive_search'>3.2. Diverse Contrastive Search</a>
     * <a href='#nucleus_sampling'>3.3. Nucleus Sampling</a>
@@ -37,15 +37,11 @@ chmod +x ./train.sh
 ./train.sh
 ```
 The arguments are as follows:
-* `--model_name`: The name of huggingface pre-trained gpt model.
+* `--model_name`: The name of huggingface pre-trained gpt model (e.g. gpt2).
 * `--train_path`: The file path of training set.
 * `--dev_path`: The file path of validation set.
-* `--test_path`: The file path of test set.
 * `--margin`: The contrastive margin $\rho$.
-* `--min_len`: The minimum length of training samples.
-* `--max_len`: The maximum length of training samples.
-* `--eos_token`: The special token used to indicate the boundary between different utterances. For Chinese and English dataset, use '[SEP]' and 'endoftext', respectively.
-* `--pad_token`: The special token used to pad the training batch during the training process.
+* `--seqlen`: The length of every training sample.
 * `--number_of_gpu`: The number of available GPUs.
 * `--batch_size_per_gpu`: The batch size for each GPU.
 * `--gradient_accumulation_steps`: How many forward computations between two gradient updates.
@@ -59,7 +55,7 @@ The arguments are as follows:
 ****
 <span id='generate_results'/>
 
-#### 3. Generate Result with Different Decoding Methods:
+#### 3. Generate Result with English SimCTG using Different Decoding Methods:
 Here, we show how to use SimCTG to generate dialogue response with different decoding methods.
 ```python
 import torch
