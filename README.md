@@ -1,8 +1,6 @@
 # A Contrastive Framework for Neural Text Generation
 **Authors**: Yixuan Su, Tian Lan, Yan Wang, Dani Yogatama, Lingpeng Kong, and Nigel Collier
 
-Code of our paper: [A Contrastive Framework for Neural Text Generation]()
-
 ****
 ### Catalogue:
 * <a href='#citation'>1. Citation</a>
@@ -24,7 +22,7 @@ Code of our paper: [A Contrastive Framework for Neural Text Generation]()
 <span id='citation'/>
 
 #### 1. Citation:
-If you find our paper and resources useful, please kindly star this repo and cite our paper:
+If you find our paper and resources useful, please leave a star and cite our paper. Thanks!:
 
 ```bibtex
 @article{SuSimCTG2022,
