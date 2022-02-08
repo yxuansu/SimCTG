@@ -60,9 +60,9 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 
 |Model Name|Task|Language|Training Corpus (Size)|Model Address|
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-|cambridgeltl/simctg_wikitext103|Document Generation|English|Wikitext-103 (529MB)|[[link]](https://huggingface.co/cambridgeltl/simctg_wikitext103/)|
-|cambridgeltl/simctg_lccc|Open-domain Dialogue Generation|Chinese|LCCC (708MB)|[[link]](https://huggingface.co/cambridgeltl/simctg_lccc/)|
-|cambridgeltl/simctg_english_wikipedia|General Domain Pre-training|English|Wikipedia (14.11GB)|[[link]](https://huggingface.co/cambridgeltl/simctg_english_wikipedia/)|
+|cambridgeltl/simctg_wikitext103|Document Generation|English|Wikitext-103 (529 MB)|[[link]](https://huggingface.co/cambridgeltl/simctg_wikitext103/)|
+|cambridgeltl/simctg_lccc|Open-domain Dialogue Generation|Chinese|LCCC (708 MB)|[[link]](https://huggingface.co/cambridgeltl/simctg_lccc/)|
+|cambridgeltl/simctg_english_wikipedia|General Domain Pre-training|English|Wikipedia (14.11 GB)|[[link]](https://huggingface.co/cambridgeltl/simctg_english_wikipedia/)|
 
 
 ****
