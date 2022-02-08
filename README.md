@@ -133,7 +133,7 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
 
 # use nucleus sampling to generate the result
 nucleus_p, decoding_len = 0.95, 128
-eos_token = '<|endoftext|>'
+eos_token = '[SEP]'
 print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
 '''
   '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华传统文化，更是经济、政治、文化上的一个精神机能的全面发展。
@@ -143,12 +143,22 @@ print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
 
 # use greedy search to generate the result
 decoding_len = 128
-eos_token = '<|endoftext|>'
+eos_token = '[SEP]'
 print (model.greedy_search(input_ids, decoding_len, eos_token))
 '''
   '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华民族的传统美德，也体现了中华民族的传统文化。[UNK]中华民族
    的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传
    统美德。[UNK]中华民族的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传'
+'''
+
+# use beam search to generate the result
+beam_width, decoding_len = 10, 128
+eos_token = '[SEP]'
+print (model.beam_search(input_ids, 10, decoding_len, eos_token))
+'''
+  '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历史使命。
+   中华民族伟大复兴的历史使命，不仅体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历史使命。中华民族伟大复兴的历
+   史使命，不仅体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历'
 '''
 ```
 
