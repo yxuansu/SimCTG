@@ -133,6 +133,7 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
 
 # use nucleus sampling to generate the result
 nucleus_p, decoding_len = 0.95, 128
+eos_token = '<|endoftext|>'
 print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
 '''
   '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华传统文化，更是经济、政治、文化上的一个精神机能的全面发展。
