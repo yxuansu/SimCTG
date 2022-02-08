@@ -59,11 +59,11 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 
 #### 4. Huggingface Models:
 
-|Model Name|Task|Language|Training Corpus (Size)|Model Address|
-|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-|cambridgeltl/simctg_wikitext103|Document Generation|English|Wikitext-103 (529MB)|[[link]](https://huggingface.co/cambridgeltl/simctg_wikitext103/)|
-|cambridgeltl/simctg_lccc|Open-domain Dialogue Generation|Chinese|LCCC (708MB)|[[link]](https://huggingface.co/cambridgeltl/simctg_lccc/)|
-|cambridgeltl/simctg_english_wikipedia|General Domain Pre-training|English|Wikipedia (14.11GB)|[[link]](https://huggingface.co/cambridgeltl/simctg_english_wikipedia/)|
+|Model Name|Task|Language|Training Corpus (Size)|Model Size|Model Address|
+|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+|cambridgeltl/simctg_wikitext103|Document Generation|English|Wikitext-103 (529MB)|117M|[[link]](https://huggingface.co/cambridgeltl/simctg_wikitext103/)|
+|cambridgeltl/simctg_lccc|Open-domain Dialogue Generation|Chinese|LCCC (708MB)|117M|[[link]](https://huggingface.co/cambridgeltl/simctg_lccc/)|
+|cambridgeltl/simctg_english_wikipedia|General Domain Pre-training|English|Wikipedia (14.11GB)|117M|[[link]](https://huggingface.co/cambridgeltl/simctg_english_wikipedia/)|
 
 
 ****
