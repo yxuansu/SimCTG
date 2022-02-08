@@ -34,11 +34,11 @@ If you find our paper and resources useful, please kindly star this repo and cit
 ## Huggingface Models
 ### 1. Wikitext-103:
 
-|Model Name|Description|Training Corpus|Training Corpus Size|Model Address|
-|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-|(**cambridgeltl/tacl-bert-base-uncased**)|[link](https://huggingface.co/cambridgeltl/tacl-bert-base-uncased)||||
-|**cambridgeltl/simctg_lccc**|[link](https://huggingface.co/cambridgeltl/tacl-bert-base-chinese)||||
-|**cambridgeltl/simctg_english_wikipedia**|[link](https://huggingface.co/cambridgeltl/tacl-bert-base-chinese)||||
+|Model Name|Task|Training Corpus (Size)|Model Address|
+|:-------------:|:-------------:|:-------------:|:-------------:|
+|(**cambridgeltl/tacl-bert-base-uncased**)|Document Generation|Wikitext-103||
+|**cambridgeltl/simctg_lccc**|Open-domain Dialogue Generation|LCCC||
+|**cambridgeltl/simctg_english_wikipedia**|General Domain Pre-training|English Wikipedia||
 
 ****
 ## Catalogue:
