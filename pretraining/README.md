@@ -121,38 +121,38 @@ The arguments are as follows:
 
 ##### 3.3. Nucleus Sampling:
 ```python
-nucleus_p, decoding_len = 0.95, 64
-print (model.nucleus_sampling(context_list, nucleus_p, decoding_len))
-# '你说沈阳，我就说大连了'
+nucleus_p, decoding_len = 0.95, 128
+print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
 ```
 The arguments are as follows:
-* `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
+* `--input_ids`: The ids of the prefix sequence.
 * `--nucleus_p`: The probability in nucleus sampling.
 * `--decoding_len`: Number of tokens to generate.
+* `--eos_token`: The token that indicates the end of sequence.
 
 <span id='greedy_search'/>
 
 ##### 3.4. Greedy Search:
 ```python
-decoding_len = 64
-print (model.greedy_search(context_list, decoding_len))
-# '我也觉得'
+decoding_len = 128
+print (model.greedy_search(input_ids, decoding_len, eos_token))
 ```
 The arguments are as follows:
-* `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
+* `--input_ids`: The ids of the prefix sequence.
 * `--decoding_len`: Number of tokens to generate.
+* `--eos_token`: The token that indicates the end of sequence.
 
 <span id='beam_search'/>
 
 ##### 3.5. Beam Search:
 ```python
-beam_width, decoding_len = 10, 64
-print (model.beam_search(context_list, beam_width, decoding_len))
-# '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈'
+beam_width, decoding_len = 10, 128
+print (model.beam_search(input_ids, beam_width, decoding_len, eos_token))
 ```
 The arguments are as follows:
-* `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
+* `--input_ids`: The ids of the prefix sequence.
 * `--beam_width`: The beam width of beam search.
 * `--decoding_len`: Number of tokens to generate.
+* `--eos_token`: The token that indicates the end of sequence.
 
 
