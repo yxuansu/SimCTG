@@ -191,7 +191,32 @@ More details on how to use different decoding methods to generate the result can
 
 ###### 6.2.2. Japanese GPT:
 
-Sadly, I do not speak Japanese, so I can only read the generated text using Google translate. It would be great if anyone can tell me whether the generated text is good or not. Thank you in advance!
+```python
+import torch
+import sys
+sys.path.append(r'./pretraining')
+from simctg import SimCTGPretraining
+# load an off-the-shelf Japanese GPT
+model_path = r'colorfulscoop/gpt2-small-ja'
+model = SimCTGPretraining(model_path)
+model.eval()
+
+# prepare text prefix input
+text = r'臥龍桜（がりゅうざくら）は、岐阜県高山市一之宮町にある一本桜。龍が地'
+tokens = model.tokenizer.tokenize(text)
+input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+# use contrastive search to generate the result
+beam_width, alpha, decoding_len = 5, 0.6, 128
+eos_token = model.tokenizer.eos_token
+print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
+'''
+   臥龍桜(がりゅうざくら)は、岐阜県高山市一之宮町にある一本桜。龍が地中に染みつく様子を図案化したもので、樹齢400年を越す日本さくら名所100選に選定されている。一之宮町指定天然記念物。岐阜県飛騨地方(東濃地方)の山間地に生育し、約1万年前に絶滅したと考えられている。「花の本」とも称され、開花期は5月上旬から下旬までで、桜の枝張りは濃緑色である。花は直径約10cmの花弁を咲かせる八重咲きで、花弁の色は紅紫色で、雄しべは4本、雌しべは1本ある。雄しべの先
+'''
+```
+
+**[Note]** Sadly, I do not speak Japanese, so I can only judge the quality of the generated text using [Google translate](https://translate.google.com/). It would be great if anyone can tell me whether the generated text is good or not. Thank you in advance!
 
 ****
 
