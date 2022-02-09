@@ -12,11 +12,12 @@
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
     * <a href='#example_usage_different_language_model'>6.2. Use **Off-the-shelf** Language Models from Different Languages</a>
         * <a href='#example_usage_chinese_gpt'>6.2.1. Chinese GPT</a>
-    * <a href='#example_usage_japanese_gpt'>6.3. Use Off-the-shelf Japanese GPT</a>
+        * <a href='#example_usage_japanese_gpt'>6.2.2. Japanese GPT</a>
 * <a href='#wikitext103_tutorial'>7. Document Generation</a>
 * <a href='#dialogue_tutorial'>8. Open-domain Dialogue Generation</a>
 * <a href='#pretraining'>9. Large-Scale Pre-training with SimCTG</a>
 * <a href='#contact'>10. Contact</a>
+
 
 ****
 
@@ -123,7 +124,7 @@ More details on how to pre-train SimCTG on large-scale corpus and the detals of 
 
 <span id='example_usage_different_language_model'/>
 
-##### 6.2. Use Off-the-shelf Language Models from Different Languages
+##### 6.2. Use Off-the-shelf Language Models from Different Languages:
 We found that contrastive search can be directly applied to the off-the-shelf language models even **without** contrastive training. The only condition is that the corresponding language is naturally tokenized by character units. In the following, we showcase how to use contrastive search with off-the-shelf Chinese and Japanese language models. More analysis can be found in the Appendix C of our paper. 
 
 <span id='example_usage_chinese_gpt'/>
@@ -187,8 +188,9 @@ print (model.beam_search(input_ids, 10, decoding_len, eos_token))
 More details on how to use different decoding methods to generate the result can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
 
 
+<span id='example_usage_japanese_gpt'/>
 
-
+###### 6.2.2. Japanese GPT:
 
 
 ****
