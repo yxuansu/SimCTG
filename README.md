@@ -191,6 +191,7 @@ More details on how to use different decoding methods to generate the result can
 
 ###### 6.2.2. Japanese GPT:
 
+Sadly, I do not speak Japanese, so I can only read the generated text using Google translate. It would be great if anyone can tell me whether the generated text is good or not. Thank you in advance!
 
 ****
 
