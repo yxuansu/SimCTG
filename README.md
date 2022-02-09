@@ -196,7 +196,7 @@ import torch
 import sys
 sys.path.append(r'./pretraining')
 from simctg import SimCTGPretraining
-# load an off-the-shelf Japanese GPT
+# load an off-the-shelf Japanese GPT; https://huggingface.co/colorfulscoop/gpt2-small-ja
 model_path = r'colorfulscoop/gpt2-small-ja'
 model = SimCTGPretraining(model_path)
 model.eval()
