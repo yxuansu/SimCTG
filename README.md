@@ -10,8 +10,8 @@
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
-    * <a href='#example_usage_chinese_gpt'>6.2. Use Off-the-shelf Language Models from Different Languages</a>
-        * <a href='#example_usage_chinese_gpt'>6.2. Use Off-the-shelf Language Models from Different Languages</a>
+    * <a href='#example_usage_different_language_model'>6.2. Use **Off-the-shelf** Language Models from Different Languages</a>
+        * <a href='#example_usage_chinese_gpt'>6.2.1. Chinese GPT</a>
     * <a href='#example_usage_japanese_gpt'>6.3. Use Off-the-shelf Japanese GPT</a>
 * <a href='#wikitext103_tutorial'>7. Document Generation</a>
 * <a href='#dialogue_tutorial'>8. Open-domain Dialogue Generation</a>
@@ -121,9 +121,13 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
 More details on how to pre-train SimCTG on large-scale corpus and the detals of the argument setup in contrastive search can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
 
 
+##### 6.2. Use Off-the-shelf Language Models from Different Languages
+
+example_usage_different_language_model'></a>
+
 <span id='example_usage_chinese_gpt'/>
 
-##### 6.2. Use Off-the-shelf Chinese GPT:
+###### 6.2.1. Chinese GPT:
 Interestingly, we found that the contrastive search can work surprisingly well with **off-the-shelf** Chinese GPT (**even without contrastive training!**). Below, we show how to apply contrastive search with an off-the-shelf Chinese GPT model. (More analysis of why contrastive search works well on vanilla Chinese GPT can be found in the paper.)
 ```python
 import torch
