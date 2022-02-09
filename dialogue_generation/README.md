@@ -67,23 +67,23 @@ Here, we show how to use SimCTG to generate dialogue response with different dec
 import torch
 from simctgdialogue import SimCTGDialogue
 # load model
-model_path = r'cambridgeltl/simctg_lccc'
+model_path = r'cambridgeltl/simctg_lccc_dialogue'
 eos_token, pad_token = '[SEP]', '[PAD]'
 model = SimCTGDialogue(model_path, eos_token, pad_token)
 tokenizer = model.tokenizer
 model.eval()
 
 # prepare dailogue context
-context_list = ['都有什么好玩的哇', '没啥好玩的、一点儿意思都没有', '那跟沈阳差不多，还是大连好']
+context_list = ['刺猬很可爱！以前别人送了只没养，味儿太大！', '是很可爱但是非常臭', '是啊，没办法养', '那个怎么养哦不会扎手吗']
 ```
 <span id='contrastive_search'/>
 
 ##### 3.1. Contrastive Search:
 ```python
 # use contrastive search to generate the result
-beam_width, alpha, decoding_len = 3, 0.6, 64
+beam_width, alpha, decoding_len = 5, 0.6, 64
 print (model.contrastive_search(context_list, beam_width, alpha, decoding_len))
-# '哈哈，我觉得沈阳比大连好玩多了'
+# '我觉得还好，就是有点臭'
 ```
 The arguments are as follows:
 * `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
@@ -98,9 +98,9 @@ We also provide a stochastic version of contrastive search which can generate di
 ```python
 # use diverse contrastive search to generate the result
 sample_step, nucleus_p = 1, 0.95
-beam_width, alpha, decoding_len = 3, 0.6, 64
+beam_width, alpha, decoding_len = 5, 0.6, 64
 print (model.diverse_contrastive_search(context_list, sample_step, nucleus_p, beam_width, alpha, decoding_len))
-# '沈阳也不错啊'
+# '亲爱的，我家那只就是这样的，一开始不喜欢，后来发现它特别乖，就养了起来，现在好多了'
 ```
 The arguments are as follows:
 * `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
@@ -116,7 +116,7 @@ The arguments are as follows:
 ```python
 nucleus_p, decoding_len = 0.95, 64
 print (model.nucleus_sampling(context_list, nucleus_p, decoding_len))
-# '你说沈阳，我就说大连了'
+# '我是在家里养的感觉不会弄它血的特别快啊我之前也怕它血不会流很多，但是你家都这么养的可能都被它养着我家在南京'
 ```
 The arguments are as follows:
 * `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
@@ -129,7 +129,7 @@ The arguments are as follows:
 ```python
 decoding_len = 64
 print (model.greedy_search(context_list, decoding_len))
-# '我也觉得'
+# '我也不知道，我家的也是，我家的也是，我家的也是，我家的也是，我家的也是，我家的也是，我家的也是，我家的也是，我家的也是，我家的也'
 ```
 The arguments are as follows:
 * `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
@@ -141,7 +141,7 @@ The arguments are as follows:
 ```python
 beam_width, decoding_len = 10, 64
 print (model.beam_search(context_list, beam_width, decoding_len))
-# '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈'
+# '可以的'
 ```
 The arguments are as follows:
 * `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
