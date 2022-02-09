@@ -100,7 +100,7 @@ We also provide a stochastic version of contrastive search which can generate di
 sample_step, nucleus_p = 1, 0.95
 beam_width, alpha, decoding_len = 5, 0.6, 64
 print (model.diverse_contrastive_search(context_list, sample_step, nucleus_p, beam_width, alpha, decoding_len))
-# '亲爱的，我家那只就是这样的，一开始不喜欢，后来发现它特别乖，就养了起来，现在好多了'
+# '可以的，就是有点疼'
 ```
 The arguments are as follows:
 * `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
