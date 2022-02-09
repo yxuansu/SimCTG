@@ -121,9 +121,8 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
 More details on how to pre-train SimCTG on large-scale corpus and the detals of the argument setup in contrastive search can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
 
 
+<span id='example_usage_different_language_model'/>
 ##### 6.2. Use Off-the-shelf Language Models from Different Languages
-
-example_usage_different_language_model'></a>
 
 <span id='example_usage_chinese_gpt'/>
 
