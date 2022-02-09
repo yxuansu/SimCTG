@@ -10,7 +10,9 @@
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
-    * <a href='#example_usage_chinese_gpt'>6.2. Use Off-the-shelf Chinese GPT</a>
+    * <a href='#example_usage_chinese_gpt'>6.2. Use Off-the-shelf Language Models from Different Languages</a>
+        * <a href='#example_usage_chinese_gpt'>6.2. Use Off-the-shelf Language Models from Different Languages</a>
+    * <a href='#example_usage_japanese_gpt'>6.3. Use Off-the-shelf Japanese GPT</a>
 * <a href='#wikitext103_tutorial'>7. Document Generation</a>
 * <a href='#dialogue_tutorial'>8. Open-domain Dialogue Generation</a>
 * <a href='#pretraining'>9. Large-Scale Pre-training with SimCTG</a>
@@ -178,6 +180,10 @@ print (model.beam_search(input_ids, 10, decoding_len, eos_token))
 '''
 ```
 More details on how to use different decoding methods to generate the result can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
+
+
+
+
 
 
 ****
