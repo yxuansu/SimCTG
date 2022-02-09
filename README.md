@@ -36,7 +36,7 @@ Text generation is of great importance to many natural language processing appli
 <span id='citation'/>
 
 #### 3. Citation:
-If you find our paper and resources useful, please kindly leave a star and cite our paper. Thanks!:
+If you find our paper and resources useful, please kindly leave a star and cite our paper. Thanks!
 
 ```bibtex
 @article{SuSimCTG2022,
