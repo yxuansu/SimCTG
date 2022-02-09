@@ -122,6 +122,7 @@ More details on how to pre-train SimCTG on large-scale corpus and the detals of 
 
 
 <span id='example_usage_different_language_model'/>
+
 ##### 6.2. Use Off-the-shelf Language Models from Different Languages
 
 <span id='example_usage_chinese_gpt'/>
