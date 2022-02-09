@@ -219,7 +219,7 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
 '''
 ```
 
-**[Note]** Sadly, I do not speak Japanese, so I can only judge the quality of the generated text using [Google translate](https://translate.google.com/). It would be great if anyone can tell me whether the generated text is good or not. Thank you in advance!
+**[Note]** Sadly, I do not speak Japanese, so I can only judge the quality of the generated text using [Google translate](https://translate.google.com/). It would be great if anyone could tell me whether the generated text is good or not. Thank you in advance!
 
 ****
 
