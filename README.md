@@ -136,7 +136,7 @@ import torch
 import sys
 sys.path.append(r'./pretraining')
 from simctg import SimCTGPretraining
-# load an off-the-shelf Chinese GPT
+# load an off-the-shelf Chinese GPT (https://huggingface.co/uer/gpt2-chinese-cluecorpussmall)
 model_path = r'uer/gpt2-chinese-cluecorpussmall'
 model = SimCTGPretraining(model_path)
 model.eval()
