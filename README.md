@@ -98,7 +98,7 @@ model_path = r'cambridgeltl/simctg_english_wikipedia'
 model = SimCTGPretraining(model_path)
 model.eval()
 
-# prepare the text prefix input
+# we randomly select a prefix from the dev set of Wikipedia pre-training corpus and prepare the text prefix input
 text = r'Insect farming is the practice of raising and breeding insects as livestock, also referred to as minilivestock or micro stock. Insects may be farmed for the commodities'
 tokens = model.tokenizer.tokenize(text)
 input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
