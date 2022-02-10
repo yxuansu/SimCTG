@@ -204,7 +204,7 @@ model.eval()
 
 '''
    Prepare text prefix input. The prefix is copied from a random Japanese Wikipedia 
-   page here: https://ja.wikipedia.org/wiki/%E8%87%A5%E9%BE%8D%E6%A1%9C.
+   page here (https://ja.wikipedia.org/wiki/%E8%87%A5%E9%BE%8D%E6%A1%9C).
 '''
 text = r'臥龍桜（がりゅうざくら）は、岐阜県高山市一之宮町にある一本桜。龍が地'
 tokens = model.tokenizer.tokenize(text)
