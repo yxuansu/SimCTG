@@ -127,6 +127,8 @@ More details on how to pre-train SimCTG on large-scale corpus and the detals of 
 ##### 6.2. Use Off-the-shelf Language Models from Different Languages:
 Interestingly, we found that contrastive search can be directly applied to **off-the-shelf** language models even **without** contrastive training. The only condition is that the corresponding language should be naturally tokenized by character units. In the following, we showcase how to use contrastive search with off-the-shelf Chinese and Japanese language models. More analysis of why contrastive search works well on vanilla language models can be found in the Appendix C of our paper. 
 
+<ins>text</ins>
+
 <span id='example_usage_chinese_gpt'/>
 
 ###### 6.2.1. Chinese GPT:
