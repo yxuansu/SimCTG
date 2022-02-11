@@ -10,7 +10,7 @@
     * <a href='#nucleus_sampling'>4.3. Nucleus Sampling</a>
     * <a href='#greedy_search'>4.4. Greedy Search</a>
     * <a href='#beam_search'>4.5. Beam Search</a>
-* <a href='#visualize_token_similarity_matrix'>5. Visualize Token Similarity Matrix</a>
+* <a href='#visualize_token_similarity_matrix'>5. Visualize the Token Similarity Matrix</a>
 
 
 ****
@@ -214,7 +214,7 @@ The arguments are as follows:
 
 <span id='visualize_token_similarity_matrix'/>
 
-#### 5. Visualize Token Similarity Matrix
+#### 5. Visualize the Token Similarity Matrix
 Here, we show how to reproduce the token similarity matrix visualization (Figure 6 of the paper).
 ```python
 import torch
