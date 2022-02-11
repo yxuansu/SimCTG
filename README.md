@@ -92,7 +92,7 @@ import torch
 import sys
 sys.path.append(r'./pretraining')
 from simctg import SimCTGPretraining
-# load SimCTG model pretrained on Wikipedia corpus
+# load SimCTG model pretrained on the large-scale Wikipedia corpus
 model_path = r'cambridgeltl/simctg_english_wikipedia'
 model = SimCTGPretraining(model_path)
 model.eval()
