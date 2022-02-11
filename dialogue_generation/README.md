@@ -62,7 +62,7 @@ The arguments are as follows:
 <span id='generate_results'/>
 
 #### 3. Generate Result with Different Decoding Methods:
-Here, we show how to use SimCTG to generate dialogue response with different decoding methods. More generated examples can be found in Appendix D of our paper.
+Here, we show how to use SimCTG to generate dialogue response with different decoding methods. More generated examples can be found in the Appendix D of our paper.
 ```python
 import torch
 from simctgdialogue import SimCTGDialogue
