@@ -68,7 +68,7 @@ chmod +x ./inference.sh
 ./inference.sh
 ```
 The arguments are as follows:
-* `--ckpt_path`: The path of trained checkpoint. You can either use the off-the-shelf checkpoint (`cambridgeltl/simctg_wikitext103`) or newly trained model that can be found in the `--save_path_prefix` argument of train.sh.
+* `--ckpt_path`: The path of trained checkpoint. You can either use our released checkpoint (`cambridgeltl/simctg_wikitext103`) or your own trained model that can be found in the `--save_path_prefix` directory as defined in train.sh.
 * `--dev_path`: The file path of validation set.
 * `--test_path`: The file path of test set.
 * `--prefix_len`: The length of prefix.
