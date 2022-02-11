@@ -99,7 +99,7 @@ The generated file is a list of dictionary, where the data format of each dictio
 <span id='generate_results'/>
 
 #### 4. Generate Result with Different Decoding Methods:
-Here, we use the prefix in Table 3 of the [paper]() to illustrate how to use different decoding methods to generate the result. 
+Here, we use the prefix in Table 4 of the [paper]() to illustrate how to use different decoding methods to generate the result. 
 ```python
 import torch
 from simctg import SimCTG
@@ -151,7 +151,7 @@ The arguments are as follows:
 <span id='diverse_contrastive_search'/>
 
 ##### 4.2. Diverse Contrastive Search:
-We also provide a stochastic version of contrastive search which can generate diverse results by combining nucleus sampling and contrastive search. More details can be found in Appendix E of the [paper]().
+We also provide a stochastic version of contrastive search which can generate diverse results by combining nucleus sampling and contrastive search. More details can be found in Appendix G of the [paper]().
 ```python
 # use diverse contrastive search to generate the result
 sample_step, nucleus_p = 2, 0.95
