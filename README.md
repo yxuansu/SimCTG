@@ -124,7 +124,7 @@ More details on how to pre-train SimCTG on large-scale corpus and the detals of 
 <span id='example_usage_different_language_model'/>
 
 ##### 6.2. Use Off-the-shelf Language Models from Different Languages:
-Interestingly, we found that contrastive search can be directly applied to **off-the-shelf** language models even **without** contrastive training. The only condition is that <ins>the corresponding language should be naturally tokenized by character units</ins>. In the following, we showcase how to use contrastive search with off-the-shelf Chinese and Japanese language models. More analysis of why contrastive search works well on vanilla language models can be found in the Appendix C of our paper. 
+Importantly, we found that contrastive search can be directly applied to **off-the-shelf** language models even **without** contrastive training. The only condition is that <ins>the corresponding language should be naturally tokenized by character units</ins>. Some examples include Chinese, Japanese, and Korean. In the following, we showcase how to use contrastive search with off-the-shelf Chinese and Japanese language models. More analysis of why contrastive search works well on vanilla language models can be found in the Appendix C of our paper. 
 
 
 <span id='example_usage_chinese_gpt'/>
@@ -243,7 +243,7 @@ The detailed tutorial of experiment on open-domain dialogue generation provided 
 <span id='pretraining'/>
 
 #### 9. Large-Scale Pre-training with SimCTG
-In addition to fine-tuning on downstream tasks (e.g. document generation and open-domain dialogue generation), we can also use a large-scale general domain corpus (e.g. Wikipedia) to pre-train a SimCTG model. [Here](https://github.com/yxuansu/SimCTG/tree/main/pretraining), we show the details of how to pre-train SimCTG using a large-scale English Wikipedia corpus.
+In addition to fine-tuning on downstream tasks (e.g. document generation and open-domain dialogue generation), we can also use a large-scale general domain corpus (i.e. Wikipedia) to pre-train a SimCTG model. [Here](https://github.com/yxuansu/SimCTG/tree/main/pretraining), we show the details of how to pre-train SimCTG using a large-scale English Wikipedia corpus.
 
 
 ****
