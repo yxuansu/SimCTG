@@ -142,8 +142,8 @@ print(tokenizer.decode(output))
 ```
 The arguments are as follows:
 * `--input_ids`: The ids of the prefix sequence.
-* `--beam_width`: k in the contrastive search, which is typically set within the range of [3, 10].
-* `--alpha`: alpha in the contrastive search, which is typically set within the range of [0.5, 0.8].
+* `--beam_width`: k in the contrastive search, which is typically set within the range of [3,10].
+* `--alpha`: alpha in the contrastive search, which is typically set within the range of [0.5,0.8].
 * `--decoding_len`: Number of tokens to generate.
 
 **[Note]** We provide two implementations of contrastive search: (1) fast_contrastive_search and (2) slow_contrastive_search. These two implementations produce the same result, but the fast version is properly optimized and is much faster than the slow version. On the other hand, the implementation details of the slow version is more straightforward. We recommend you to rewrite the slow version first if you want to adapt contrastive search to your specific research task.
