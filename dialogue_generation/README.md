@@ -39,7 +39,7 @@ chmod +x ./train.sh
 ./train.sh
 ```
 The arguments are as follows:
-* `--model_name`: The name of huggingface pre-trained gpt model (e.g. uer/gpt2-chinese-cluecorpussmall).
+* `--model_name`: The name of huggingface pre-trained gpt model (e.g. gpt2 and uer/gpt2-chinese-cluecorpussmall).
 * `--train_path`: The file path of training set.
 * `--dev_path`: The file path of validation set.
 * `--test_path`: The file path of test set.
