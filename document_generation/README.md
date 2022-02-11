@@ -93,7 +93,7 @@ The generated file is a list of dictionary, where the data format of each dictio
 }
 ```
 
-**[Note]** We provide our generated file in ./simctg_contrastive.json.
+**[Note]** We provide our generated file in ./simctg_contrasive.json.
 
 ****
 <span id='generate_results'/>
