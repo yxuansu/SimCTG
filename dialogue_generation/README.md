@@ -62,7 +62,7 @@ The arguments are as follows:
 <span id='generate_results'/>
 
 #### 3. Generate Result with Different Decoding Methods:
-Here, we show how to use SimCTG to generate dialogue response with different decoding methods.
+Here, we show how to use SimCTG to generate dialogue response with different decoding methods. More generated examples can be found in Appendix D of our paper.
 ```python
 import torch
 from simctgdialogue import SimCTGDialogue
@@ -73,7 +73,7 @@ model = SimCTGDialogue(model_path, eos_token, pad_token)
 tokenizer = model.tokenizer
 model.eval()
 
-# prepare dailogue context
+# prepare the dailogue context which is a list of utterances
 context_list = ['刺猬很可爱！以前别人送了只没养，味儿太大！', '是很可爱但是非常臭', '是啊，没办法养', '那个怎么养哦不会扎手吗']
 ```
 <span id='contrastive_search'/>
@@ -87,14 +87,14 @@ print (model.contrastive_search(context_list, beam_width, alpha, decoding_len))
 ```
 The arguments are as follows:
 * `--context_list`: A list of utterances, e.g. [utterance_1, utterance_2, ..., utterance_n].
-* `--beam_width`: k in the contrastive search, which is typically set within the range of [3, 10].
-* `--alpha`: alpha in the contrastive search, which is typically set within the range of [0.5, 0.8].
+* `--beam_width`: k in the contrastive search, which is typically set within the range of [3,10].
+* `--alpha`: alpha in the contrastive search, which is typically set within the range of [0.5,0.8].
 * `--decoding_len`: Number of tokens to generate.
 
 <span id='diverse_contrastive_search'/>
 
 ##### 3.2. Diverse Contrastive Search:
-We also provide a stochastic version of contrastive search which can generate diverse results by combining nucleus sampling and contrastive search. More details can be found in Appendix E of the [paper]().
+We also provide a stochastic version of contrastive search which can generate diverse results by combining nucleus sampling and contrastive search. More details can be found in Appendix G of the [paper]().
 ```python
 # use diverse contrastive search to generate the result
 sample_step, nucleus_p = 1, 0.95
