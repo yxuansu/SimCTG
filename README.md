@@ -143,6 +143,7 @@ model_path = r'uer/gpt2-chinese-cluecorpussmall'
 model = SimCTGPretraining(model_path)
 model.eval()
 
+# prepare text prefix input
 text = r'苹果公司'
 tokens = model.tokenizer.tokenize(text)
 input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
