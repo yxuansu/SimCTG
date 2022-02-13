@@ -147,16 +147,14 @@ tokens = model.tokenizer.tokenize(text)
 input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
 input_ids = torch.LongTensor(input_ids).view(1,-1)
 
-
 # use contrastive search to generate the result
 beam_width, alpha, decoding_len = 3, 0.6, 128
 eos_token = '[SEP]'
 print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
 '''
    '苹果公司在中国市场推出的iphone7，不仅在外观设计上有所改变，在配置上也进行了升级。苹果还宣布，新一代iphone将采用5.7英寸
-   屏幕，分辨率达到2560×1440像素，显示效果非常出色。此外，该机还支持指纹  识别功能，可实现手指快速扫描、人脸识别等功能。'
+   屏幕，分辨率达到2560×1440像素，显示效果非常出色。此外，该机还支持指纹识别功能，可实现手指快速扫描、人脸识别等功能。'
 '''
-
 
 # use nucleus sampling to generate the result
 nucleus_p, decoding_len = 0.95, 128
@@ -168,8 +166,27 @@ print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
    支，他们'
 '''
 
+# use greedy search to generate the result
+decoding_len = 128
+eos_token = '[SEP]'
+print (model.greedy_search(input_ids, decoding_len, eos_token))
+'''
+   '苹果公司的一个重要客户，他们的产品在全球范围内都有着非常高的知名度。[UNK]我们的产品在全球范围内都有着非常高的知名度，我们的产品
+   在全球范围内都有着非常高的知名度。[UNK]在这样的背景下，苹果公司  的产品在全球范围内都有着非常高的知名度。[UNK]我们的产品在全球
+   范围内都有着非常高的知'
+'''
 
+# use beam search to generate the result
+beam_width, decoding_len = 10, 128
+eos_token = '[SEP]'
+print (model.beam_search(input_ids, 10, decoding_len, eos_token))
+'''
+  '苹果公司总裁兼首席执行官蒂姆·库克（timcook）表示：[UNK]苹果公司是全球最大的智能手机制造商之一，苹果公司是全球最大的智能手机制造
+  商之一，苹果公司是全球最大的智能手机制造商之一，苹果公司是全球最大的智能手机制造商之一，苹果公司是全球最大的智能手机制造商之一，苹
+  果公司是全球'
+'''
 
+# ------------------------------------------------------------------------------------------------------------ #
 # Another Example:
 # prepare text prefix input
 text = r'百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华'
