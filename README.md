@@ -149,7 +149,7 @@ tokens = model.tokenizer.tokenize(text)
 input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
 input_ids = torch.LongTensor(input_ids).view(1,-1)
 
-# use contrastive search to generate the result
+# (1) use contrastive search to generate the result
 beam_width, alpha, decoding_len = 3, 0.6, 128
 eos_token = '[SEP]'
 print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
@@ -159,7 +159,7 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
    别等功能。'
 '''
 
-# use nucleus sampling to generate the result
+# (2) use nucleus sampling to generate the result
 nucleus_p, decoding_len = 0.95, 128
 eos_token = '[SEP]'
 print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
@@ -169,7 +169,7 @@ print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
    时建筑的一个分支或一个分支，他们'
 '''
 
-# use greedy search to generate the result
+# (3) use greedy search to generate the result
 decoding_len = 128
 eos_token = '[SEP]'
 print (model.greedy_search(input_ids, decoding_len, eos_token))
@@ -179,7 +179,7 @@ print (model.greedy_search(input_ids, decoding_len, eos_token))
    我们的产品在全球范围内都有着非常高的知'
 '''
 
-# use beam search to generate the result
+# (4) use beam search to generate the result
 beam_width, decoding_len = 10, 128
 eos_token = '[SEP]'
 print (model.beam_search(input_ids, 10, decoding_len, eos_token))
@@ -196,7 +196,7 @@ tokens = model.tokenizer.tokenize(text)
 input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
 input_ids = torch.LongTensor(input_ids).view(1,-1)
 
-# use contrastive search to generate the result
+# (1) use contrastive search to generate the result
 beam_width, alpha, decoding_len = 3, 0.6, 128
 eos_token = '[SEP]'
 print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
@@ -204,7 +204,7 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
   '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华文化精髓，也表现了人民群众生活水平的提高和对美好生活的向往。'
 '''
 
-# use nucleus sampling to generate the result
+# (2) use nucleus sampling to generate the result
 nucleus_p, decoding_len = 0.95, 128
 eos_token = '[SEP]'
 print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
@@ -214,7 +214,7 @@ print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
    ，他们深深地扎根于中国历史的传统历史文化中，热爱中华文化，热爱中华文化的传承'
 '''
 
-# use greedy search to generate the result
+# (3) use greedy search to generate the result
 decoding_len = 128
 eos_token = '[SEP]'
 print (model.greedy_search(input_ids, decoding_len, eos_token))
@@ -224,7 +224,7 @@ print (model.greedy_search(input_ids, decoding_len, eos_token))
    统美德。[UNK]中华民族的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传'
 '''
 
-# use beam search to generate the result
+# (4) use beam search to generate the result
 beam_width, decoding_len = 10, 128
 eos_token = '[SEP]'
 print (model.beam_search(input_ids, 10, decoding_len, eos_token))
