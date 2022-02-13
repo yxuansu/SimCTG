@@ -13,8 +13,8 @@ This repository contains code, models, and other related resources of our paper 
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
     * <a href='#example_usage_different_language_model'>6.2. Use **Off-the-shelf** Language Models from Different Languages</a>
-        * <a href='#example_usage_chinese_gpt'>6.2.1. Chinese GPT</a>
-        * <a href='#example_usage_japanese_gpt'>6.2.2. Japanese GPT</a>
+        * <a href='#example_usage_chinese_gpt'>6.2.1. Chinese Language Model</a>
+        * <a href='#example_usage_japanese_gpt'>6.2.2. Japanese Language Model</a>
 * <a href='#wikitext103_tutorial'>7. Document Generation</a>
 * <a href='#dialogue_tutorial'>8. Open-domain Dialogue Generation</a>
 * <a href='#pretraining'>9. Large-Scale Pre-training with SimCTG</a>
@@ -132,7 +132,7 @@ Importantly, we found that contrastive search can be directly applied to **off-t
 
 <span id='example_usage_chinese_gpt'/>
 
-###### 6.2.1. Chinese GPT:
+###### 6.2.1. Chinese Language Model:
 ```python
 import torch
 import sys
@@ -239,7 +239,7 @@ More details on how to use different decoding methods to generate the result can
 
 <span id='example_usage_japanese_gpt'/>
 
-###### 6.2.2. Japanese GPT:
+###### 6.2.2. Japanese Language Model:
 
 ```python
 import torch
