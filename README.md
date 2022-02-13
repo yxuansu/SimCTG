@@ -186,8 +186,7 @@ print (model.beam_search(input_ids, 10, decoding_len, eos_token))
   果公司是全球'
 '''
 
-# ------------------------------------------------------------------------------------------------------------ #
-# Another Example:
+# ------------------------------------------ Another Example --------------------------------------------- #
 # prepare text prefix input
 text = r'百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华'
 tokens = model.tokenizer.tokenize(text)
@@ -231,12 +230,6 @@ print (model.beam_search(input_ids, 10, decoding_len, eos_token))
    中华民族伟大复兴的历史使命，不仅体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历史使命。中华民族伟大复兴的历
    史使命，不仅体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历'
 '''
-
-
-
-
-
-
 ```
 More details on how to use different decoding methods to generate the result can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
 
