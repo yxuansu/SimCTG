@@ -142,6 +142,22 @@ model_path = r'uer/gpt2-chinese-cluecorpussmall'
 model = SimCTGPretraining(model_path)
 model.eval()
 
+text = r'苹果公司'
+tokens = model.tokenizer.tokenize(text)
+input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+beam_width, alpha, decoding_len = 3, 0.6, 128
+eos_token = '[SEP]'
+print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
+'''
+  '苹果公司在中国市场推出的iphone7，不仅在外观设计上有所改变，在配置上也进行了升级。苹果还宣布，新一代iphone将采用5.7英寸屏幕，分辨率达到2560×1440像素，显示效果非常出色。此外，该机还支持指纹  识别功能，可实现手指快速扫描、人脸识别等功能。'
+'''
+
+
+
+# Another Example:
+
 # prepare text prefix input
 text = r'百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华'
 tokens = model.tokenizer.tokenize(text)
@@ -185,6 +201,12 @@ print (model.beam_search(input_ids, 10, decoding_len, eos_token))
    中华民族伟大复兴的历史使命，不仅体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历史使命。中华民族伟大复兴的历
    史使命，不仅体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历'
 '''
+
+
+
+
+
+
 ```
 More details on how to use different decoding methods to generate the result can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
 
