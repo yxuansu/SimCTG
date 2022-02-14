@@ -121,7 +121,7 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
    farming is by hand-cropping, which consists of cutting a hole in the ground and using a saw
 '''
 ```
-More details on how to pre-train SimCTG on large-scale corpus and the detals of the argument setup in contrastive search can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
+More details on how to pre-train SimCTG on large-scale corpus and the details of the argument setup in contrastive search can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
 
 
 <span id='example_usage_different_language_model'/>
