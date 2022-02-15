@@ -330,7 +330,7 @@ print (model.greedy_search(input_ids, decoding_len, eos_token))
 '''
 
 # (4) use beam search to generate the result
-# We do not print the result, because beam search stops generation immediately
+# We do not print the result, because beam search stops generation immediately.
 ```
 
 **[Note]** Sadly, I am not a Korean speaker either, so I can only judge the quality of the generated text using [Google translate](https://translate.google.com/) as well. It would be great if anyone could tell me whether the generated text is good or not. Thank you!
