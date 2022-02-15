@@ -128,7 +128,7 @@ More details on how to pre-train SimCTG on large-scale corpus and the details of
 <span id='example_usage_different_language_model'/>
 
 ##### 6.2. Use Off-the-shelf Language Models from Different Languages:
-Importantly, we found that contrastive search can be directly applied to **off-the-shelf** language models even **without** contrastive training. The only condition is that <ins>the corresponding language should be naturally tokenized by character units</ins>. Some examples include Chinese, Japanese, and Korean. In the following, we showcase how to use contrastive search with off-the-shelf Chinese and Japanese language models. More analysis of why contrastive search works well on vanilla language models can be found in the Appendix C of our paper. 
+Importantly, we found that contrastive search can be directly applied to **off-the-shelf** language models even **without** contrastive training. The only condition is that <ins>the corresponding language should be naturally tokenized by character units</ins>. Some examples include Chinese, Japanese, and Korean. In the following, we showcase how to use contrastive search with off-the-shelf Chinese, Japanese, and Korean language models. More analysis of why contrastive search works well on vanilla language models can be found in the Appendix C of our paper. 
 
 
 <span id='example_usage_chinese_gpt'/>
@@ -281,6 +281,57 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
 
 ###### 6.2.3. Korean Language Model:
 
+```python
+import torch
+import sys
+sys.path.append(r'./pretraining')
+from simctg import SimCTGPretraining
+# load an off-the-shelf Korean GPT (https://huggingface.co/skt/ko-gpt-trinity-1.2B-v0.5)
+model_path = r'skt/ko-gpt-trinity-1.2B-v0.5'
+model = SimCTGPretraining(model_path)
+model.eval()
+
+'''
+   Prepare text prefix input.
+'''
+text = r'인간처럼 생각하고, 행동하는 \'지능\'을 통해 인류가 이제까지 풀지 못했던'
+tokens = model.tokenizer.tokenize(text)
+input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+# (1) use contrastive search to generate the result
+beam_width, alpha, decoding_len = 5, 0.6, 64 
+# because this model is pretty large, so we set generation length (decoding_len) as 64
+eos_token = model.tokenizer.eos_token
+print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
+'''
+   인간처럼생각하고,행동하는\'지능\'을통해인류가이제까지풀지못했던난제를해결하려한다.이책의제목이기도한'슈퍼인텔리전스'는인공지능
+   (AI)의등장으로야기된사회변화를일컫는말로,이책을관통하는키워드이기도하다.저자는"기술과인간사이의경계가무너지고있다"고지적한다.
+   AI가인간의사고방식과행동을모방할뿐만
+'''
+
+# (2) use nucleus sampling to generate the result
+nucleus_p, decoding_len = 0.95, 64
+eos_token = model.tokenizer.eos_token
+print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
+'''
+  '인간처럼생각하고,행동하는\'지능\'을통해인류가이제까지풀지못했던큰수수께끼를풀수있다.'지능\'은인공두뇌그자체이기도하지만그공간의
+  반영이라는해석도가능하다.예를들면시간부등호처럼복잡한수식을쉽게떠올릴수있다는이야기다.마치구글에검색창에'Quick'이라는단어를입력하
+  면자동으로'중력'은일정한법칙에따라'
+'''
+
+# (3) use greedy search to generate the result
+decoding_len = 64
+eos_token = model.tokenizer.eos_token
+print (model.greedy_search(input_ids, decoding_len, eos_token))
+'''
+  '인간처럼생각하고,행동하는\'지능\'을통해인류가이제까지풀지못했던문제를해결할수있다고주장한다.이지능은\'지능\'그자체라기보다\'지능\'
+  그자체를구성하는\'지능\'그자체라고할수있다.이지능은\'지능\'그자체라기보다\'지능\'그자체를구성하는\'지능\'그자체라고'
+'''
+
+# (4) use beam search to generate the result
+# we do not print the result, because beam search stops generation immediately
+```
 
 ****
 
