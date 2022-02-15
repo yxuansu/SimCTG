@@ -15,6 +15,7 @@ This repository contains code, models, and other related resources of our paper 
     * <a href='#example_usage_different_language_model'>6.2. Use **Off-the-shelf** Language Models from Different Languages</a>
         * <a href='#example_usage_chinese_gpt'>6.2.1. Chinese Language Model</a>
         * <a href='#example_usage_japanese_gpt'>6.2.2. Japanese Language Model</a>
+        * <a href='#example_usage_korean_gpt'>6.2.3. Korean Language Model</a>
 * <a href='#wikitext103_tutorial'>7. Document Generation</a>
 * <a href='#dialogue_tutorial'>8. Open-domain Dialogue Generation</a>
 * <a href='#pretraining'>9. Large-Scale Pre-training with SimCTG</a>
@@ -273,6 +274,13 @@ print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len,
 ```
 
 **[Note]** Sadly, I do not speak Japanese (I wish I do!), so I can only judge the quality of the generated text using [Google translate](https://translate.google.com/). It would be great if anyone could tell me whether the generated text is good or not. Thank you in advance!
+
+****
+
+<span id='example_usage_korean_gpt'/>
+
+###### 6.2.3. Korean Language Model:
+
 
 ****
 
