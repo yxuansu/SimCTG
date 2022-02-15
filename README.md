@@ -301,7 +301,7 @@ input_ids = torch.LongTensor(input_ids).view(1,-1)
 
 # (1) use contrastive search to generate the result
 beam_width, alpha, decoding_len = 5, 0.6, 64 
-# because this model is pretty large, so we set generation length (decoding_len) as 64
+# because this model is pretty large, so we set the generation length (decoding_len) as 64
 eos_token = model.tokenizer.eos_token
 print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
 '''
