@@ -99,7 +99,7 @@ The generated file is a list of dictionary, where the data format of each dictio
 <span id='generate_results'/>
 
 #### 4. Generate Result with Different Decoding Methods:
-Here, we use the prefix in Table 4 of the [paper]() to illustrate how to use different decoding methods to generate the result. 
+Here, we use the prefix in Table 4 of the [paper](https://arxiv.org/abs/2202.06417) to illustrate how to use different decoding methods to generate the result. 
 ```python
 import torch
 from simctg import SimCTG
