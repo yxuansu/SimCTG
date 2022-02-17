@@ -34,7 +34,7 @@ Text generation is of great importance to many natural language processing appli
 <span id='news'/>
 
 #### 2. News:
-[2022/02/14] SimCTG is publicly released!
+[2022/02/15] SimCTG is publicly released!
 
 
 ****
