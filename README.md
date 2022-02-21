@@ -45,17 +45,13 @@ Text generation is of great importance to many natural language processing appli
 If you find our paper and resources useful, please kindly leave a star and cite our paper. Thanks!
 
 ```bibtex
-@article{SuSimCTG2022,
-  author    = {Yixuan Su and
-               Tian Lan and
-               Yan Wang and
-               Dani Yogatama and
-               Lingpeng Kong and
-               Nigel Collier},
-  title     = {A Contrastive Framework for Neural Text Generation},
-  journal   = {CoRR},
-  year      = {2022},
-  eprinttype = {arXiv}
+@article{su2022contrastive,
+      title={A Contrastive Framework for Neural Text Generation}, 
+      author={Yixuan Su and Tian Lan and Yan Wang and Dani Yogatama and Lingpeng Kong and Nigel Collier},
+      year={2022},
+      eprint={2202.06417},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
 ```
 
