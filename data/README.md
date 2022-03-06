@@ -16,7 +16,7 @@ chmod +x ./download_wikipedia.sh
 ./download_wikipedia.sh
 ```
 
-### 4. Download the write-prompt dataset:
+### 4. Download the WritingPrompts dataset:
 ```yaml
 chmod +x ./download_writeprompt.sh
 ./download_writeprompt.sh
