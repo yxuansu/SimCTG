@@ -1,4 +1,4 @@
-## Open-Ended Story Generation on WritePrompt benchmark.
+## Open-Ended Story Generation on WritingPrompts benchmark.
 This benchmark is designed for the task of open-ended story generation and it is created by [Fan et al. (2018)](https://arxiv.org/abs/1805.04833).
 
 
@@ -6,8 +6,7 @@ This benchmark is designed for the task of open-ended story generation and it is
 ### Catalogue:
 * <a href='#data_preparation'>1. Data Preparation</a>
 * <a href='#train_simctg'>2. Train SimCTG</a>
-* <a href='#inference'>3. Inference with SimCTG</a>
-* <a href='#generate_results'>4. Generate Result with Different Decoding Methods</a>
+* <a href='#generate_results'>3. Generate Result</a>
     * <a href='#contrastive_search'>4.1. Contrastive Search</a>
     * <a href='#diverse_contrastive_search'>4.2. Diverse Contrastive Search</a>
     * <a href='#nucleus_sampling'>4.3. Nucleus Sampling</a>
@@ -20,7 +19,7 @@ This benchmark is designed for the task of open-ended story generation and it is
 <span id='data_preparation'/>
 
 #### 1. Data Preparation:
-To download the data, please follow the instructions [[here]](https://github.com/yxuansu/SimCTG/tree/main/data).
+To download the WritePrompt data, please follow the instructions [[here]](https://github.com/yxuansu/SimCTG/tree/main/data).
 
 > **** The dataset contains the following three files:
 
@@ -30,14 +29,14 @@ To download the data, please follow the instructions [[here]](https://github.com
         ├── writeprompt_dev.txt     # Validation Set
         └── writeprompt_test.txt    # Test Set
 
-**Data Format**: In the files, each line represents a full document.
+**Data Format**: In the files, each line is formatted as prompt + '\t' + story.
 
 ****
 
 <span id='train_simctg'/>
 
 #### 2. Train SimCTG:
-To train a SimCTG model on Wikitext-103, please run the following commands:
+To train a SimCTG model on WritePrompt, please run the following commands:
 ```yaml
 chmod +x ./train.sh
 ./train.sh
@@ -46,7 +45,6 @@ The arguments are as follows:
 * `--model_name`: The name of huggingface pre-trained gpt model (e.g. gpt2, gpt-large).
 * `--train_path`: The file path of training set.
 * `--dev_path`: The file path of validation set.
-* `--test_path`: The file path of test set.
 * `--margin`: The contrastive margin $\rho$.
 * `--max_len`: The maximum length of training samples.
 * `--number_of_gpu`: The number of available GPUs.
@@ -59,59 +57,51 @@ The arguments are as follows:
 * `--learning_rate`: The learning rate.
 * `--save_path_prefix`: Where to save the checkpoints.
 
-
-****
-
-<span id='inference'/>
-
-#### 3. Inference with SimCTG
-Here we show how to use SimCTG to perform inference with prefixes from validation and test sets.
-```yaml
-chmod +x ./inference.sh
-./inference.sh
-```
-The arguments are as follows:
-* `--ckpt_path`: The path of trained checkpoint. You can either use our released checkpoint (`cambridgeltl/simctg_wikitext103`) or your own trained model that can be found in the `--save_path_prefix` directory as defined in train.sh.
-* `--dev_path`: The file path of validation set.
-* `--test_path`: The file path of test set.
-* `--prefix_len`: The length of prefix.
-* `--decoding_len`: The length of generated text continuation.
-* `--k`: The k in contrastive search.
-* `--alpha`: The \alpha in contrastive search.
-* `--save_path`: Where to save the generated result.
-
-The generated file is a list of dictionary, where the data format of each dictionary is:
-
-```yaml
-{  
-   "prefix_text": The human-written prefix.
-   "reference_text": The reference document (prefix + reference text continuation).
-   "reference_continuation_text": The reference text continuation.   
-   "generated_result": {
-       "0": {
-           "full_text": The prefix + generated continuation.
-           "continuation": The generated continuation.
-            }
-       }
-}
-```
-
-**[Note]** We provide our generated file in ./simctg_contrasive.json.
-
 ****
 <span id='generate_results'/>
 
-#### 4. Generate Result with Different Decoding Methods:
-Here, we use the prefix in Table 4 of our [paper](https://arxiv.org/abs/2202.06417) to illustrate how to use different decoding methods to generate the result. 
+#### 3. Generate Result:
+```python
+# define function that loads test prompts
+def load_prompt(in_f):
+    prompt_list = []
+    with open(in_f, 'r', encoding = 'utf8') as i:
+        lines = i.readlines()
+        for l in lines:
+            item_list = l.strip('\n').split('\t')
+            prompt = item_list[0].strip()
+            prompt_list.append(prompt)
+    return prompt_list
+
+# load test set prompts
+in_f = r'../data/WritePrompt/writeprompt_test.txt'
+prompt_list = load_prompt(in_f)
+```
+
 ```python
 import torch
+import sys
 from simctg import SimCTG
-from transformers import AutoTokenizer
-# load model and tokenizer
-model_path = r'cambridgeltl/simctg_wikitext103'
-tokenizer = AutoTokenizer.from_pretrained(model_path)
-model = SimCTG(model_path, tokenizer.pad_token_id)
+# load model
+model_path = r'cambridgeltl/simctg_writingprompts'
+pad_token = '<_PAD_>'
+model = SimCTG(model_path, pad_token)
 model.eval()
+
+# ---------- example 1 ---------- #
+index = 3
+prompt = prompt_list[index] + ' ' + model.tokenizer.eos_token
+print ('prompt is:')
+print (prompt)
+tokens = model.tokenizer.tokenize(prompt)
+input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+'''
+prompt is:
+[ WP ] A kid doodling in a math class accidentally creates the world 's first functional magic circle in centuries . <|endoftext|>
+'''
+
+
 
 # prepare prefix input
 text = r"Butt criticized Donald 's controls in certain situations in the game , as well as the difficulty of some levels and puzzles . Buchanan also criticized the controls , calling"
