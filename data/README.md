@@ -15,3 +15,9 @@ chmod +x ./download_LCCC_dataset.sh
 chmod +x ./download_wikipedia.sh
 ./download_wikipedia.sh
 ```
+
+### 3. Download the write-prompt dataset:
+```yaml
+chmod +x ./download_writeprompt.sh
+./download_writeprompt.sh
+```
