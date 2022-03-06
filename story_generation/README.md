@@ -119,36 +119,35 @@ The arguments are as follows:
 * `--decoding_len`: Number of tokens to generate.
 
 
-<span id='contrastive_search'/>
-
-##### 4.1. Contrastive Search:
 ```python
-# use contrastive search to generate the result
-beam_width, alpha, decoding_len = 8, 0.6, 128
+# ---------- example 2 ---------- #
+index = 32
+prompt = prompt_list[index] + ' ' + model.tokenizer.eos_token
+print ('prompt is:')
+print (prompt)
+tokens = model.tokenizer.tokenize(prompt)
+input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+'''
+    prompt is:
+    [ WP ] On the day of their death , every human gets to have a vision of meeting the man
+    they could have become . <|endoftext|>
+'''
+
+beam_width, alpha, decoding_len = 5, 0.6, 200
 output = model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len)
-#output = model.slow_contrastive_search(input_ids, beam_width, alpha, decoding_len)
-print("Output:\n" + 100 * '-')
-print(tokenizer.decode(output))
-
+generated_story = model.tokenizer.decode(output).split(model.tokenizer.eos_token)[1].strip()
+print ('generated story is:')
+print (generated_story)
 '''
-   Butt criticized Donald's controls in certain situations in the game, as well as 
-   the difficulty of some levels and puzzles. Buchanan also criticized the controls, 
-   calling them " unimpressive " and a " nightmare " of an experience to play with 
-   players unfamiliar with Tetris. On the other hand, his opinion was shared by other 
-   reviewers, and some were critical of the game's technical design for the Wii version 
-   of Tetris. In addition, Tintin's review included a quote from Roger Ebert, who said 
-   that Tetris was better than the original game due to its simplicity and ease of play. 
-   Ebert's comments were included in the game's DVD commentary, released on March 22, 2010. 
-   It is unclear if any of the video commentary was taken from the DVD
+    It wasn't long after the event that I realized it was a dream. My vision was a blur, like
+    I was floating in a sea of white clouds that were not my own at all. I looked around me,
+    but nothing was there. There was no light, no sound, just silence. Then, as if on cue, the
+    clouds parted and I was standing on a white marble floor. A man in a lab coat, glasses, and
+    a pair of black sunglasses stared at me with a blank expression. `` What are you doing here? ''
+    I asked, trying to find the words that had made me think of this man. He didn't answer, instead
+    focusing on his work in the lab. `` You're going to die in an instant, '' he said in a monotone
+    voice. `` But I'm not going to die. '' I was confused for a moment, but then I heard a voice
+    from the other side of the room. `` Do n
 '''
-
 ```
-The arguments are as follows:
-* `--input_ids`: The ids of the prefix sequence.
-* `--beam_width`: k in the contrastive search, which is typically set within the range of [3,10].
-* `--alpha`: alpha in the contrastive search, which is typically set within the range of [0.5,0.8].
-* `--decoding_len`: Number of tokens to generate.
-
-
-
-
