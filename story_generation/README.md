@@ -97,8 +97,9 @@ tokens = model.tokenizer.tokenize(prompt)
 input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
 input_ids = torch.LongTensor(input_ids).view(1,-1)
 '''
-prompt is:
-[ WP ] A kid doodling in a math class accidentally creates the world 's first functional magic circle in centuries . <|endoftext|>
+   prompt is:
+   [ WP ] A kid doodling in a math class accidentally creates the world 's first
+   functional magic circle in centuries . <|endoftext|>
 '''
 
 
