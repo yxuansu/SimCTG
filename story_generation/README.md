@@ -90,9 +90,9 @@ tokens = model.tokenizer.tokenize(prompt)
 input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
 input_ids = torch.LongTensor(input_ids).view(1,-1)
 '''
-   prompt is:
-   [ WP ] A kid doodling in a math class accidentally creates the world 's first
-   functional magic circle in centuries . <|endoftext|>
+    prompt is:
+    [ WP ] A kid doodling in a math class accidentally creates the world 's first
+    functional magic circle in centuries . <|endoftext|>
 '''
 
 beam_width, alpha, decoding_len = 5, 0.6, 200
@@ -101,15 +101,16 @@ generated_story = model.tokenizer.decode(output).split(model.tokenizer.eos_token
 print ('generated story is:')
 print (generated_story)
 '''
-   I looked at the circle, it wasn't there. I couldn't see it, and my eyes were watering 
-   from the rain that had fallen over the school, the wind howling through the windows 
-   and making a wispy noise as it passed through the air. `` What is it? '' I asked, trying 
-   to find the source of the noise. `` It's a circle, '' the teacher said in a voice that 
-   sounded like it was from an old TV show or something like that. `` You can't make it out
-   of there. '' I looked around the room, there was no one there. It was as if I was in a 
-   dream, but no one seemed to notice me. Then I saw a flash of light, and the circle appeared
-   in front of me. I turned around to see what was going on, I had never seen anything like
-   it before in my life. I ran up to the teacher and asked, `` Are you sure this is real?
+    generated story is:
+    I looked at the circle, it wasn't there. I couldn't see it, and my eyes were watering 
+    from the rain that had fallen over the school, the wind howling through the windows 
+    and making a wispy noise as it passed through the air. `` What is it? '' I asked, trying 
+    to find the source of the noise. `` It's a circle, '' the teacher said in a voice that 
+    sounded like it was from an old TV show or something like that. `` You can't make it out
+    of there. '' I looked around the room, there was no one there. It was as if I was in a 
+    dream, but no one seemed to notice me. Then I saw a flash of light, and the circle appeared
+    in front of me. I turned around to see what was going on, I had never seen anything like
+    it before in my life. I ran up to the teacher and asked, `` Are you sure this is real?
 '''
 ```
 The arguments are as follows:
@@ -140,6 +141,7 @@ generated_story = model.tokenizer.decode(output).split(model.tokenizer.eos_token
 print ('generated story is:')
 print (generated_story)
 '''
+    generated story is:
     It wasn't long after the event that I realized it was a dream. My vision was a blur, like
     I was floating in a sea of white clouds that were not my own at all. I looked around me,
     but nothing was there. There was no light, no sound, just silence. Then, as if on cue, the
