@@ -402,7 +402,7 @@ In addition to fine-tuning on downstream tasks (e.g. document generation and ope
 <span id='story_generation'/>
 
 #### 10. Open-Ended Story Generation
-We also show how to adapt our approach to open-ended story generation task. The details are provided [here](https://github.com/yxuansu/SimCTG/tree/main/story_generation)
+We also show how to adapt our approach to open-ended story generation task. The details are provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/story_generation)
 
 ****
 
