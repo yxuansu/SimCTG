@@ -1,5 +1,5 @@
 ## Open-Ended Story Generation on WritingPrompts benchmark.
-This benchmark is designed for the task of open-ended story generation and it is created by [Fan et al. (2018)](https://arxiv.org/abs/1805.04833).
+This benchmark is designed for the task of open-ended story generation and the benchmark is proposed by [Fan et al. (2018)](https://arxiv.org/abs/1805.04833).
 
 **[Note]** In this directory, we only show how to adapt our approach to open-ended story generation based on specific prompt. The performance of the model is not rigoriously tested with human evaluation. But we hope it can help people who are interested in this task.
 
