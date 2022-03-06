@@ -12,7 +12,7 @@ This benchmark is designed for the task of open-ended story generation and it is
 <span id='data_preparation'/>
 
 #### 1. Data Preparation:
-To download the WritePrompt data, please follow the instructions [[here]](https://github.com/yxuansu/SimCTG/tree/main/data).
+To download the WritingPrompts data, please follow the instructions [[here]](https://github.com/yxuansu/SimCTG/tree/main/data).
 
 > **** The dataset contains the following three files:
 
