@@ -34,6 +34,7 @@ Text generation is of great importance to many natural language processing appli
 <span id='news'/>
 
 #### 2. News:
+[2022/03/06] Example of how to adapt our approach to open-ended story generation is provided.
 [2022/02/15] SimCTG is publicly released!
 
 
@@ -402,7 +403,7 @@ In addition to fine-tuning on downstream tasks (e.g. document generation and ope
 <span id='story_generation'/>
 
 #### 10. Open-Ended Story Generation
-We also show how to adapt our approach to open-ended story generation task. The details are provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/story_generation)
+We also show how to adapt our approach to open-ended story generation task. The details are provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/story_generation).
 
 ****
 
