@@ -1,0 +1,15 @@
+CUDA_VISIBLE_DEVICES=0,1 python train.py\
+    --model_name gpt2\
+    --train_path ../data/WritePrompt/writeprompt_train.txt\
+    --dev_path ../data/WritePrompt/writeprompt_test.txt\
+    --max_len 256\
+    --number_of_gpu 2\
+    --batch_size_per_gpu 8\
+    --gradient_accumulation_steps 16\
+    --effective_batch_size 256\
+    --total_steps 40000\
+    --print_every 200\
+    --save_every 1000\
+    --learning_rate 2e-5\
+    --margin 0.5\
+    --save_path_prefix ./simctg_writeprompt/
