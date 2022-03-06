@@ -19,8 +19,8 @@ This repository contains code, models, and other related resources of our paper 
 * <a href='#wikitext103_tutorial'>7. Document Generation</a>
 * <a href='#dialogue_tutorial'>8. Open-domain Dialogue Generation</a>
 * <a href='#pretraining'>9. Large-Scale Pre-training with SimCTG</a>
-* <a href='#contact'>10. Contact</a>
-
+* <a href='#story_generation'>10. Open-Ended Story Generation</a>
+* <a href='#contact'>11. Contact</a>
 
 
 ****
@@ -399,7 +399,14 @@ In addition to fine-tuning on downstream tasks (e.g. document generation and ope
 
 ****
 
+<span id='story_generation'/>
+
+#### 10. Open-Ended Story Generation
+We also show how to adapt our approach to open-ended story generation task. The details are provided [here](https://github.com/yxuansu/SimCTG/tree/main/story_generation)
+
+****
+
 <span id='contact'/>
 
-#### 10. Contact
+#### 11. Contact
 If you have any questions, feel free to contact me via (ys484 at cam.ac.uk).
