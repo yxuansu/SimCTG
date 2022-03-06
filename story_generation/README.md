@@ -1,4 +1,4 @@
-## This repo describes the experimental details on WritePrompt benchmark.
+## Open-ended Story Generation on WritePrompt benchmark.
 This benchmark is designed for the task of open-ended story generation and it is created by [Fan et al. (2018)](https://arxiv.org/abs/1805.04833).
 
 
