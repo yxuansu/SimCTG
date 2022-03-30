@@ -21,6 +21,7 @@ This repository contains code, models, and other related resources of our paper 
 * <a href='#pretraining'>9. Large-Scale Pre-training with SimCTG</a>
 * <a href='#story_generation'>10. Open-Ended Story Generation</a>
 * <a href='#contact'>11. Contact</a>
+* <a href='#simctg_elsewhere'>12. SimCTG Elsewhere</a>
 
 
 ****
