@@ -411,3 +411,15 @@ We also show how to adapt our approach to open-ended story generation task. The 
 
 #### 11. Contact
 If you have any questions, feel free to contact me via (ys484 at cam.ac.uk).
+
+****
+
+<span id='simctg_elsewhere'/>
+
+#### 12. SimCTG Elsewhere
+
+We thank the community's effort for extending SimCTG!
+
+- [Zenn](https://zenn.dev/) has provided [a tutorial and implemented of contrastive search based on T5 model](https://zenn.dev/kwashizzz/articles/ml-simctg-contrastive-framework). 
+
+
