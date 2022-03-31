@@ -421,6 +421,6 @@ If you have any questions, feel free to contact me via (ys484 at cam.ac.uk).
 
 We thank the community's effort for extending SimCTG!
 
-- [Zenn](https://zenn.dev/) has provided [a tutorial and implemented of contrastive search based on T5](https://zenn.dev/kwashizzz/articles/ml-simctg-contrastive-framework). 
+- [Zenn](https://zenn.dev/) has provided [a tutorial and implementation of contrastive search based on T5](https://zenn.dev/kwashizzz/articles/ml-simctg-contrastive-framework). 
 
 
