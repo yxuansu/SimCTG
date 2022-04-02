@@ -159,3 +159,11 @@ print (generated_story)
     from the other side of the room. `` Do n
 '''
 ```
+
+****
+
+<span id='rocstories'/>
+
+### 1. Open-Ended Story Generation on ROCStories Benchmark:
+This benchmark is proposed by [Mostafazadeh et al. (2018)](https://aclanthology.org/N16-1098/).
+
