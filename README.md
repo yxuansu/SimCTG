@@ -79,6 +79,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 |cambridgeltl/simctg_lccc_dialogue|Open-domain Dialogue Generation|Chinese|LCCC (708MB)|117M|[[link]](https://huggingface.co/cambridgeltl/simctg_lccc_dialogue/)|
 |cambridgeltl/simctg_english_wikipedia|General Domain Pre-training|English|Wikipedia (14.11GB)|117M|[[link]](https://huggingface.co/cambridgeltl/simctg_english_wikipedia/)|
 |cambridgeltl/simctg_writingprompts|Open-Ended Story Generation|English|WritingPrompts (865MB)|117M|[[link]](https://huggingface.co/cambridgeltl/simctg_writingprompts/)|
+|cambridgeltl/simctg_rocstories|Open-Ended Story Generation|English|ROCStories (23MB)|117M|[[link]](https://huggingface.co/cambridgeltl/simctg_rocstories/)|
 
 
 ****
