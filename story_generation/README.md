@@ -9,7 +9,10 @@
     * <a href='#train_simctg'>1.2 Train SimCTG</a>
     * <a href='#generate_results'>1.3 Generate Result</a>
 * <a href='#rocstories'>2. Open-Ended Story Generation on ROCStories Benchmark</a>
-
+    * <a href='#roc_data_preparation'>2.1 Data Preparation</a>
+    * <a href='#roc_train_simctg'>2.2 Train SimCTG</a>
+    * <a href='#roc_generate_results'>2.3 Generate Result</a>
+    
 ****
 
 <span id='writingprompts'/>
@@ -167,4 +170,18 @@ print (generated_story)
 
 ### 2. Open-Ended Story Generation on ROCStories Benchmark:
 This benchmark is proposed by [Mostafazadeh et al. (2018)](https://aclanthology.org/N16-1098/).
+
+<span id='roc_data_preparation'/>
+
+#### 2.1 Data Preparation:
+To download the ROCStories data, please follow the instructions [[here]](https://github.com/yxuansu/SimCTG/tree/main/data).
+
+> **** The dataset contains the following files:
+
+    .
+    ├── ROCStories             
+        ├── rocstories_train.txt   # Training Set
+        └── rocstories_test.txt    # Test Set
+
+**Data Format**: In the files, each line is formatted as prompt + '\t' + story.
 
