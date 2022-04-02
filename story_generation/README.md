@@ -8,6 +8,7 @@
     * <a href='#data_preparation'>1.1 Data Preparation</a>
     * <a href='#train_simctg'>1.2 Train SimCTG</a>
     * <a href='#generate_results'>1.3 Generate Result</a>
+* <a href='#rocstories'>2. Open-Ended Story Generation on ROCStories Benchmark</a>
 
 ****
 
@@ -164,6 +165,6 @@ print (generated_story)
 
 <span id='rocstories'/>
 
-### 1. Open-Ended Story Generation on ROCStories Benchmark:
+### 2. Open-Ended Story Generation on ROCStories Benchmark:
 This benchmark is proposed by [Mostafazadeh et al. (2018)](https://aclanthology.org/N16-1098/).
 
