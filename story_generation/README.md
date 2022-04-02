@@ -185,3 +185,13 @@ To download the ROCStories data, please follow the instructions [[here]](https:/
 
 **Data Format**: In the files, each line is formatted as prompt + '\t' + story.
 
+<span id='roc_train_simctg'/>
+
+#### 2.2 Train SimCTG:
+To train a SimCTG model on ROCStories, please run the following commands:
+```yaml
+chmod +x ./train_rocstories.sh
+./train_rocstories.sh
+```
+The arguments have been described in section 1.2.
+
