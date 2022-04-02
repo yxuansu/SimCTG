@@ -195,3 +195,32 @@ chmod +x ./train_rocstories.sh
 ```
 The arguments have been described in section 1.2.
 
+<span id='roc_generate_results'/>
+
+#### 2.3 Generate Result:
+
+```python
+import torch
+import sys
+from simctg import SimCTG
+# load model
+model_path = r'cambridgeltl/simctg_rocstories'
+pad_token = '<_PAD_>'
+model = SimCTG(model_path, pad_token)
+model.eval()
+
+prompt = r"Larry's car smokes <|endoftext|>"
+tokens = model.tokenizer.tokenize(prompt)
+input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+beam_width, alpha, decoding_len = 5, 0.6, 64
+output = model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len)
+generated_story = model.tokenizer.decode(output).split(model.tokenizer.eos_token)[1].strip()
+print ('generated story is:')
+print (generated_story)
+'''
+    generated story is:
+    Larry was driving down the road. He saw a car on the side of the road. Larry looked for the source of the smoke. It was his car. Larry pulled over and put out the fire. Larry was able to get his car fixed in a few hours. Larry decided to never drive down the road again.
+'''
+```
