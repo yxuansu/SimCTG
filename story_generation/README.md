@@ -221,6 +221,8 @@ print ('generated story is:')
 print (generated_story)
 '''
     generated story is:
-    Larry was driving down the road. He saw a car on the side of the road. Larry looked for the source of the smoke. It was his car. Larry pulled over and put out the fire. Larry was able to get his car fixed in a few hours. Larry decided to never drive down the road again.
+    Larry was driving down the road. He saw a car on the side of the road. Larry looked for the source
+    of the smoke. It was his car. Larry pulled over and put out the fire. Larry was able to get his car
+    fixed in a few hours. Larry decided to never drive down the road again.
 '''
 ```
