@@ -4,7 +4,7 @@
 
 ****
 ### Catalogue:
-* <a href='#writingprompts'>1. Prepare Image Index</a>
+* <a href='#writingprompts'>1. Open-Ended Story Generation on WritingPrompts Benchmark</a>
     * <a href='#data_preparation'>1.1 Data Preparation</a>
     * <a href='#train_simctg'>1.2 Train SimCTG</a>
     * <a href='#generate_results'>1.3 Generate Result</a>
@@ -13,8 +13,8 @@
 
 <span id='writingprompts'/>
 
-### 1. Open-Ended Story Generation on WritingPrompts benchmark.
-This benchmark is designed for the task of open-ended story generation and the benchmark is proposed by [Fan et al. (2018)](https://arxiv.org/abs/1805.04833).
+### 1. Open-Ended Story Generation on WritingPrompts Benchmark:
+This benchmark is proposed by [Fan et al. (2018)](https://arxiv.org/abs/1805.04833).
 
 <span id='data_preparation'/>
 
