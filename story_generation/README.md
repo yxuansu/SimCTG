@@ -1,19 +1,24 @@
-## Open-Ended Story Generation on WritingPrompts benchmark.
-This benchmark is designed for the task of open-ended story generation and the benchmark is proposed by [Fan et al. (2018)](https://arxiv.org/abs/1805.04833).
+## Open-Ended Story Generation
 
 **[Note]** In this directory, we only show how to adapt our approach to open-ended story generation. The performance of the model is not rigoriously tested with human evaluation. But we hope it can help people who are interested in this task.
 
-
 ****
 ### Catalogue:
-* <a href='#data_preparation'>1. Data Preparation</a>
-* <a href='#train_simctg'>2. Train SimCTG</a>
-* <a href='#generate_results'>3. Generate Result</a>
+* <a href='#writingprompts'>1. Prepare Image Index</a>
+    * <a href='#data_preparation'>1.1 Data Preparation</a>
+    * <a href='#train_simctg'>1.2 Train SimCTG</a>
+    * <a href='#generate_results'>1.3 Generate Result</a>
 
 ****
+
+<span id='writingprompts'/>
+
+### 1. Open-Ended Story Generation on WritingPrompts benchmark.
+This benchmark is designed for the task of open-ended story generation and the benchmark is proposed by [Fan et al. (2018)](https://arxiv.org/abs/1805.04833).
+
 <span id='data_preparation'/>
 
-#### 1. Data Preparation:
+#### 1.1 Data Preparation:
 To download the WritingPrompts data, please follow the instructions [[here]](https://github.com/yxuansu/SimCTG/tree/main/data).
 
 > **** The dataset contains the following three files:
@@ -26,11 +31,10 @@ To download the WritingPrompts data, please follow the instructions [[here]](htt
 
 **Data Format**: In the files, each line is formatted as prompt + '\t' + story.
 
-****
 
 <span id='train_simctg'/>
 
-#### 2. Train SimCTG:
+#### 1.2 Train SimCTG:
 To train a SimCTG model on WritePrompt, please run the following commands:
 ```yaml
 chmod +x ./train.sh
@@ -52,10 +56,10 @@ The arguments are as follows:
 * `--learning_rate`: The learning rate.
 * `--save_path_prefix`: Where to save the checkpoints.
 
-****
+
 <span id='generate_results'/>
 
-#### 3. Generate Result:
+#### 1.3 Generate Result:
 ```python
 # define function that loads test prompts
 def load_prompt(in_f):
