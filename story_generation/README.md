@@ -209,7 +209,7 @@ pad_token = '<_PAD_>'
 model = SimCTG(model_path, pad_token)
 model.eval()
 
-prompt = r"Larry's car smokes <|endoftext|>"
+prompt = r"Accident in the Lab <|endoftext|>"
 tokens = model.tokenizer.tokenize(prompt)
 input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
 input_ids = torch.LongTensor(input_ids).view(1,-1)
@@ -221,8 +221,7 @@ print ('generated story is:')
 print (generated_story)
 '''
     generated story is:
-    Larry was driving down the road. He saw a car on the side of the road. Larry looked for the source
-    of the smoke. It was his car. Larry pulled over and put out the fire. Larry was able to get his car
-    fixed in a few hours. Larry decided to never drive down the road again.
+    Tom went to work one day. He noticed a lab accident in the lab. Tom was worried about his safety at 
+    work. Unfortunately the accident didn't go well. Tom wound up leaving early to get back on the job.
 '''
 ```
