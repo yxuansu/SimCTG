@@ -214,7 +214,7 @@ tokens = model.tokenizer.tokenize(prompt)
 input_ids = model.tokenizer.convert_tokens_to_ids(tokens)
 input_ids = torch.LongTensor(input_ids).view(1,-1)
 
-beam_width, alpha, decoding_len = 5, 0.6, 64
+beam_width, alpha, decoding_len = 5, 0.65, 64
 output = model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len)
 generated_story = model.tokenizer.decode(output).split(model.tokenizer.eos_token)[1].strip()
 print ('generated story is:')
