@@ -169,7 +169,7 @@ print (generated_story)
 <span id='rocstories'/>
 
 ### 2. Open-Ended Story Generation on ROCStories Benchmark:
-This benchmark is proposed by [Mostafazadeh et al. (2018)](https://aclanthology.org/N16-1098/).
+This benchmark is proposed by [Mostafazadeh et al. (2016)](https://aclanthology.org/N16-1098/).
 
 <span id='roc_data_preparation'/>
 
