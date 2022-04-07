@@ -35,7 +35,7 @@ Text generation is of great importance to many natural language processing appli
 <span id='news'/>
 
 #### 2. News:
-* [2022/04/07] SimCTG has been publicly deployed in the **sentence completion** module of [[腾讯智能创作助手 (Tencent Effidit)]](https://effidit.qq.com/). Check it out and have fun!
+* [2022/04/07] SimCTG has been publicly deployed in the **sentence completion** module of [Tencent's Effidit platform (腾讯智能创作助手)](https://effidit.qq.com/). Check it out and have fun!
 * [2022/04/02] Add support on another benchmark (ROCStories) for the task of open-ended story generation.
 * [2022/03/06] Example of how to adapt our approach to open-ended story generation is released.
 * [2022/02/15] SimCTG is publicly released!
