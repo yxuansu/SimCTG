@@ -117,3 +117,14 @@ with torch.no_grad():
     be married to four men, and</s>
     '''
 ```
+
+****
+
+<span id='t5'/>
+
+### 2. T5:
+
+More details on how to apply contrastive search on T5 will be released soon.
+
+
+
