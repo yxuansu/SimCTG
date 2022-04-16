@@ -52,7 +52,7 @@ If convicted, Barrientos faces up to four years in prison.  Her next court appea
 with torch.no_grad():
     beam_width, alpha, decoding_len = 5, 0.5, 64
     ids = torch.LongTensor(tokenizer.encode(ARTICLE, add_special_tokens=False)).unsqueeze(0)
-    dids = torch.LongTensor([tokenizer.eos_token_id, bokenizer.eos_token_id]).unsqueeze(0)
+    dids = torch.LongTensor([tokenizer.eos_token_id, tokenizer.bos_token_id]).unsqueeze(0)
     if torch.cuda.is_available():
         ids, dids = ids.cuda(), dids.cuda()
     # response = model.slow_contrastive_search(ids, dids, beam_width, alpha, decoding_len)
