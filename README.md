@@ -20,8 +20,9 @@ This repository contains code, models, and other related resources of our paper 
 * <a href='#dialogue_tutorial'>8. Open-domain Dialogue Generation</a>
 * <a href='#pretraining'>9. Large-Scale Pre-training with SimCTG</a>
 * <a href='#story_generation'>10. Open-Ended Story Generation</a>
-* <a href='#contact'>11. Contact</a>
-* <a href='#simctg_elsewhere'>12. SimCTG Elsewhere</a>
+* <a href='#contrastive_for_encoder_decoder'>11. Contrastive Search on Encoder-Decoder Models</a>
+* <a href='#contact'>12. Contact</a>
+* <a href='#simctg_elsewhere'>13. SimCTG Elsewhere</a>
 
 
 ****
@@ -409,18 +410,27 @@ In addition to fine-tuning on downstream tasks (e.g. document generation and ope
 #### 10. Open-Ended Story Generation
 We also show how to adapt our approach to open-ended story generation task. The details are provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/story_generation).
 
+
+****
+
+<span id='contrastive_for_encoder_decoder'/>
+
+#### 11. Contrastive Search on Encoder-Decoder Models
+
+More details on how to apply contrastive search on encoder-decoder models (e.g. BART and T5) can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec).
+
 ****
 
 <span id='contact'/>
 
-#### 11. Contact
+#### 12. Contact
 If you have any questions, feel free to contact me via (ys484 at cam.ac.uk).
 
 ****
 
 <span id='simctg_elsewhere'/>
 
-#### 12. SimCTG Elsewhere
+#### 13. SimCTG Elsewhere
 
 We thank the community's effort for extending SimCTG!
 
