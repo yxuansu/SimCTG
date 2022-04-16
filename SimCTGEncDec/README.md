@@ -50,9 +50,9 @@ If convicted, Barrientos faces up to four years in prison.  Her next court appea
 """
 
 with torch.no_grad():
-    beam_width, alpha, decoding_len = 5, 0.4, 64
+    beam_width, alpha, decoding_len = 5, 0.5, 64
     ids = torch.LongTensor(tokenizer.encode(ARTICLE, add_special_tokens=False)).unsqueeze(0)
-    dids = torch.LongTensor([tokenizer.eos_token_id]).unsqueeze(0)
+    dids = torch.LongTensor([tokenizer.eos_token_id, bokenizer.eos_token_id]).unsqueeze(0)
     if torch.cuda.is_available():
         ids, dids = ids.cuda(), dids.cuda()
     # response = model.slow_contrastive_search(ids, dids, beam_width, alpha, decoding_len)
@@ -67,7 +67,8 @@ with torch.no_grad():
     print(tokenizer.decode(id_list))
     
     '''
-    Liana Barrientos, 39, pleaded not guilty to two counts of "offering a false instrument for filing in the first degree" In total, Barrientos has been married 10 times, with nine of her marriages occurring between 1999 and 2002.
+    Liana Barrientos, 39, pleaded not guilty to two counts of "offering a false instrument for filing in the first degree" 
+    In total, Barrientos has been married 10 times, with nine of her marriages occurring between 1999 and 2002.
     '''
 ```
 
