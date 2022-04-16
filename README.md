@@ -36,7 +36,7 @@ Text generation is of great importance to many natural language processing appli
 <span id='news'/>
 
 #### 2. News:
-* [2022/04/16] We update instructions on how to apply contrastive search on encoder-decoder models (e.g. BART and T5). More details can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec).
+* [2022/04/16] We have updated instructions on how to apply contrastive search on encoder-decoder models (e.g. BART and T5). More details can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec).
 * [2022/04/07] SimCTG has been publicly deployed in the **AI sentence completion** module of [Tencent's Effidit platform (腾讯智能创作助手)](https://effidit.qq.com/). Check it out and have fun!
 * [2022/04/02] Add support on another benchmark (ROCStories) for the task of open-ended story generation.
 * [2022/03/06] Example of how to adapt our approach to open-ended story generation is released.
