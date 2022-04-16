@@ -17,7 +17,7 @@ In this folder, we illustrate how to apply contrastive search on models (e.g. BA
 
 ### 1. BART:
 
-Here, we provide an example of how to apply contrastive search on BART model.
+Here, we provide an example of how to apply different search methods on BART model.
 
 ```python
 import torch
@@ -81,4 +81,19 @@ with torch.no_grad():
     '''
 ```
 
+<span id='bart_greedy_search'/>
+
+#### 1.2. Greedy Search:
+
+```python
+with torch.no_grad():
+    response = model.greedy_search(ids, decoding_len)
+    print(tokenizer.decode(response))
+    
+    '''
+    </s><s>Liana Barrientos has been married 10 times, with nine of her marriages occurring between 1999 and 2002. She is 
+    believed to still be married to four men, and at one time, she was married to eight men at once. In 2010, she stated 
+    it was her "first and only" marriage</s>
+    '''
+```
 
