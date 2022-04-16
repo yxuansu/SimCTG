@@ -54,7 +54,7 @@ If convicted, Barrientos faces up to four years in prison.  Her next court appea
 """
 ```
 
-<span id='bart'/>
+<span id='bart_contrastive_search'/>
 
 #### 1.1. Contrastive Search:
 
