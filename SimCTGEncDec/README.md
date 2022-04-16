@@ -5,7 +5,9 @@ In this folder, we illustrate how to apply contrastive search on models (e.g. BA
 ****
 ### Catalogue:
 * <a href='#bart'>1. BART</a>
-    
+    * <a href='#bart_contrastive_search'>1.1. Contrastive Search</a>
+    * <a href='#bart_greedy_search'>1.2. Greedy Search</a>
+    * <a href='#bart_beam_search'>1.3. Beam Search</a>
 * <a href='#t5'>2. T5</a>
 
 
@@ -31,6 +33,7 @@ if torch.cuda.is_available():
     model.cuda()
 model.eval()
 
+# prepare an example article
 ARTICLE = """ New York (CNN)When Liana Barrientos was 23 years old, she got married in Westchester County, New York.
 A year later, she got married again in Westchester County, but to a different man and without divorcing her first husband.
 Only 18 days after that marriage, she got hitched yet again. Then, Barrientos declared "I do" five more times, sometimes only within two weeks of each other.
@@ -49,7 +52,13 @@ Investigation Division. Seven of the men are from so-called "red-flagged" countr
 Her eighth husband, Rashid Rajput, was deported in 2006 to his native Pakistan after an investigation by the Joint Terrorism Task Force.
 If convicted, Barrientos faces up to four years in prison.  Her next court appearance is scheduled for May 18.
 """
+```
 
+<span id='bart'/>
+
+#### 1.1. Contrastive Search:
+
+```python
 with torch.no_grad():
     beam_width, alpha, decoding_len = 5, 0.5, 64
     ids = torch.LongTensor(tokenizer.encode(ARTICLE, add_special_tokens=False)).unsqueeze(0)
