@@ -81,6 +81,9 @@ with torch.no_grad():
     '''
 ```
 
+**[Note]** In this example, we only apply an **off-the-shelf** BART model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). We highly recommend the users to use SimCTG to train the BART model before applying contrastive search on it.
+
+
 <span id='bart_greedy_search'/>
 
 #### 1.2. Greedy Search:
