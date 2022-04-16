@@ -65,8 +65,7 @@ with torch.no_grad():
     dids = torch.LongTensor([tokenizer.eos_token_id, tokenizer.bos_token_id]).unsqueeze(0)
     if torch.cuda.is_available():
         ids, dids = ids.cuda(), dids.cuda()
-    # response = model.slow_contrastive_search(ids, dids, beam_width, alpha, decoding_len)
-
+        
     response = model.fast_contrastive_search(ids, dids, beam_width, alpha, decoding_len)
     id_list = []
     for idx in response:
