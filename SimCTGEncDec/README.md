@@ -100,3 +100,20 @@ with torch.no_grad():
     '''
 ```
 
+<span id='bart_beam_search'/>
+
+#### 1.3. Beam Search:
+
+
+```python
+with torch.no_grad():
+    beam = 5
+    response = model.beam_search(ids, beam, decoding_len)
+    print(tokenizer.decode(response))
+
+    '''
+    </s><s>Liana Barrientos, now 39, is facing two criminal counts of "offering a false instrument for filing in the first degree" 
+    In total, she has been married 10 times, with nine of her marriages occurring between 1999 and 2002. She is believed to still 
+    be married to four men, and</s>
+    '''
+```
