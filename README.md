@@ -417,7 +417,7 @@ We also show how to adapt our approach to open-ended story generation task. The 
 
 #### 11. Contrastive Search on Encoder-Decoder Models
 
-More details on how to apply contrastive search on encoder-decoder models (e.g. BART and T5) can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec).
+Details on how to apply contrastive search on encoder-decoder models (e.g. BART and T5) can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec).
 
 ****
 
