@@ -148,6 +148,9 @@ Importantly, we found that contrastive search can be directly applied to **off-t
 <span id='example_usage_chinese_gpt'/>
 
 ###### 6.2.1. Chinese Language Model:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sharing)
+
 ```python
 import torch
 import sys
