@@ -105,6 +105,7 @@ pip3 install -r requirements.txt
 
 ##### 6.1. Use SimCTG Pretrained on Wikipedia Corpus:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MhK3cVHW9HQ1ArXu0M_sS_Po0_4N1xgQ?usp=sharing)
+
 Here, we show how to use contrastive search to generate the result.
 ```python
 import torch
