@@ -11,7 +11,7 @@ This repository contains code, models, and other related resources of our paper 
 * <a href='#models'>4. Huggingface Models</a>
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
-    * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a>
+    * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MhK3cVHW9HQ1ArXu0M_sS_Po0_4N1xgQ?usp=sharing)
     * <a href='#example_usage_different_language_model'>6.2. Use **Off-the-shelf** Language Models from Different Languages</a>
         * <a href='#example_usage_chinese_gpt'>6.2.1. Chinese Language Model</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sharing)
         * <a href='#example_usage_japanese_gpt'>6.2.2. Japanese Language Model</a>
@@ -104,6 +104,7 @@ pip3 install -r requirements.txt
 <span id='example_usage_english_simctg'/>
 
 ##### 6.1. Use SimCTG Pretrained on Wikipedia Corpus:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MhK3cVHW9HQ1ArXu0M_sS_Po0_4N1xgQ?usp=sharing)
 Here, we show how to use contrastive search to generate the result.
 ```python
 import torch
