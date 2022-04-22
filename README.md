@@ -14,7 +14,7 @@ This repository contains code, models, and other related resources of our paper 
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MhK3cVHW9HQ1ArXu0M_sS_Po0_4N1xgQ?usp=sharing)
     * <a href='#example_usage_different_language_model'>6.2. Use **Off-the-shelf** Language Models from Different Languages</a>
         * <a href='#example_usage_chinese_gpt'>6.2.1. Chinese Language Model</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sharing)
-        * <a href='#example_usage_japanese_gpt'>6.2.2. Japanese Language Model</a>
+        * <a href='#example_usage_japanese_gpt'>6.2.2. Japanese Language Model</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1844kf-BttuPt1DaYhdgw-07-qz7V7pOd?usp=sharing)
         * <a href='#example_usage_korean_gpt'>6.2.3. Korean Language Model</a>
 * <a href='#wikitext103_tutorial'>7. Document Generation</a>
 * <a href='#dialogue_tutorial'>8. Open-domain Dialogue Generation</a>
@@ -260,6 +260,7 @@ More details on how to use different decoding methods to generate the result can
 <span id='example_usage_japanese_gpt'/>
 
 ###### 6.2.2. Japanese Language Model:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1844kf-BttuPt1DaYhdgw-07-qz7V7pOd?usp=sharing)
 
 ```python
 import torch
