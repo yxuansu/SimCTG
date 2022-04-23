@@ -99,6 +99,8 @@ The generated file is a list of dictionary, where the data format of each dictio
 <span id='generate_results'/>
 
 #### 4. Generate Result with Different Decoding Methods:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_zPZRlbJo5iw_Q7FUhP113udPnciUxVF?usp=sharing)
+
 Here, we use the prefix in Table 4 of our [paper](https://arxiv.org/abs/2202.06417) to illustrate how to use different decoding methods to generate the result. 
 ```python
 import torch
