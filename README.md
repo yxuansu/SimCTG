@@ -395,6 +395,8 @@ print (model.greedy_search(input_ids, decoding_len, eos_token))
 <span id='wikitext103_tutorial'/>
 
 #### 7. Document Generation:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_zPZRlbJo5iw_Q7FUhP113udPnciUxVF?usp=sharing)
+
 The detailed tutorial of experiment on document generation is provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
 
 ****
