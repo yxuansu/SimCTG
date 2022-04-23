@@ -17,12 +17,14 @@ This repository contains code, models, and other related resources of our paper 
         * <a href='#example_usage_japanese_gpt'>6.2.2. Japanese Language Model</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1844kf-BttuPt1DaYhdgw-07-qz7V7pOd?usp=sharing)
         * <a href='#example_usage_korean_gpt'>6.2.3. Korean Language Model</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1a8g1n86S-zmGe7Nb0PgVQnqWSAMfIR3D?usp=sharing)
 * <a href='#wikitext103_tutorial'>7. Document Generation</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_zPZRlbJo5iw_Q7FUhP113udPnciUxVF?usp=sharing)
-* <a href='#dialogue_tutorial'>8. Open-domain Dialogue Generation</a>
+* <a href='#dialogue_tutorial'>8. Open-domain Dialogue Generation</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
+https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sharing)
 * <a href='#pretraining'>9. Large-Scale Pre-training with SimCTG</a>
 * <a href='#story_generation'>10. Open-Ended Story Generation</a>
 * <a href='#contrastive_for_encoder_decoder'>11. Contrastive Search on Encoder-Decoder Models</a>
 * <a href='#contact'>12. Contact</a>
 * <a href='#simctg_elsewhere'>13. SimCTG Elsewhere</a>
+
 
 
 ****
@@ -404,6 +406,9 @@ The detailed tutorial of experiment on document generation is provided [[here]](
 <span id='dialogue_tutorial'/>
 
 #### 8. Open-domain Dialogue Generation:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
+https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sharing)
+
 The detailed tutorial of experiment on open-domain dialogue generation provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/dialogue_generation).
 
 ****
