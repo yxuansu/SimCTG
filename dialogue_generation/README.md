@@ -63,6 +63,10 @@ The arguments are as follows:
 
 #### 3. Generate Result with Different Decoding Methods:
 Here, we show how to use SimCTG to generate dialogue response with different decoding methods. More generated examples can be found in the Appendix D of our [paper](https://arxiv.org/abs/2202.06417).
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
+https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sharing)
+
 ```python
 import torch
 from simctgdialogue import SimCTGDialogue
