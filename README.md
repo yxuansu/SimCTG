@@ -38,7 +38,7 @@ Text generation is of great importance to many natural language processing appli
 <span id='news'/>
 
 #### 2. News:
-* [2022/05/06] We have released a follow up work of SimCTG, MAGIC, which is the SOTA method in zero-shot multi-modal text generation tasks (e.g., zero-shot image captioning and visually grounded story generation). Check it out! [[paper]](https://arxiv.org/abs/2205.02655) [[code]](https://github.com/yxuansu/MAGIC)
+* [2022/05/06] We have released a follow up work of SimCTG, **_MAGIC_**, which is the SOTA method in zero-shot multi-modal text generation tasks (e.g., zero-shot image captioning and visually grounded story generation). Check it out! [[paper]](https://arxiv.org/abs/2205.02655) [[code]](https://github.com/yxuansu/MAGIC)
 * [2022/04/16] We have updated instructions on how to apply contrastive search on encoder-decoder models (e.g. BART and T5). More details can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec).
 * [2022/04/07] SimCTG has been publicly deployed in the **AI sentence completion** module of [Tencent's Effidit platform (腾讯智能创作助手)](https://effidit.qq.com/). Check it out and have fun!
 * [2022/04/02] Add support on another benchmark (ROCStories) for the task of open-ended story generation.
