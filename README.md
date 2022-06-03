@@ -351,7 +351,7 @@ print(tokenizer.decode(output))
 <span id='training_tutorial'/>
 
 ##### 4.5. Detailed Tutorial of Training SimCTG on Wikitext-103:
-
+We also provide a comprehensive tutorial on how to reproduce our experiments on Wikitext-103 using the released package. Check it [[here]](https://github.com/yxuansu/SimCTG/tree/main/training_tutorial_on_wikitext103)!
 
 ****
 
