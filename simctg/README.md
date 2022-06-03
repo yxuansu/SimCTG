@@ -34,7 +34,7 @@ model = SimCTGGPT(model_name=model_name, special_token_list=special_token_list)
 tokenizer = model.tokenizer
 ```
 
-The parameters are as follows:
+:bell: The parameters are as follows:
 * `model_name`: The name of huggingface pre-trained model.
 * `special_token_list`: The list of user-defined special tokens that are added to the model embedding layer and the tokenizer. It should be a list of tokens, e.g., ["[token_1]", "[token_2]", "[token_3]"].
 
@@ -46,13 +46,13 @@ The parameters are as follows:
 last_hidden_states, logits = model(input_ids=input_ids, labels=labels)
 ```
 
-The inputs are as follows:
+:bell: The inputs are as follows:
 * `input_ids`: The tensor of a batch input ids and its size is bsz x seqlen. The tensor should be right-padded with a padding token id.
 * `labels`: The tensor of a bacth labels and its size is bsz x seqlen. The labels is the input_ids right-shifted by one time step. And the padding token is should be replaced -100 to prevent gradient update on padded positions.
 
 You can find an example on how to build the input tensors [[here]](https://github.com/yxuansu/SimCTG#423-create-example-training-data).
 
-The outputs are as follows:
+:bell: The outputs are as follows:
 * `last_hidden_states`: The hidden states of the output layer of the language model and its size is bsz x seqlen x embed_dim.
 * `logits`: The output of the prediction linear layer of the language model and its size is bsz x seqlen x vocab_size. The vocab_size = len(model.tokenizer).
 
