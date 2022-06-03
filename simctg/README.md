@@ -5,6 +5,7 @@
 * <a href='#simctg_install'>1. Install SimCTG</a>
 * <a href='#simctggpt'>2. SimCTGGPT Class</a>
     * <a href='#init_simctggpt'>2.1. Initialization</a>
+    * <a href='#forward_simctggpt'>2.2. Forward Computation</a>
 * <a href='#simctg_loss'>3. SimCTG Loss Class</a>
 
 ****
@@ -16,6 +17,8 @@ The package can be easily installed via pip as
 ```yaml
 pip install simctg==0.1
 ```
+
+****
 
 <span id='simctggpt'/>
 
@@ -34,6 +37,15 @@ tokenizer = model.tokenizer
 The parameters are as follows:
 * `model_name`: The name of huggingface pre-trained model.
 * `special_token_list`: The list of user-defined special tokens that are added to the model embedding layer and the tokenizer. It should be a list of tokens, e.g., ["[token_1]", "[token_2]", "[token_3]"].
+
+
+<span id='forward_simctggpt'/>
+
+##### 2.2. Forward Computation:
+
+
+
+****
 
 <span id='simctg_loss'/>
 
