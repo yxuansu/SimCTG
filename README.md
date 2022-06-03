@@ -21,7 +21,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 * <a href='#news'>2. News</a>
 * <a href='#models'>3. Huggingface Models</a>
 * <a href='#tutorial'>4. Huggingface-Style Tutorials</a> :star::star::star:
-    * <a href='#install_simctg'>4.1. Install SimCTG</a>
+    * <a href='#install_simctg'>4.1. Install and Load SimCTG</a>
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MhK3cVHW9HQ1ArXu0M_sS_Po0_4N1xgQ?usp=sharing)
@@ -83,10 +83,21 @@ We have encapsulated our work as an easy-to-use library (i.e., package). In the 
 
 <span id='install_simctg'/>
 
-##### 4.1. Install SimCTG:
-To use our package, we recommand you to use Python with version >= 3.6. The SimCTG can be installed with the command below.
+##### 4.1. Install and Load SimCTG:
+To use our package, we recommand you to use Python with version >= 3.6. The SimCTG can be installed and loaded with the commands below.
+
+Install SimCTG with pip.
 ```yaml
 pip install simctg==0.1
+```
+
+Load SimCTG package with Python.
+```python
+import torch
+# load SimCTG language model
+from simctg.simctggpt import SimCTGGPT
+# load SimCTG loss class
+from simctg.lossfunction import SimCTGLoss
 ```
 
 ****
