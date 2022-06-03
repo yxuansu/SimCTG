@@ -20,7 +20,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 * <a href='#introduction'>1. Introduction</a>
 * <a href='#news'>2. News</a>
 * <a href='#models'>3. Huggingface Models</a>
-* <a href='#tutorial'>4. Huggingface-Style Tutorials</a>
+* <a href='#tutorial'>4. Huggingface-Style Tutorials</a> :star::star::star:
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MhK3cVHW9HQ1ArXu0M_sS_Po0_4N1xgQ?usp=sharing)
