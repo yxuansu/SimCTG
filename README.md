@@ -141,7 +141,7 @@ pad_token_id = tokenizer.bos_token_id
 simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_token_id)
 ```
 
-:bell: The detailed description of SimCTGLoss can be found [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#3-simctg-loss-class).
+:bell: The detailed description of SimCTGLoss can be found [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#3-simctgloss-class).
 
 **[Note]** If the margin is set as 0.0, then the SimCTG loss is equivalent to the MLE loss. 
 
