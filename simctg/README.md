@@ -28,6 +28,6 @@ simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_t
 ```
 
 
-<span id='simctg_loss'/>
+<span id='simctggpt'/>
 
-#### 2. SimCTG Loss Class:
+#### 3. SimCTGGPT Class:
