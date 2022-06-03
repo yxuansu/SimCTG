@@ -270,6 +270,7 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
                                        early_stop=True) 
 print("Output:\n" + 100 * '-')
 print(tokenizer.decode(output))
+print("Output:\n" + 100 * '-')
 
 # Example 2
 prefix_text = '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华'
