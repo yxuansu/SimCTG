@@ -24,7 +24,16 @@ pip install simctg==0.1
 <span id='init_simctggpt'/>
 
 ##### 2.1. Initialization:
+Initializing the model and the tokenizer
+```python
+from simctg.simctggpt import SimCTGGPT
+model = SimCTGGPT(model_name=model_name, special_token_list=special_token_list)
+tokenizer = model.tokenizer
+```
 
+The parameters are as follows:
+* `model_name`: The name of huggingface pre-trained model.
+* `special_token_list`: The list of user-defined special tokens that are added to the model embedding layer and the tokenizer. It should be a list of tokens, e.g., ["[token_1]", "[token_2]", "[token_3]"].
 
 <span id='simctg_loss'/>
 
