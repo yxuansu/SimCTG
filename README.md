@@ -28,6 +28,8 @@ If you find our paper and resources useful, please kindly leave a star and cite 
         * <a href='#init_training_data'>4.2.3. Create Example Training Data</a>
         * <a href='#compute_loss'>4.2.4. Compute Loss</a>
     * <a href='#contrastive_search_examples'>4.3. Examples of Performing Generation with Contrastive Search</a>
+        * <a href='#example_document_generation'>4.3.1. Open-Ended Document Generation</a>
+        * <a href='#example_dialogue_generation'>4.3.2. Open-Domain Dialogue Generation</a>
     * <a href='#training_tutorial'>4.4. Detailed Tutorial of Training SimCTG on Wikitext-103</a>
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
