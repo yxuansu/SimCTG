@@ -7,6 +7,13 @@
     * <a href='#init_simctggpt'>2.1. Initialization</a>
     * <a href='#forward_simctggpt'>2.2. Forward Computation</a>
     * <a href='#save_simctggpt'>2.3. Save Model</a>
+    * <a href='#decoding_simctggpt'>2.4. Decoding Methods</a>
+      * <a href='#contrastive_search_simctggpt'>2.4.1. Contrastive Search</a>
+      * <a href='#diverse_contrastive_search_simctggpt'>2.4.2. Diverse Contrastive Search</a>
+      * <a href='#greedy_search_simctggpt'>2.4.3. Greedy Search</a>
+      * <a href='#beam_search_simctggpt'>2.4.4. Beam Search</a>
+      * <a href='#nucleus_sampling_simctggpt'>2.4.5. Nucleus Sampling</a>
+      * <a href='#topk_sampling_simctggpt'>2.4.6. Top-k Sampling</a>
 * <a href='#simctg_loss'>3. SimCTGLoss Class</a>
 
 ****
