@@ -7,7 +7,7 @@
     * <a href='#init_simctggpt'>2.1. Initialization</a>
     * <a href='#forward_simctggpt'>2.2. Forward Computation</a>
     * <a href='#save_simctggpt'>2.3. Save Model</a>
-* <a href='#simctg_loss'>3. SimCTG Loss Class</a>
+* <a href='#simctg_loss'>3. SimCTGLoss Class</a>
 
 ****
 
@@ -73,7 +73,7 @@ model.save_model(ckpt_save_path=ckpt_save_path)
 
 <span id='simctg_loss'/>
 
-#### 3. SimCTG Loss Class:
+#### 3. SimCTGLoss Class:
 To import and initialize the class, run the following command:
 ```python
 from simctg.lossfunction import SimCTGLoss
