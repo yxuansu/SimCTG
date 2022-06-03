@@ -105,6 +105,30 @@ from simctg.simctggpt import SimCTGGPT
 from simctg.lossfunction import SimCTGLoss
 ```
 
+
+<span id='example_train_with_simctg'/>
+
+##### 4.2. Example of Training Language Model with SimCTG:
+
+<span id='init_simctg'/>
+
+###### 4.2.1. Initialize Language Model:
+
+
+<span id='init_loss_class'/>
+
+###### 4.2.2. Initialize Loss Class:
+
+
+<span id='init_training_data'/>
+
+###### 4.2.3. Create Example Training Data:
+
+<span id='compute_loss'/>
+
+###### 4.2.4. Compute Loss:
+
+
 ****
 
 <span id='environment_setup'/>
