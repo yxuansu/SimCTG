@@ -113,21 +113,53 @@ from simctg.lossfunction import SimCTGLoss
 <span id='init_simctg'/>
 
 ###### 4.2.1. Initialize Language Model:
-
+```python
+model_name = r'gpt2'
+# initialize the language model with a vanilla GPT-2
+model = SimCTGGPT(model_name)
+tokenizer = model.tokenizer
+```
 
 <span id='init_loss_class'/>
 
 ###### 4.2.2. Initialize Loss Class:
-
+```python
+margin = 0.5
+vocab_size = len(tokenizer)
+pad_token_id = tokenizer.bos_token_id
+simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_token_id)
+```
 
 <span id='init_training_data'/>
 
 ###### 4.2.3. Create Example Training Data:
+```python
+from torch.nn.utils import rnn
+text_list = ['Pandas are so cute!', 'The weather in Cambridge today is very good!']
+# transform batch of texts to batch of token ids
+tokens_list = [tokenizer.tokenize(text) for text in text_list]
+batch_id_list = [tokenizer.convert_tokens_to_ids(item) for item in tokens_list]
+batch_id_list = [torch.LongTensor(item) for item in batch_id_list]
+# pad the batch of token ids
+batch_tensor = rnn.pad_sequence(batch_id_list, batch_first=True, padding_value=pad_token_id)
+# get batch input ids and batch label ids
+batch_inputs = batch_tensor[:, :-1].clone()
+batch_labels = batch_tensor[:, 1:].clone()
+# by setting pad token ids as -100, we stop the gradient update on these padded positions
+batch_labels[batch_labels[:, :] == pad_token_id] = -100
+```
 
 <span id='compute_loss'/>
 
 ###### 4.2.4. Compute Loss:
-
+```python
+# forward computation
+last_hidden_states, logits = model(input_ids=batch_inputs, labels=batch_labels)
+# loss computation
+mle_loss, cl_loss = simctgloss(last_hidden_states=last_hidden_states, logits=logits, 
+                               input_ids=batch_inputs, labels=batch_labels)
+simctg_loss = mle_loss + cl_loss
+```
 
 ****
 
