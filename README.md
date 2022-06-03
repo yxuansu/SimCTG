@@ -132,6 +132,8 @@ pad_token_id = tokenizer.bos_token_id
 simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_token_id)
 ```
 
+**[Note]** If the margin is set as 0.0, then the SimCTG loss is equivalent to the MLE loss.
+
 <span id='init_training_data'/>
 
 ###### 4.2.3. Create Example Training Data:
@@ -162,6 +164,8 @@ mle_loss, cl_loss = simctgloss(last_hidden_states=last_hidden_states, logits=log
                                input_ids=batch_inputs, labels=batch_labels)
 simctg_loss = mle_loss + cl_loss
 ```
+
+**[Note]** If the margin in SimCTG loss is set as 0.0, the returned cl_loss will always be 0.0 and the SimCTG loss is equivalent to the MLE loss.
 
 <span id='contrastive_search_examples'/>
 
