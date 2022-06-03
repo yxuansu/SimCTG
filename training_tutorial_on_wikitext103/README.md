@@ -1,0 +1,1 @@
+To reproduce our experiments on Wikitext-103 using the released package, please first prepare the dataset as instructed [[here]](https://github.com/yxuansu/SimCTG/tree/main/data#1-download-wikitext-103-dataset).
