@@ -22,9 +22,6 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 * <a href='#models'>3. Huggingface Models</a>
 * <a href='#tutorial'>4. Huggingface-Style Tutorials</a> :star::star::star:
     * <a href='#install_simctg'>4.1. Install and Load SimCTG</a>
-
-:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code can still work!**). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
-
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MhK3cVHW9HQ1ArXu0M_sS_Po0_4N1xgQ?usp=sharing)
