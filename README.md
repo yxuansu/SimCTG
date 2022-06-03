@@ -129,6 +129,8 @@ model = SimCTGGPT(model_name)
 tokenizer = model.tokenizer
 ```
 
+:bell: The detailed description of SimCTGGPT can be found [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#2-simctggpt-class).
+
 <span id='init_loss_class'/>
 
 ###### 4.2.2. Initialize Loss Class:
@@ -139,7 +141,9 @@ pad_token_id = tokenizer.bos_token_id
 simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_token_id)
 ```
 
-**[Note]** If the margin is set as 0.0, then the SimCTG loss is equivalent to the MLE loss.
+:bell: The detailed description of SimCTGLoss can be found [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#3-simctg-loss-class).
+
+**[Note]** If the margin is set as 0.0, then the SimCTG loss is equivalent to the MLE loss. 
 
 <span id='init_training_data'/>
 
