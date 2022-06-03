@@ -229,7 +229,7 @@ print(tokenizer.decode(output))
 
 <span id='training_tutorial'/>
 
-##### 4.4. Detailed Tutorial of Training SimCTG on Wikitext-103:
+##### 4.5. Detailed Tutorial of Training SimCTG on Wikitext-103:
 
 
 ****
