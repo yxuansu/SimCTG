@@ -23,7 +23,7 @@
 #### 1. Install SimCTG:
 The package can be easily installed via pip as
 ```yaml
-pip install simctg==0.1
+pip install simctg
 ```
 
 ****
