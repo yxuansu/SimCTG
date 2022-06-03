@@ -24,4 +24,4 @@ The arguments are as follows:
 * `--learning_rate`: The learning rate.
 * `--save_path_prefix`: Where to save the checkpoints.
 
-(3) More details 
+(3) For more details of the experiment setup, please refer to [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
