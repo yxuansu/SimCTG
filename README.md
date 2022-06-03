@@ -22,6 +22,11 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 * <a href='#models'>3. Huggingface Models</a>
 * <a href='#tutorial'>4. Huggingface-Style Tutorials</a> :star::star::star:
     * <a href='#install_simctg'>4.1. Install and Load SimCTG</a>
+    * <a href='#example_train_with_simctg'>4.2. Example of Training Language Model with SimCTG</a>
+        * <a href='#init_simctg'>4.2.1. Initialize Language Model</a>
+        * <a href='#init_loss_class'>4.2.2. Initialize Loss Class</a>
+        * <a href='#init_training_data'>4.2.3. Create Example Training Data</a>
+        * <a href='#compute_loss'>4.2.4. Compute Loss</a>
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MhK3cVHW9HQ1ArXu0M_sS_Po0_4N1xgQ?usp=sharing)
