@@ -19,8 +19,8 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 ### Catalogue:
 * <a href='#introduction'>1. Introduction</a>
 * <a href='#news'>2. News</a>
-* <a href='#citation'>3. Citation</a>
-* <a href='#models'>4. Huggingface Models</a>
+* <a href='#models'>3. Huggingface Models</a>
+* <a href='#tutorial'>4. Huggingface-Style Tutorials</a>
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MhK3cVHW9HQ1ArXu0M_sS_Po0_4N1xgQ?usp=sharing)
@@ -57,21 +57,12 @@ Text generation is of great importance to many natural language processing appli
 * [2022/02/15] SimCTG is publicly released!
 
 
-****
-
-<span id='citation'/>
-
-#### 3. Citation:
-```yaml
-python version >= 3.6
-pip install simctg==0.1
-```
 
 ****
 
 <span id='models'/>
 
-#### 4. Huggingface Models:
+#### 3. Huggingface Models:
 
 |Model Name|Task|Language|Training Corpus (Size)|Model Size|Model Address|
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
@@ -81,6 +72,16 @@ pip install simctg==0.1
 |cambridgeltl/simctg_writingprompts|Open-Ended Story Generation|English|WritingPrompts (865MB)|117M|[[link]](https://huggingface.co/cambridgeltl/simctg_writingprompts/)|
 |cambridgeltl/simctg_rocstories|Open-Ended Story Generation|English|ROCStories (12MB)|117M|[[link]](https://huggingface.co/cambridgeltl/simctg_rocstories/)|
 
+
+****
+
+<span id='tutorial'/>
+
+#### 4. Huggingface-Style Tutorials:
+```yaml
+python version >= 3.6
+pip install simctg==0.1
+```
 
 ****
 
