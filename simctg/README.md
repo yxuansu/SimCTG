@@ -61,7 +61,13 @@ You can find an example on how to build the input tensors [[here]](https://githu
 <span id='save_simctggpt'/>
 
 ##### 2.3. Save Model:
+To save the model, please run the following command:
+``python
+model.save_model(ckpt_save_path=ckpt_save_path)
+```
 
+:bell: The parameter is as follows:
+* `ckpt_save_path`: The directory to save the model parameters and the tokenizer. The directory will be automatically created if it does not exist before saving the model.
 
 ****
 
