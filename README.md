@@ -85,8 +85,6 @@ pip install simctg==0.1
 
 ****
 
-:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code! Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials).
-
 <span id='environment_setup'/>
 
 #### 5. Environment Setup:
@@ -95,8 +93,7 @@ python version >= 3.6
 pip3 install -r requirements.txt
 ```
 ****
-
-:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code! Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials).
+:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (Of course, the original code can still work!). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
 
 <span id='example_usage'/>
 
@@ -393,6 +390,8 @@ print (model.greedy_search(input_ids, decoding_len, eos_token))
 
 ****
 
+:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (Of course, the original code can still work!). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
+
 <span id='wikitext103_tutorial'/>
 
 #### 7. Document Generation:
@@ -401,6 +400,8 @@ The detailed tutorial of experiment on document generation is provided [[here]](
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_zPZRlbJo5iw_Q7FUhP113udPnciUxVF?usp=sharing)
 
 ****
+
+:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (Of course, the original code can still work!). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
 
 <span id='dialogue_tutorial'/>
 
