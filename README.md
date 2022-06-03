@@ -4,6 +4,18 @@
 This repository contains code, models, and other related resources of our paper [A Contrastive Framework for Neural Text Generation](https://arxiv.org/abs/2202.06417).
 
 ****
+If you find our paper and resources useful, please kindly leave a star and cite our paper. Thanks!
+
+```bibtex
+@article{su2022contrastive,
+  title={A Contrastive Framework for Neural Text Generation},
+  author={Su, Yixuan and Lan, Tian and Wang, Yan and Yogatama, Dani and Kong, Lingpeng and Collier, Nigel},
+  journal={arXiv preprint arXiv:2202.06417},
+  year={2022}
+}
+```
+
+****
 ### Catalogue:
 * <a href='#introduction'>1. Introduction</a>
 * <a href='#news'>2. News</a>
@@ -24,7 +36,6 @@ https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sh
 * <a href='#contrastive_for_encoder_decoder'>11. Contrastive Search on Encoder-Decoder Models</a>
 * <a href='#contact'>12. Contact</a>
 * <a href='#simctg_elsewhere'>13. SimCTG Elsewhere</a>
-
 
 
 ****
@@ -51,16 +62,7 @@ Text generation is of great importance to many natural language processing appli
 <span id='citation'/>
 
 #### 3. Citation:
-If you find our paper and resources useful, please kindly leave a star and cite our paper. Thanks!
 
-```bibtex
-@article{su2022contrastive,
-  title={A Contrastive Framework for Neural Text Generation},
-  author={Su, Yixuan and Lan, Tian and Wang, Yan and Yogatama, Dani and Kong, Lingpeng and Collier, Nigel},
-  journal={arXiv preprint arXiv:2202.06417},
-  year={2022}
-}
-```
 
 ****
 
