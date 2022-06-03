@@ -181,7 +181,7 @@ simctg_loss = mle_loss + cl_loss
 
 ###### 4.3.1. Open-Ended Document Generation:
 
-In the following, we show how to reproduce our result in the case study (i.e., Table 4) of our paper.
+We show how to reproduce our result in the case study (i.e., Table 4) of our paper.
 ```python
 import torch
 # load SimCTG language model
@@ -209,23 +209,142 @@ print(tokenizer.decode(output))
 <span id='example_dialogue_generation'/>
 
 ###### 4.3.2. Open-Domain Dialogue Generation:
+We show how to reproduce our result in the case study (i.e., Table 7) of our paper.
+```python
+import torch
+# load SimCTG language model
+from simctg.simctggpt import SimCTGGPT
+model_name = r'cambridgeltl/simctg_lccc_dialogue'
+model = SimCTGGPT(model_name)
+model.eval()
+tokenizer = model.tokenizer
+eos_token = '[SEP]'
+eos_token_id = tokenizer.convert_tokens_to_ids([eos_token])[0]
+
+# prepare input
+context_list = ['刺猬很可爱！以前别人送了只没养，味儿太大！', '是很可爱但是非常臭', '是啊，没办法养', '那个怎么养哦不会扎手吗']
+prefix_text = eos_token.join(context_list).strip(eos_token) + eos_token
+print ('Prefix is: {}'.format(prefix_text))
+tokens = tokenizer.tokenize(prefix_text)
+input_ids = tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+# generate result
+beam_width, alpha, decoding_len = 5, 0.6, 64
+output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, alpha=alpha, 
+                                       decoding_len=decoding_len, end_of_sequence_token_id=eos_token_id,
+                                       early_stop=True) 
+print("Output:\n" + 100 * '-')
+print(tokenizer.decode(output))
+```
 
 <span id='example_off_the_shelf_generation'/>
 
 ##### 4.4. Contrastive Search with Off-the-shelf Language Models from Different Languages:
+In the following, we show how to apply contrastive search on off-the-shelf language models of different languages.
 
 <span id='chinese_example_off_the_shelf_generation'/>
 
 ###### 4.4.1. Chinese Language Model:
+```python
+import torch
+# load SimCTG language model
+from simctg.simctggpt import SimCTGGPT
+model_name = r'uer/gpt2-chinese-cluecorpussmall'
+model = SimCTGGPT(model_name)
+model.eval()
+tokenizer = model.tokenizer
+eos_token = '[SEP]'
+eos_token_id = tokenizer.convert_tokens_to_ids([eos_token])[0]
+
+# Example 1
+prefix_text = '苹果公司'
+print ('Prefix is: {}'.format(prefix_text))
+tokens = tokenizer.tokenize(prefix_text)
+input_ids = tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+beam_width, alpha, decoding_len = 3, 0.6, 128
+output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, alpha=alpha, 
+                                       decoding_len=decoding_len, end_of_sequence_token_id=eos_token_id,
+                                       early_stop=True) 
+print("Output:\n" + 100 * '-')
+print(tokenizer.decode(output))
+
+# Example 2
+prefix_text = '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华'
+print ('Prefix is: {}'.format(prefix_text))
+tokens = tokenizer.tokenize(prefix_text)
+input_ids = tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+beam_width, alpha, decoding_len = 3, 0.6, 128
+output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, alpha=alpha, 
+                                       decoding_len=decoding_len, end_of_sequence_token_id=eos_token_id,
+                                       early_stop=True) 
+print("Output:\n" + 100 * '-')
+print(tokenizer.decode(output))
+```
 
 <span id='japanese_example_off_the_shelf_generation'/>
 
 ###### 4.4.2. Japanese Language Model:
+```python
+import torch
+# load SimCTG language model
+from simctg.simctggpt import SimCTGGPT
+model_name = r'colorfulscoop/gpt2-small-ja'
+model = SimCTGGPT(model_name)
+model.eval()
+tokenizer = model.tokenizer
+eos_token = tokenizer.eos_token
+eos_token_id = tokenizer.convert_tokens_to_ids([eos_token])[0]
+
+# prepare input
+prefix_text = r'臥龍桜（がりゅうざくら）は、岐阜県高山市一之宮町にある一本桜。龍が地'
+print ('Prefix is: {}'.format(prefix_text))
+tokens = tokenizer.tokenize(prefix_text)
+input_ids = tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+# generate result
+beam_width, alpha, decoding_len = 5, 0.6, 128
+output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, alpha=alpha, 
+                                       decoding_len=decoding_len, end_of_sequence_token_id=eos_token_id,
+                                       early_stop=True) 
+print("Output:\n" + 100 * '-')
+print(tokenizer.decode(output))
+```
 
 <span id='korean_example_off_the_shelf_generation'/>
 
 ###### 4.4.3. Korean Language Model:
+```python
+import torch
+# load SimCTG language model
+from simctg.simctggpt import SimCTGGPT
+model_name = r'skt/ko-gpt-trinity-1.2B-v0.5'
+model = SimCTGGPT(model_name)
+model.eval()
+tokenizer = model.tokenizer
+eos_token = tokenizer.eos_token
+eos_token_id = tokenizer.convert_tokens_to_ids([eos_token])[0]
 
+# prepare input
+prefix_text = r'인간처럼 생각하고, 행동하는 \'지능\'을 통해 인류가 이제까지 풀지 못했던'
+print ('Prefix is: {}'.format(prefix_text))
+tokens = tokenizer.tokenize(prefix_text)
+input_ids = tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+# generate result
+beam_width, alpha, decoding_len = 5, 0.6, 64
+output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, alpha=alpha, 
+                                       decoding_len=decoding_len, end_of_sequence_token_id=eos_token_id,
+                                       early_stop=True) 
+print("Output:\n" + 100 * '-')
+print(tokenizer.decode(output))
+```
 
 <span id='training_tutorial'/>
 
