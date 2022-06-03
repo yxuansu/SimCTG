@@ -32,6 +32,8 @@ If you find our paper and resources useful, please kindly leave a star and cite 
         * <a href='#example_dialogue_generation'>4.3.2. Open-Domain Dialogue Generation</a>
         * <a href='#example_off_the_shelf_generation'>4.3.3. Use Off-the-shelf Language Models from Different Languages</a>
           * <a href='#chinese_example_off_the_shelf_generation'>4.3.3.1. Chinese Language Model</a>
+          * <a href='#japanese_example_off_the_shelf_generation'>4.3.3.2. Japanese Language Model</a>
+          * <a href='#korean_example_off_the_shelf_generation'>4.3.3.3. Korean Language Model</a>
     * <a href='#training_tutorial'>4.4. Detailed Tutorial of Training SimCTG on Wikitext-103</a>
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
@@ -174,6 +176,31 @@ simctg_loss = mle_loss + cl_loss
 <span id='contrastive_search_examples'/>
 
 ##### 4.3. Examples of Performing Generation with Contrastive Search:
+
+<span id='example_document_generation'/>
+
+###### 4.3.1. Open-Ended Document Generation:
+
+<span id='example_dialogue_generation'/>
+
+###### 4.3.2. Open-Domain Dialogue Generation:
+
+<span id='example_off_the_shelf_generation'/>
+
+###### 4.3.3. Use Off-the-shelf Language Models from Different Languages:
+
+<span id='chinese_example_off_the_shelf_generation'/>
+
+####### 4.3.3.1. Chinese Language Model:
+
+<span id='japanese_example_off_the_shelf_generation'/>
+
+####### 4.3.3.2. Japanese Language Model:
+
+<span id='korean_example_off_the_shelf_generation'/>
+
+####### 4.3.3.3. Korean Language Model:
+
 
 <span id='training_tutorial'/>
 
