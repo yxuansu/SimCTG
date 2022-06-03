@@ -64,6 +64,7 @@ Text generation is of great importance to many natural language processing appli
 #### 3. Citation:
 ```yaml
 python version >= 3.6
+pip install simctg==0.1
 ```
 
 ****
