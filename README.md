@@ -27,6 +27,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
         * <a href='#init_loss_class'>4.2.2. Initialize Loss Class</a>
         * <a href='#init_training_data'>4.2.3. Create Example Training Data</a>
         * <a href='#compute_loss'>4.2.4. Compute Loss</a>
+        * <a href='#training_tutorial'>4.2.5. Detailed Tutorial of Training with SimCTG</a>
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MhK3cVHW9HQ1ArXu0M_sS_Po0_4N1xgQ?usp=sharing)
@@ -160,6 +161,10 @@ mle_loss, cl_loss = simctgloss(last_hidden_states=last_hidden_states, logits=log
                                input_ids=batch_inputs, labels=batch_labels)
 simctg_loss = mle_loss + cl_loss
 ```
+
+<span id='training_tutorial'/>
+
+###### 4.2.5. Detailed Tutorial of Training with SimCTG:
 
 ****
 
