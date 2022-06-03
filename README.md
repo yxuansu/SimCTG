@@ -92,8 +92,9 @@ pip install simctg==0.1
 python version >= 3.6
 pip3 install -r requirements.txt
 ```
+
 ****
-:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (Of course, the original code can still work!). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
+:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code can still work!**). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
 
 <span id='example_usage'/>
 
@@ -390,7 +391,7 @@ print (model.greedy_search(input_ids, decoding_len, eos_token))
 
 ****
 
-:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (Of course, the original code can still work!). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
+:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code can still work!**). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
 
 <span id='wikitext103_tutorial'/>
 
@@ -401,7 +402,7 @@ The detailed tutorial of experiment on document generation is provided [[here]](
 
 ****
 
-:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (Of course, the original code can still work!). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
+:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code can still work!**). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
 
 <span id='dialogue_tutorial'/>
 
