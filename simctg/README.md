@@ -42,7 +42,13 @@ The parameters are as follows:
 <span id='forward_simctggpt'/>
 
 ##### 2.2. Forward Computation:
+```python
+last_hidden_states, logits = model(input_ids=input_ids, labels=labels)
+```
 
+The inputs are as follows:
+* `input_ids`: The tensor of a batch input ids and its size is bsz x seqlen. The tensor should be right-padded with a padding token id.
+* `labels`: The tensor of a bacth labels and its size is bsz x seqlen. The labels is the input_ids right-shifted by one time step. And the padding token is should be replaced -100 to prevent gradient update on padded positions.
 
 
 ****
