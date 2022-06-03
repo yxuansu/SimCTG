@@ -62,7 +62,9 @@ Text generation is of great importance to many natural language processing appli
 <span id='citation'/>
 
 #### 3. Citation:
-
+```yaml
+python version >= 3.6
+```
 
 ****
 
@@ -85,7 +87,7 @@ Text generation is of great importance to many natural language processing appli
 
 #### 5. Environment Setup:
 ```yaml
-python version: 3.8
+python version >= 3.6
 pip3 install -r requirements.txt
 ```
 ****
