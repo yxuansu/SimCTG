@@ -181,6 +181,31 @@ simctg_loss = mle_loss + cl_loss
 
 ###### 4.3.1. Open-Ended Document Generation:
 
+In the following, we show how to reproduce our result in the case study (i.e., Table 4) of our paper.
+```python
+import torch
+# load SimCTG language model
+from simctg.simctggpt import SimCTGGPT
+model_name = r'cambridgeltl/simctg_wikitext103'
+model = SimCTGGPT(model_name)
+model.eval()
+tokenizer = model.tokenizer
+
+# prepare input
+prefix_text = r"Butt criticized Donald 's controls in certain situations in the game , as well as the difficulty of some levels and puzzles . Buchanan also criticized the controls , calling"
+print ('Prefix is: {}'.format(prefix_text))
+tokens = tokenizer.tokenize(prefix_text)
+input_ids = tokenizer.convert_tokens_to_ids(tokens)
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+
+# generate result
+beam_width, alpha, decoding_len = 8, 0.6, 128
+output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, 
+                                       alpha=alpha, decoding_len=decoding_len) 
+print("Output:\n" + 100 * '-')
+print(tokenizer.decode(output))
+```
+
 <span id='example_dialogue_generation'/>
 
 ###### 4.3.2. Open-Domain Dialogue Generation:
