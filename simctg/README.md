@@ -62,7 +62,7 @@ You can find an example on how to build the input tensors [[here]](https://githu
 
 ##### 2.3. Save Model:
 To save the model, please run the following command:
-``python
+```python
 model.save_model(ckpt_save_path=ckpt_save_path)
 ```
 
