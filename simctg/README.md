@@ -6,6 +6,7 @@
 * <a href='#simctggpt'>2. SimCTGGPT Class</a>
     * <a href='#init_simctggpt'>2.1. Initialization</a>
     * <a href='#forward_simctggpt'>2.2. Forward Computation</a>
+    * <a href='#save_simctggpt'>2.3. Save Model</a>
 * <a href='#simctg_loss'>3. SimCTG Loss Class</a>
 
 ****
@@ -48,13 +49,18 @@ last_hidden_states, logits = model(input_ids=input_ids, labels=labels)
 
 :bell: The inputs are as follows:
 * `input_ids`: The tensor of a batch input ids and its size is bsz x seqlen. The tensor should be right-padded with a padding token id.
-* `labels`: The tensor of a bacth labels and its size is bsz x seqlen. The labels is the input_ids right-shifted by one time step. And the padding token is should be replaced -100 to prevent gradient update on padded positions.
+* `labels`: The tensor of a bacth labels and its size is bsz x seqlen. The labels is the input_ids right-shifted by one time step. And the padding token is should be replaced **-100** to prevent gradient update on padded positions.
 
 You can find an example on how to build the input tensors [[here]](https://github.com/yxuansu/SimCTG#423-create-example-training-data).
 
 :bell: The outputs are as follows:
 * `last_hidden_states`: The hidden states of the output layer of the language model and its size is bsz x seqlen x embed_dim.
 * `logits`: The output of the prediction linear layer of the language model and its size is bsz x seqlen x vocab_size. The vocab_size = len(model.tokenizer).
+
+
+<span id='save_simctggpt'/>
+
+##### 2.3. Save Model:
 
 
 ****
