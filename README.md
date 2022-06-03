@@ -86,12 +86,12 @@ We have encapsulated our work as an easy-to-use library (i.e., package). In the 
 ##### 4.1. Install and Load SimCTG:
 To use our package, we recommand you to use Python with version >= 3.6. The SimCTG can be installed and loaded with the commands below.
 
-Install SimCTG with pip.
+(1) Install SimCTG with pip.
 ```yaml
 pip install simctg==0.1
 ```
 
-Load SimCTG package with Python.
+(2) Load SimCTG package with Python.
 ```python
 import torch
 # load SimCTG language model
