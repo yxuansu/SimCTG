@@ -84,7 +84,7 @@ pip install simctg==0.1
 
 ****
 
-**[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code! Check it [here]().
+:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code! Check it [here]().
 
 <span id='environment_setup'/>
 
