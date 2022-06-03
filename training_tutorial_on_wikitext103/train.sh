@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=3 python train.py\
+CUDA_VISIBLE_DEVICES=0 python train.py\
     --model_name gpt2\
     --train_path ../data/language_modelling/wikitext103/wikitext103_raw_v1_train.txt\
     --dev_path ../data/language_modelling/wikitext103/wikitext103_raw_v1_validation.txt\
