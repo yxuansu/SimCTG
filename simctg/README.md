@@ -107,7 +107,7 @@ You can find an example on how to build the input tensors [[here]](https://githu
 
 :bell: The outputs are as follows:
 * `last_hidden_states`: The hidden states of the output layer of the language model and its size is `bsz x seqlen x embed_dim`.
-* `logits`: The output of the prediction linear layer of the language model and its size is `bsz x seqlen x vocab_size`. The vocab_size = len(model.tokenizer).
+* `logits`: The output of the prediction linear layer of the language model and its size is `bsz x seqlen x vocab_size`. The `vocab_size = len(model.tokenizer)`.
 
 **[Note]** For more detailed definition of last_hidden_states and logits, please refer to the huggingface's documentation [[here]](https://huggingface.co/docs/transformers/model_doc/gpt2#transformers.GPT2LMHeadModel).
 
