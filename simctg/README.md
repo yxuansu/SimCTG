@@ -50,7 +50,7 @@ simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_t
 
 :bell: The parameters are as follows:
 * `model_name`: The margin in the contrastive loss term (Eq. (2) of our paper).
-* `vocab_size`: The vocabulary size of the language model. See more details [[here]]().
+* `vocab_size`: The vocabulary size of the language model. See more details [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#32-forward-computation).
 * `pad_token_id`: The token id for the padding token. See more details [[here]](https://github.com/yxuansu/SimCTG#422-initialize-loss-class).
 
 
