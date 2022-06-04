@@ -146,15 +146,57 @@ output = model.greedy_search(input_ids=input_ids, decoding_len=decoding_len,
 <span id='beam_search_simctggpt'/>
 
 ###### 2.4.4. Beam Search:
+```python
+output = model.beam_search(input_ids=input_ids, beam_width=beam_width, decoding_len=decoding_len,           
+                             end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
+```
+
+:bell: The inputs are as follows:
+* `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
+* `beam_width`: The beam width of beam search.
+* `decoding_len`: The number of tokens to generate.
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
+
+:bell: The output is as follows:
+* `output`: A list of output token ids. If `early_stop` is False, then `len(output) = prefix_len + decoding_len`. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
+
 
 <span id='nucleus_sampling_simctggpt'/>
 
 ###### 2.4.5. Nucleus Sampling:
+```python
+output = model.nucleus_sampling(input_ids=input_ids, nucleus_p=nucleus_p, decoding_len=decoding_len,           
+                             end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
+```
+
+:bell: The inputs are as follows:
+* `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
+* `nucleus_p`: The probability $p$ in nucleus sampling.
+* `decoding_len`: The number of tokens to generate.
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
+
+:bell: The output is as follows:
+* `output`: A list of output token ids. If `early_stop` is False, then `len(output) = prefix_len + decoding_len`. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
 
 <span id='topk_sampling_simctggpt'/>
 
 ###### 2.4.6. Top-k Sampling:
+```python
+output = model.topk_sampling(input_ids=input_ids, topk=topk, decoding_len=decoding_len,           
+                             end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
+```
 
+:bell: The inputs are as follows:
+* `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
+* `topk`: The $k$ in top-k sampling.
+* `decoding_len`: The number of tokens to generate.
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
+
+:bell: The output is as follows:
+* `output`: A list of output token ids. If `early_stop` is False, then `len(output) = prefix_len + decoding_len`. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
 
 
 ****
