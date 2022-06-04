@@ -61,8 +61,8 @@ last_hidden_states, logits = model(input_ids=input_ids, labels=labels)
 You can find an example on how to build the input tensors [[here]](https://github.com/yxuansu/SimCTG#423-create-example-training-data).
 
 :bell: The outputs are as follows:
-* `last_hidden_states`: The hidden states of the output layer of the language model and its size is bsz x seqlen x embed_dim.
-* `logits`: The output of the prediction linear layer of the language model and its size is bsz x seqlen x vocab_size. The vocab_size = len(model.tokenizer).
+* `last_hidden_states`: The hidden states of the output layer of the language model and its size is **bsz x seqlen x embed_dim**.
+* `logits`: The output of the prediction linear layer of the language model and its size is **bsz x seqlen x vocab_size**. The vocab_size = len(model.tokenizer).
 
 
 <span id='save_simctggpt'/>
