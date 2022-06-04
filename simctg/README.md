@@ -129,6 +129,19 @@ output = model.diverse_contrastive_search(input_ids=input_ids, sample_step=sampl
 <span id='greedy_search_simctggpt'/>
 
 ###### 2.4.3. Greedy Search:
+```python
+output = model.greedy_search(input_ids=input_ids, decoding_len=decoding_len,           
+                             end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
+```
+
+:bell: The inputs are as follows:
+* `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
+* `decoding_len`: The number of tokens to generate.
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
+
+:bell: The output is as follows:
+* `output`: A list of output token ids. If `early_stop` is False, then `len(output) = prefix_len + decoding_len`. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
 
 <span id='beam_search_simctggpt'/>
 
