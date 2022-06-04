@@ -76,6 +76,37 @@ model.save_model(ckpt_save_path=ckpt_save_path)
 :bell: The parameter is as follows:
 * `ckpt_save_path`: The directory to save the model parameters and the tokenizer. The directory will be automatically created if it does not exist before saving the model.
 
+<span id='decoding_simctggpt'/>
+
+##### 2.4. Decoding Methods:
+In the following, we illustrate how to use SimCTG to generate text with diffferent decoding methods.
+
+<span id='contrastive_search_simctggpt'/>
+
+###### 2.4.1. Contrastive Search:
+
+<span id='diverse_contrastive_search_simctggpt'/>
+
+###### 2.4.2. Diverse Contrastive Search:
+
+<span id='greedy_search_simctggpt'/>
+
+###### 2.4.3. Greedy Search:
+
+<span id='beam_search_simctggpt'/>
+
+###### 2.4.4. Beam Search:
+
+<span id='nucleus_sampling_simctggpt'/>
+
+###### 2.4.5. Nucleus Sampling:
+
+<span id='topk_sampling_simctggpt'/>
+
+###### 2.4.6. Top-k Sampling:
+
+
+
 ****
 
 <span id='simctg_loss'/>
