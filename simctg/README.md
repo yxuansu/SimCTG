@@ -95,7 +95,7 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 * `alpha`: The $\alpha$ in contrastive search and $\alpha\in [0.0, 1.0]$ (See Eq. (5) of the paper).
 * `decoding_len`: The number of tokens to generate.
 * `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
-* `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. early_stop$\in$[True, False] and its default value is `False`.
+* `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
 
 <span id='diverse_contrastive_search_simctggpt'/>
 
