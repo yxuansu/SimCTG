@@ -104,6 +104,17 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 <span id='diverse_contrastive_search_simctggpt'/>
 
 ###### 2.4.2. Diverse Contrastive Search:
+We can also incorporate a certain level of stochasticity into the decoding process of contrastive search by combining nucleus sampling with contrastive search. For instance, if we would like to generate 128 tokens, we can first use nucleus sampling to generate the first two tokens. Then, for the remaining 126 tokens, we switch back to the contrastive search method. For more details, please refer to `Section 7` and `Appendix I` of our paper.
+
+```python
+output = model.diverse_contrastive_search(input_ids=input_ids, sample_step=sample_step, nucleus_p=nucleus_p, 
+                                          beam_width=beam_width, alpha=alpha, decoding_len=decoding_len,           
+                                          end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
+```
+
+
+(self, input_ids, , , beam_width, alpha, decoding_len,
+        end_of_sequence_token_id = None, early_stop = False)
 
 <span id='greedy_search_simctggpt'/>
 
