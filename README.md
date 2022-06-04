@@ -95,7 +95,7 @@ Text generation is of great importance to many natural language processing appli
 #### 4. Huggingface-Style Tutorials:
 We have encapsulated our work as an easy-to-use library (i.e., package). In the following, we provide huggingface-style tutorials on how to use SimCTG and contrastive search with just **a few lines of code**! 
 
-:star: **[Documentation]** We have provided detailed documentation of the (i) **source code** of the package and (ii) **instructions** on how to use the it. Please refer to [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
+:star: **[Documentation]** We have provided detailed documentation of the (i) **source code** of the package and (ii) **instructions** on how to use it. Please refer to [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
 
 <span id='install_simctg'/>
 
