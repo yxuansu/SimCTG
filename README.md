@@ -97,6 +97,8 @@ We have encapsulated our work as an easy-to-use library (i.e., package). In the 
 
 :star: **[Documentation]** We have provided detailed documentation of the (i) **source code** of the package and (ii) **instructions** on how to use it. Please refer to [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
 
+:star: We provide a Google Colab for the easy reproductivity of our tutorial. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ImvR-ldHf9rJyFzOCMJ_zjAGK8n1iTW7?usp=sharing)
+
 <span id='install_simctg'/>
 
 ##### 4.1. Install and Load SimCTG:
