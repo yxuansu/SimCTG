@@ -359,10 +359,6 @@ We also provide a comprehensive tutorial on how to reproduce our experiments on 
 
 ****
 
-:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code still works!**). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
-
-****
-
 <span id='environment_setup'/>
 
 #### 5. Environment Setup:
@@ -370,6 +366,10 @@ We also provide a comprehensive tutorial on how to reproduce our experiments on 
 python version >= 3.6
 pip3 install -r requirements.txt
 ```
+
+****
+
+:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code still works!**). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
 
 ****
 <span id='example_usage'/>
