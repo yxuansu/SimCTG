@@ -89,6 +89,10 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
                                        end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
 ```
 
+:bell: The inputs are as follows:
+* `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
+* `beam_width`: The k in contrastive search (See Eq. (5) of the paper).
+* `alpha`: The $\alpha$ in contrastive search and $\alpha\in [0.0, 1.0]$ (See Eq. (5) of the paper).
 
 <span id='diverse_contrastive_search_simctggpt'/>
 
