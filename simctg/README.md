@@ -5,7 +5,7 @@
 * <a href='#simctg_install'>1. Install SimCTG</a>
 * <a href='#simctg_loss'>2. SimCTGLoss Class</a>
     * <a href='#init_simctgloss'>2.1. Initialization</a>
-    * <a href='#forward_simctgloss'>2.2. Forward Computation</a>
+    * <a href='#forward_simctgloss'>2.2. Compute Loss</a>
 * <a href='#simctggpt'>3. SimCTGGPT Class</a>
     * <a href='#init_simctggpt'>3.1. Initialization</a>
     * <a href='#forward_simctggpt'>3.2. Forward Computation</a>
@@ -42,9 +42,6 @@ pip install simctg
 Initializing the SimCTGLoss class
 ```python
 from simctg.lossfunction import SimCTGLoss
-margin = # 
- = # the vocabulary size of the language model
-pad_token_id = # the token id of the padding token 
 simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_token_id)
 ```
 
@@ -56,20 +53,18 @@ simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_t
 
 <span id='forward_simctgloss'/>
 
-##### 2.2. Forward Computation:
-
-
-
-To import and initialize the class, run the following command:
+##### 2.2. Compute Loss:
 ```python
-from simctg.lossfunction import SimCTGLoss
-margin = # the margin in the contrastive loss term
-vocab_size = # the vocabulary size of the language model
-pad_token_id = # the token id of the padding token 
-simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_token_id)
+mle_loss, cl_loss = simctgloss(last_hidden_states=last_hidden_states, logits=logits, 
+                               input_ids=input_ids, labels=labels)
+simctg_loss = mle_loss + cl_loss
 ```
 
-More details of input refer to below sections.
+:bell: The inputs are as follows:
+* `last_hidden_states`: The hidden states of the output layer of the language model and its size is `bsz x seqlen x embed_dim`. See more details [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg#32-forward-computation).
+* `logits`: The output of the prediction linear layer of the language model and its size is `bsz x seqlen x vocab_size`. The `vocab_size = len(model.tokenizer)`. See more details [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg#32-forward-computation).
+* `input_ids`: The tensor of a batch input ids and its size is `bsz x seqlen`. The tensor should be right-padded with a padding token id. See more details [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg#32-forward-computation).
+* `labels`: The tensor of a bacth labels and its size is `bsz x seqlen`. The labels is the input_ids right-shifted by one time step. And the padding token is should be replaced **-100** to prevent gradient update on padded positions. See more details [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg#32-forward-computation).
 
 ****
 
@@ -100,8 +95,8 @@ last_hidden_states, logits = model(input_ids=input_ids, labels=labels)
 ```
 
 :bell: The inputs are as follows:
-* `input_ids`: The tensor of a batch input ids and its size is bsz x seqlen. The tensor should be right-padded with a padding token id.
-* `labels`: The tensor of a bacth labels and its size is bsz x seqlen. The labels is the input_ids right-shifted by one time step. And the padding token is should be replaced **-100** to prevent gradient update on padded positions.
+* `input_ids`: The tensor of a batch input ids and its size is `bsz x seqlen`. The tensor should be right-padded with a padding token id.
+* `labels`: The tensor of a bacth labels and its size is `bsz x seqlen`. The labels is the input_ids right-shifted by one time step. And the padding token is should be replaced **-100** to prevent gradient update on padded positions.
 
 You can find an example on how to build the input tensors [[here]](https://github.com/yxuansu/SimCTG#423-create-example-training-data).
 
