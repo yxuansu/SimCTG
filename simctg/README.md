@@ -4,6 +4,8 @@
 ### Catalogue:
 * <a href='#simctg_install'>1. Install SimCTG</a>
 * <a href='#simctg_loss'>2. SimCTGLoss Class</a>
+    * <a href='#init_simctgloss'>2.1. Initialization</a>
+    * <a href='#forward_simctgloss'>2.2. Forward Computation</a>
 * <a href='#simctggpt'>3. SimCTGGPT Class</a>
     * <a href='#init_simctggpt'>3.1. Initialization</a>
     * <a href='#forward_simctggpt'>3.2. Forward Computation</a>
@@ -32,6 +34,17 @@ pip install simctg
 <span id='simctg_loss'/>
 
 #### 2. SimCTGLoss Class:
+
+<span id='init_simctgloss'/>
+
+##### 2.1. Initialization:
+
+<span id='forward_simctgloss'/>
+
+##### 2.2. Forward Computation:
+
+
+
 To import and initialize the class, run the following command:
 ```python
 from simctg.lossfunction import SimCTGLoss
