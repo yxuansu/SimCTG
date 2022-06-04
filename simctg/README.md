@@ -3,18 +3,19 @@
 ****
 ### Catalogue:
 * <a href='#simctg_install'>1. Install SimCTG</a>
-* <a href='#simctggpt'>2. SimCTGGPT Class</a>
-    * <a href='#init_simctggpt'>2.1. Initialization</a>
-    * <a href='#forward_simctggpt'>2.2. Forward Computation</a>
-    * <a href='#save_simctggpt'>2.3. Save Model</a>
-    * <a href='#decoding_simctggpt'>2.4. Decoding Methods</a>
-      * <a href='#contrastive_search_simctggpt'>2.4.1. Contrastive Search</a>
-      * <a href='#diverse_contrastive_search_simctggpt'>2.4.2. Diverse Contrastive Search</a>
-      * <a href='#greedy_search_simctggpt'>2.4.3. Greedy Search</a>
-      * <a href='#beam_search_simctggpt'>2.4.4. Beam Search</a>
-      * <a href='#nucleus_sampling_simctggpt'>2.4.5. Nucleus Sampling</a>
-      * <a href='#topk_sampling_simctggpt'>2.4.6. Top-k Sampling</a>
-* <a href='#simctg_loss'>3. SimCTGLoss Class</a>
+* <a href='#simctg_loss'>2. SimCTGLoss Class</a>
+* <a href='#simctggpt'>3. SimCTGGPT Class</a>
+    * <a href='#init_simctggpt'>3.1. Initialization</a>
+    * <a href='#forward_simctggpt'>3.2. Forward Computation</a>
+    * <a href='#save_simctggpt'>3.3. Save Model</a>
+    * <a href='#decoding_simctggpt'>3.4. Decoding Methods</a>
+      * <a href='#contrastive_search_simctggpt'>3.4.1. Contrastive Search</a>
+      * <a href='#diverse_contrastive_search_simctggpt'>3.4.2. Diverse Contrastive Search</a>
+      * <a href='#greedy_search_simctggpt'>3.4.3. Greedy Search</a>
+      * <a href='#beam_search_simctggpt'>3.4.4. Beam Search</a>
+      * <a href='#nucleus_sampling_simctggpt'>3.4.5. Nucleus Sampling</a>
+      * <a href='#topk_sampling_simctggpt'>3.4.6. Top-k Sampling</a>
+
 
 ****
 
@@ -28,13 +29,29 @@ pip install simctg
 
 ****
 
+<span id='simctg_loss'/>
+
+#### 2. SimCTGLoss Class:
+To import and initialize the class, run the following command:
+```python
+from simctg.lossfunction import SimCTGLoss
+margin = # the margin in the contrastive loss term
+vocab_size = # the vocabulary size of the language model
+pad_token_id = # the token id of the padding token 
+simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_token_id)
+```
+
+More details of input refer to below sections.
+
+****
+
 <span id='simctggpt'/>
 
-#### 2. SimCTGGPT Class:
+#### 3. SimCTGGPT Class:
 
 <span id='init_simctggpt'/>
 
-##### 2.1. Initialization:
+##### 3.1. Initialization:
 Initializing the model and the tokenizer
 ```python
 from simctg.simctggpt import SimCTGGPT
@@ -49,7 +66,7 @@ tokenizer = model.tokenizer
 
 <span id='forward_simctggpt'/>
 
-##### 2.2. Forward Computation:
+##### 3.2. Forward Computation:
 ```python
 last_hidden_states, logits = model(input_ids=input_ids, labels=labels)
 ```
@@ -69,7 +86,7 @@ You can find an example on how to build the input tensors [[here]](https://githu
 
 <span id='save_simctggpt'/>
 
-##### 2.3. Save Model:
+##### 3.3. Save Model:
 To save the model, please run the following command:
 ```python
 model.save_model(ckpt_save_path=ckpt_save_path)
@@ -80,12 +97,12 @@ model.save_model(ckpt_save_path=ckpt_save_path)
 
 <span id='decoding_simctggpt'/>
 
-##### 2.4. Decoding Methods:
+##### 3.4. Decoding Methods:
 In the following, we illustrate how to use SimCTG to generate text with diffferent decoding methods.
 
 <span id='contrastive_search_simctggpt'/>
 
-###### 2.4.1. Contrastive Search:
+###### 3.4.1. Contrastive Search:
 ```python
 output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, alpha=alpha, decoding_len=decoding_len,           
                                        end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
@@ -105,7 +122,7 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 
 <span id='diverse_contrastive_search_simctggpt'/>
 
-###### 2.4.2. Diverse Contrastive Search:
+###### 3.4.2. Diverse Contrastive Search:
 We can also incorporate a certain level of stochasticity into the decoding process of contrastive search by combining nucleus sampling with contrastive search. For instance, if we would like to generate 128 tokens, we can first use nucleus sampling to generate the first two tokens. Then, for the remaining 126 tokens, we switch back to the contrastive search method. For more details, please refer to `Section 7` and `Appendix I` of our paper.
 
 The implementation of diverse contrastive search is as follows:
@@ -130,7 +147,7 @@ output = model.diverse_contrastive_search(input_ids=input_ids, sample_step=sampl
 
 <span id='greedy_search_simctggpt'/>
 
-###### 2.4.3. Greedy Search:
+###### 3.4.3. Greedy Search:
 ```python
 output = model.greedy_search(input_ids=input_ids, decoding_len=decoding_len,           
                              end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
@@ -147,7 +164,7 @@ output = model.greedy_search(input_ids=input_ids, decoding_len=decoding_len,
 
 <span id='beam_search_simctggpt'/>
 
-###### 2.4.4. Beam Search:
+###### 3.4.4. Beam Search:
 ```python
 output = model.beam_search(input_ids=input_ids, beam_width=beam_width, decoding_len=decoding_len,           
                              end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
@@ -166,7 +183,7 @@ output = model.beam_search(input_ids=input_ids, beam_width=beam_width, decoding_
 
 <span id='nucleus_sampling_simctggpt'/>
 
-###### 2.4.5. Nucleus Sampling:
+###### 3.4.5. Nucleus Sampling:
 ```python
 output = model.nucleus_sampling(input_ids=input_ids, nucleus_p=nucleus_p, decoding_len=decoding_len,           
                              end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
@@ -184,7 +201,7 @@ output = model.nucleus_sampling(input_ids=input_ids, nucleus_p=nucleus_p, decodi
 
 <span id='topk_sampling_simctggpt'/>
 
-###### 2.4.6. Top-k Sampling:
+###### 3.4.6. Top-k Sampling:
 ```python
 output = model.topk_sampling(input_ids=input_ids, topk=topk, decoding_len=decoding_len,           
                              end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
@@ -201,19 +218,7 @@ output = model.topk_sampling(input_ids=input_ids, topk=topk, decoding_len=decodi
 * `output`: A list of output token ids. If `early_stop` is False, then `len(output) = prefix_len + decoding_len`. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
 
 
-****
 
-<span id='simctg_loss'/>
-
-#### 3. SimCTGLoss Class:
-To import and initialize the class, run the following command:
-```python
-from simctg.lossfunction import SimCTGLoss
-margin = # the margin in the contrastive loss term
-vocab_size = # the vocabulary size of the language model
-pad_token_id = # the token id of the padding token 
-simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_token_id)
-```
 
 
 
