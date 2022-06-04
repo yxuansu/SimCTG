@@ -20,7 +20,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 * <a href='#introduction'>1. Introduction</a>
 * <a href='#news'>2. News</a>
 * <a href='#models'>3. Huggingface Models</a>
-* <a href='#tutorial'>4. Huggingface-Style Tutorials</a> :star::star::star:
+* <a href='#tutorial'>4. Huggingface-Style Tutorials</a> :star: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ImvR-ldHf9rJyFzOCMJ_zjAGK8n1iTW7?usp=sharing)
     * <a href='#install_simctg'>4.1. Install and Load SimCTG</a>
     * <a href='#example_train_with_simctg'>4.2. Example of Training Language Model with SimCTG</a>
         * <a href='#init_simctg'>4.2.1. Initialize Language Model</a>
