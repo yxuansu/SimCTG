@@ -90,7 +90,7 @@ tokenizer = model.tokenizer
 
 :bell: The parameters are as follows:
 * `model_name`: The name of huggingface pre-trained model.
-* `special_token_list`: The list of user-defined special tokens that are added to the model embedding layer and the tokenizer. It should be a list of tokens, e.g., `["[token_1]", "[token_2]", "[token_3]"]`.
+* `special_token_list`: The list of user-defined special tokens that are added to the model embedding layer and the tokenizer. It should be a list of tokens, e.g., `["[token_1]", "[token_2]", "[token_3]"]`. The default value of `special_token_list` is an empty list `[]`.
 
 
 <span id='forward_simctggpt'/>
