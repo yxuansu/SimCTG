@@ -106,15 +106,25 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 ###### 2.4.2. Diverse Contrastive Search:
 We can also incorporate a certain level of stochasticity into the decoding process of contrastive search by combining nucleus sampling with contrastive search. For instance, if we would like to generate 128 tokens, we can first use nucleus sampling to generate the first two tokens. Then, for the remaining 126 tokens, we switch back to the contrastive search method. For more details, please refer to `Section 7` and `Appendix I` of our paper.
 
+The implementation of diverse contrastive search is as follows:
 ```python
 output = model.diverse_contrastive_search(input_ids=input_ids, sample_step=sample_step, nucleus_p=nucleus_p, 
                                           beam_width=beam_width, alpha=alpha, decoding_len=decoding_len,           
                                           end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
 ```
 
+:bell: The inputs are as follows:
+* `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
+* `sample_step`: The number of tokens that we generate with nucleus sampling at the **start** of the generation process.
+* `nucleus_p`: The probability $p$ of nuclues sampling.
+* `beam_width`: The $k$ in contrastive search (See Eq. (5) of the paper).
+* `alpha`: The $\alpha$ in contrastive search and $\alpha\in [0.0, 1.0]$ (See Eq. (5) of the paper).
+* `decoding_len`: The total number of tokens to generate.
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
 
-(self, input_ids, , , beam_width, alpha, decoding_len,
-        end_of_sequence_token_id = None, early_stop = False)
+:bell: The output is as follows:
+* `output`: A list of output token ids. If `early_stop` is False, then `len(output) = prefix_len + decoding_len`. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
 
 <span id='greedy_search_simctggpt'/>
 
