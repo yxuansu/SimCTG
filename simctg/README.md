@@ -39,6 +39,21 @@ pip install simctg
 
 ##### 2.1. Initialization:
 
+Initializing the SimCTGLoss class
+```python
+from simctg.lossfunction import SimCTGLoss
+margin = # 
+ = # the vocabulary size of the language model
+pad_token_id = # the token id of the padding token 
+simctgloss = SimCTGLoss(margin=margin, vocab_size=vocab_size, pad_token_id=pad_token_id)
+```
+
+:bell: The parameters are as follows:
+* `model_name`: The margin in the contrastive loss term (Eq. (2) of our paper).
+* `vocab_size`: The vocabulary size of the language model. See more details [[here]]().
+* `pad_token_id`: The token id for the padding token. See more details [[here]](https://github.com/yxuansu/SimCTG#422-initialize-loss-class).
+
+
 <span id='forward_simctgloss'/>
 
 ##### 2.2. Forward Computation:
