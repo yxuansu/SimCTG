@@ -241,7 +241,7 @@ output = model.topk_sampling(input_ids=input_ids, topk=topk, decoding_len=decodi
 * `topk`: The $k$ in top-k sampling.
 * `decoding_len`: The number of tokens to generate.
 * `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
-* `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
+* `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [`True`, `False`] and its default value is `False`.
 
 :bell: The output is as follows:
 * `output`: A list of output token ids. If `early_stop` is False, then `len(output) = prefix_len + decoding_len`. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
