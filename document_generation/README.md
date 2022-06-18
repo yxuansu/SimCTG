@@ -219,7 +219,7 @@ The arguments are as follows:
 
 #### 5. Evaluate the Generated Text
 
-To automatically evaluate the generated results from the language model, please follow the instructions as described [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#4-evaluation).
+To automatically evaluate the generated results from the language model, please follow the instructions as described [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#documentation-of-the-simctg-library).
 
 ****
 
