@@ -288,6 +288,8 @@ print ('The result of rep-2 is {}, rep-3 is {}, rep-4 is {}, and diversity is {}
 '''
 ```
 
+The the input to the function `measure_repetition_and_diversity()` is a list of text and it returns the results of rep-2, rep-3, rep-4, and diversity. 
+
 
 
 
