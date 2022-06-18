@@ -263,7 +263,11 @@ Here, we show how to replicate the n-gram repetition and diversity results of co
 
 (1) First, download the prediction result of contrastive search as provided in our repo [[here]](https://github.com/yxuansu/SimCTG/blob/main/document_generation/simctg_contrasive.json).
 ```yaml
-wget https://github.com/yxuansu/SimCTG/blob/main/document_generation/simctg_contrasive.json
+wget https://raw.githubusercontent.com/yxuansu/SimCTG/main/document_generation/simctg_contrasive.json
+```
+
+(2) Second, replicate the n-gram repetition and diversity results as:
+```python
 ```
 
 
