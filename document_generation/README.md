@@ -10,7 +10,8 @@
     * <a href='#nucleus_sampling'>4.3. Nucleus Sampling</a>
     * <a href='#greedy_search'>4.4. Greedy Search</a>
     * <a href='#beam_search'>4.5. Beam Search</a>
-* <a href='#visualize_token_similarity_matrix'>5. Visualize the Token Similarity Matrix</a>
+* <a href='#evaluation'>5. Evaluate the Generated Text</a>
+* <a href='#visualize_token_similarity_matrix'>6. Visualize the Token Similarity Matrix</a>
 
 
 ****
@@ -214,9 +215,17 @@ The arguments are as follows:
 
 ****
 
+<span id='evaluation'/>
+
+#### 5. Evaluate the Generated Text
+
+To automatically evaluate the generated results from the language model, please follow the instructions as described [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#4-evaluation).
+
+****
+
 <span id='visualize_token_similarity_matrix'/>
 
-#### 5. Visualize the Token Similarity Matrix
+#### 6. Visualize the Token Similarity Matrix
 Here, we show how to reproduce the token similarity matrix visualization (Figure 6 of the paper).
 ```python
 import torch
