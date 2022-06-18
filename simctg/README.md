@@ -250,6 +250,22 @@ output = model.topk_sampling(input_ids=input_ids, topk=topk, decoding_len=decodi
 
 
 
+****
+
+<span id='evaluation'/>
+
+#### 4. Evaluation:
+
+<span id='reptition_and_diversity'/>
+
+##### 4.1. Repetition and Diversity:
+Here, we show how to replicate the n-gram repetition and diversity results of contrastive search as reported in the paper.
+
+First, download the prediction result of contrastive search as provided in our repo [[here]](https://github.com/yxuansu/SimCTG/blob/main/document_generation/simctg_contrasive.json).
+```yaml
+wget https://github.com/yxuansu/SimCTG/blob/main/document_generation/simctg_contrasive.json
+```
+
 
 
 
