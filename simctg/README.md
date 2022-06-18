@@ -268,6 +268,24 @@ wget https://raw.githubusercontent.com/yxuansu/SimCTG/main/document_generation/s
 
 (2) Second, replicate the n-gram repetition and diversity results as:
 ```python
+# parse the generated results into a list of text
+import json
+in_f = r'./simctg_contrasive.json'
+with open(in_f) as f:
+    item_list = json.load(f)
+
+text_list = []
+for item in item_list:
+    text = item['generated_result']['0']['continuation']
+    text_list.append(text)
+
+# compute the evaluation results
+from simctg.evaluation import measure_repetition_and_diversity
+rep_2, rep_3, rep_4, diversity = measure_repetition_and_diversity(text_list)
+print ('The result of rep-2 is {}, rep-3 is {}, rep-4 is {}, and diversity is {}'.format(rep_2, rep_3, rep_4, round(diversity,2)))
+'''
+   The result of rep-2 is 3.93, rep-3 is 0.78, rep-4 is 0.31, and diversity is 0.95
+'''
 ```
 
 
