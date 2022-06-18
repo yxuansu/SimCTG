@@ -17,6 +17,8 @@
       * <a href='#beam_search_simctggpt'>3.4.4. Beam Search</a>
       * <a href='#nucleus_sampling_simctggpt'>3.4.5. Nucleus Sampling</a>
       * <a href='#topk_sampling_simctggpt'>3.4.6. Top-k Sampling</a>
+* <a href='#evaluation'>4. Evaluation</a>
+   * <a href='#reptition_and_diversity'>4.1. Repetition and Diversity</a>
 
 
 ****
