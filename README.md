@@ -106,7 +106,7 @@ To use our package, we recommand you to use Python with version >= 3.6. The SimC
 
 (1) Install SimCTG with pip.
 ```yaml
-pip install simctg
+pip install simctg --upgrade
 ```
 
 (2) Load SimCTG package with Python.
