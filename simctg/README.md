@@ -26,11 +26,9 @@
 
 ****
 
-<a href='#catalogue'>[Back to Top]</a>
-
 <span id='simctg_install'/>
 
-#### 1. Install SimCTG:
+#### 1. Install SimCTG: <a href='#catalogue'>[Back to Top]</a>
 The package can be easily installed via pip as
 ```yaml
 pip install simctg --upgrade
@@ -38,11 +36,9 @@ pip install simctg --upgrade
 
 ****
 
-<a href='#catalogue'>[Back to Top]</a>
-
 <span id='simctg_loss'/>
 
-#### 2. SimCTGLoss Class:
+#### 2. SimCTGLoss Class: <a href='#catalogue'>[Back to Top]</a>
 
 <span id='init_simctgloss'/>
 
@@ -83,11 +79,9 @@ simctg_loss = mle_loss + cl_loss
 
 ****
 
-<a href='#catalogue'>[Back to Top]</a>
-
 <span id='simctggpt'/>
 
-#### 3. SimCTGGPT Class:
+#### 3. SimCTGGPT Class: <a href='#catalogue'>[Back to Top]</a>
 
 <span id='init_simctggpt'/>
 
@@ -261,11 +255,9 @@ output = model.topk_sampling(input_ids=input_ids, topk=topk, decoding_len=decodi
 
 ****
 
-<a href='#catalogue'>[Back to Top]</a>
-
 <span id='evaluation'/>
 
-#### 4. Evaluation:
+#### 4. Evaluation: <a href='#catalogue'>[Back to Top]</a>
 
 <span id='reptition_and_diversity'/>
 
