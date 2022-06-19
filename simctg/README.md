@@ -25,7 +25,7 @@
 
 <span id='simctg_install'/>
 
-#### 1. Install SimCTG:
+#### 1. Install SimCTG: [[Back to Top]](https://github.com/yxuansu/SimCTG/tree/main/simctg#catalogue)
 The package can be easily installed via pip as
 ```yaml
 pip install simctg --upgrade
