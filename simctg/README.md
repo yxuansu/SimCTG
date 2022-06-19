@@ -1,6 +1,9 @@
 ## Documentation of the SimCTG Library
 
 ****
+
+<span id='catalogue'/>
+
 ### Catalogue:
 * <a href='#simctg_install'>1. Install SimCTG</a>
 * <a href='#simctg_loss'>2. SimCTGLoss Class</a>
@@ -23,15 +26,19 @@
 
 ****
 
+<a href='#catalogue'>[Back to Top]</a>
+
 <span id='simctg_install'/>
 
-#### 1. Install SimCTG: [[Back to Top]](https://github.com/yxuansu/SimCTG/tree/main/simctg#catalogue)
+#### 1. Install SimCTG:
 The package can be easily installed via pip as
 ```yaml
 pip install simctg --upgrade
 ```
 
 ****
+
+<a href='#catalogue'>[Back to Top]</a>
 
 <span id='simctg_loss'/>
 
@@ -75,6 +82,8 @@ simctg_loss = mle_loss + cl_loss
 **[Note]** If the margin is set as 0.0, the CL loss term will be 0.0. Therefore, the SimCTG loss is equivalent to the MLE loss.
 
 ****
+
+<a href='#catalogue'>[Back to Top]</a>
 
 <span id='simctggpt'/>
 
@@ -251,6 +260,8 @@ output = model.topk_sampling(input_ids=input_ids, topk=topk, decoding_len=decodi
 
 
 ****
+
+<a href='#catalogue'>[Back to Top]</a>
 
 <span id='evaluation'/>
 
