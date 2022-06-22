@@ -274,8 +274,8 @@ tokenizer = model.tokenizer
 
 :bell: The parameters are as follows:
 * `model_name`: The name of huggingface pre-trained model.
-* `user_defined_model`: The T5 model self-defined by the user (possibly not publically available). The default value of `user_defined_model` is an `None`.
-* `user_defined_tokenizer`: The tokenizer self-defined by the user (possibly not publically available). The default value of `user_defined_tokenizer` is an `None`.
+* `user_defined_model`: The T5 model self-defined by the user (possibly not publically available). The default value of `user_defined_model` is `None`.
+* `user_defined_tokenizer`: The tokenizer self-defined by the user (possibly not publically available). The default value of `user_defined_tokenizer` is `None`.
 * `special_token_list`: The list of user-defined special tokens that are added to the model embedding layer and the tokenizer. It should be a list of tokens, e.g., `["[token_1]", "[token_2]", "[token_3]"]`. The default value of `special_token_list` is an empty list `[]`.
 
 Below are two examples of how to initialize the model.
