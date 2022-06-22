@@ -20,8 +20,10 @@
       * <a href='#beam_search_simctggpt'>3.4.4. Beam Search</a>
       * <a href='#nucleus_sampling_simctggpt'>3.4.5. Nucleus Sampling</a>
       * <a href='#topk_sampling_simctggpt'>3.4.6. Top-k Sampling</a>
-* <a href='#evaluation'>4. Evaluation</a>
-   * <a href='#reptition_and_diversity'>4.1. Repetition and Diversity</a>
+* <a href='#simctgt5'>4. SimCTGT5 Class</a>
+    * <a href='#init_simctgt5'>4.1. Initialization</a>
+* <a href='#evaluation'>5. Evaluation</a>
+   * <a href='#reptition_and_diversity'>5.1. Repetition and Diversity</a>
 
 
 ****
@@ -250,6 +252,29 @@ output = model.topk_sampling(input_ids=input_ids, topk=topk, decoding_len=decodi
 
 :bell: The output is as follows:
 * `output`: A list of output token ids. If `early_stop` is False, then `len(output) = prefix_len + decoding_len`. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
+
+
+****
+
+<span id='simctgt5'/>
+
+#### 4. SimCTGT5 Class: <a href='#catalogue'>[Back to Top]</a>
+
+<span id='init_simctgt5'/>
+
+##### 4.1. Initialization:
+Initializing the model and the tokenizer
+```python
+from simctg.simctgt5 import SimCTGT5
+model = SimCTGT5(model_name=model_name, user_defined_model=self_defined_model, user_defined_tokenizer=self_defined_tokenizer, special_token_list=special_token_list)
+tokenizer = model.tokenizer
+```
+
+:bell: The parameters are as follows:
+* `model_name`: The name of huggingface pre-trained model.
+* `user_defined_model`: The T5 model self-defined by the user (possibly not publically available). The default value of `user_defined_model` is an `None`.
+* `user_defined_tokenizer`: The tokenizer self-defined by the user (possibly not publically available). The default value of `user_defined_tokenizer` is an `None`.
+* `special_token_list`: The list of user-defined special tokens that are added to the model embedding layer and the tokenizer. It should be a list of tokens, e.g., `["[token_1]", "[token_2]", "[token_3]"]`. The default value of `special_token_list` is an empty list `[]`.
 
 
 
