@@ -22,6 +22,8 @@
       * <a href='#topk_sampling_simctggpt'>3.4.6. Top-k Sampling</a>
 * <a href='#simctgt5'>4. SimCTGT5 Class</a>
     * <a href='#init_simctgt5'>4.1. Initialization</a>
+      * <a href='#init_simctgt5_example_1'>4.1.1. Initialization without Self-Defining Model and Tokenizer</a>
+      * <a href='#init_simctgt5_example_2'>4.1.2. Initialization with Self-Defining Model and Tokenizer</a>
 * <a href='#evaluation'>5. Evaluation</a>
    * <a href='#reptition_and_diversity'>5.1. Repetition and Diversity</a>
 
@@ -276,7 +278,32 @@ tokenizer = model.tokenizer
 * `user_defined_tokenizer`: The tokenizer self-defined by the user (possibly not publically available). The default value of `user_defined_tokenizer` is an `None`.
 * `special_token_list`: The list of user-defined special tokens that are added to the model embedding layer and the tokenizer. It should be a list of tokens, e.g., `["[token_1]", "[token_2]", "[token_3]"]`. The default value of `special_token_list` is an empty list `[]`.
 
+Below are two examples of how to initialize the model.
 
+<span id='init_simctgt5_example_1'/>
+
+###### 4.1.1. Initialization without Self-Defining Model and Tokenizer:
+```python
+from simctg.simctgt5 import SimCTGT5
+model_name = "flax-community/t5-base-cnn-dm"
+model = SimCTGT5(model_name, special_token_list=[])
+```
+
+<span id='init_simctgt5_example_2'/>
+
+###### 4.1.2. Initialization with Self-Defining Model and Tokenizer:
+```python
+from simctg.simctgt5 import SimCTGT5
+model_name = r'imxly/t5-pegasus'
+# define tokenizer
+from transformers import BertTokenizer
+tokenizer = BertTokenizer.from_pretrained(model_name)
+# define model
+from transformers.models.mt5.modeling_mt5 import MT5ForConditionalGeneration
+t5model = MT5ForConditionalGeneration.from_pretrained(model_name)
+# initialization
+model = SimCTGT5(model_name, user_defined_model=t5model, user_defined_tokenizer=tokenizer, special_token_list=[])
+```
 
 ****
 
