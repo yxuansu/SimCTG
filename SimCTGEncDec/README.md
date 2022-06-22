@@ -19,7 +19,7 @@
 In this folder, we illustrate how to apply contrastive search on models (e.g. BART and T5) with encoder-decoder structure.
 
 ****
-### Catalogue:
+### Catalogue [OUT-OF-DATE]:
 * <a href='#bart'>1. BART</a>
     * <a href='#bart_contrastive_search'>1.1. Contrastive Search</a>
     * <a href='#bart_greedy_search'>1.2. Greedy Search</a>
