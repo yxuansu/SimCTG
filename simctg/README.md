@@ -149,7 +149,7 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 :bell: The inputs are as follows:
 * `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
 * `beam_width`: The $k$ in contrastive search (See Eq. (5) of the paper).
-* `alpha`: The $\alpha$ in contrastive search and $\alpha$ is within [0.0, 1.0] (See Eq. (5) of the paper).
+* `alpha`: The $\alpha$ in contrastive search and its range is within [0.0, 1.0] (See Eq. (5) of the paper).
 * `decoding_len`: The number of tokens to generate.
 * `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
 * `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
@@ -175,7 +175,7 @@ output = model.diverse_contrastive_search(input_ids=input_ids, sample_step=sampl
 * `sample_step`: The number of tokens that we generate with nucleus sampling at the **start** of the generation process.
 * `nucleus_p`: The probability $p$ of nuclues sampling.
 * `beam_width`: The $k$ in contrastive search (See Eq. (5) of the paper).
-* `alpha`: The $\alpha$ in contrastive search and $\alpha$ is within [0.0, 1.0] (See Eq. (5) of the paper).
+* `alpha`: The $\alpha$ in contrastive search and its range is within [0.0, 1.0] (See Eq. (5) of the paper).
 * `decoding_len`: The total number of tokens to generate.
 * `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
 * `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
