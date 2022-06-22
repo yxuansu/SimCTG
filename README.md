@@ -35,6 +35,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
         * <a href='#japanese_example_off_the_shelf_generation'>4.4.2. Japanese Language Model</a>
         * <a href='#korean_example_off_the_shelf_generation'>4.4.3. Korean Language Model</a>
     * <a href='#training_tutorial'>4.5. Detailed Tutorial of Training SimCTG on Wikitext-103</a> :star:
+    * <a href='#T5_tutorial'>4.6. Apply SimCTG on T5</a> :star:
 * <a href='#environment_setup'>5. Environment Setup</a>
 * <a href='#example_usage'>6. Example Usage of Contrastive Search</a>
     * <a href='#example_usage_english_simctg'>6.1. Use SimCTG Pretrained on Wikipedia Corpus</a> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MhK3cVHW9HQ1ArXu0M_sS_Po0_4N1xgQ?usp=sharing)
@@ -360,6 +361,15 @@ print(tokenizer.decode(output))
 
 ##### 4.5. Detailed Tutorial of Training SimCTG on Wikitext-103:
 We also provide a comprehensive tutorial on how to reproduce our experiments on Wikitext-103 using the released package. Check it [[here]](https://github.com/yxuansu/SimCTG/tree/main/training_tutorial_on_wikitext103)!
+
+
+<span id='T5_tutorial'/>
+
+##### 4.6. Apply SimCTG on T5:
+
+
+
+
 
 ****
 
