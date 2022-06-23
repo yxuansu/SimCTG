@@ -16,7 +16,7 @@
 
 <span id='install_simctg'/>
 
-### 1. SimCTG Installation <a href='#new_tutorial'>[Back to Top]:
+### 1. SimCTG Installation:
    
 To install the SimCTG via pip, please run the following command.
    
