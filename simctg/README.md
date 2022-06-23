@@ -318,18 +318,14 @@ last_hidden_states, logits = model(encoder_inputs=encoder_inputs, encoder_mask=e
 :bell: The inputs are as follows:
 * `encoder_inputs`: The tensor of a batch input ids on the encoder side and its size is `bsz x src_len`. The tensor should be right-padded with a padding token id.
 * `encoder_mask`: Mask to avoid performing attention on padding token indices on the encoder side. Mask values selected in [0, 1]: (i) 1 for tokens that are not masked; and (ii) 0 for tokens that are masked. Its size is `bsz x src_len`.
-
-
-* `input_ids`: The tensor of a batch input ids and its size is `bsz x seqlen`. The tensor should be right-padded with a padding token id.
-* `labels`: The tensor of a bacth labels and its size is `bsz x seqlen`. The labels is the input_ids right-shifted by one time step. And the padding token is should be replaced **-100** to prevent gradient update on padded positions.
-
-You can find an example on how to build the input tensors [[here]](https://github.com/yxuansu/SimCTG#423-create-example-training-data).
+* `decoder_inputs`: The tensor of a batch input ids on the decoder side and its size is `bsz x tgt_len`. The tensor should be right-padded with a padding token id.
+* `decoder_labels`: The tensor of a bacth labels on the decoder side and its size is `bsz x tgt_len`. The labels is the `decoder_inputs` right-shifted by one time step. And the padding token is should be replaced **-100** to prevent gradient update on padded positions.
 
 :bell: The outputs are as follows:
-* `last_hidden_states`: The hidden states of the output layer of the language model and its size is `bsz x seqlen x embed_dim`.
-* `logits`: The output of the prediction linear layer of the language model and its size is `bsz x seqlen x vocab_size`. The `vocab_size = len(model.tokenizer)`.
+* `last_hidden_states`: The hidden states of the output layer of the decoder and its size is `bsz x tgt_len x embed_dim`.
+* `logits`: The output of the prediction linear layer of the model and its size is `bsz x tgt_len x vocab_size`. The `vocab_size = len(model.tokenizer)`.
 
-**[Note]** For more detailed definition of `last_hidden_states` and `logits`, please refer to the huggingface's documentation [[here]](https://huggingface.co/docs/transformers/model_doc/gpt2#transformers.GPT2LMHeadModel).
+**[Note]** For more detailed definition of `last_hidden_states` and `logits`, please refer to the huggingface's documentation [[here]](https://huggingface.co/docs/transformers/model_doc/t5#transformers.TFT5ForConditionalGeneration).
 
 
 
