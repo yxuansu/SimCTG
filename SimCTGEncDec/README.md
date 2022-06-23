@@ -68,6 +68,21 @@ tokenizer = model.tokenizer
 ids = torch.LongTensor(tokenizer.encode(ARTICLE, add_special_tokens=False, truncation=True, max_length=512)).unsqueeze(0)
 ```
 
+<span id='new_t5_contrastive_search'/>
+
+#### 2.2. Contrastive Search:
+
+```python
+output = model.fast_contrastive_search(input_ids=ids, beam_width=5, alpha=0.5, decoding_len=64)
+print (tokenizer.decode(output))
+    '''
+    Liana Barrientos has been married 10 times, nine of them in the Bronx. Her husbands filed for permanent residence 
+    after the marriages, prosecutors say.
+    '''
+```
+
+
+
 
 ****
 
