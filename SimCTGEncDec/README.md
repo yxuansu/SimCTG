@@ -29,6 +29,13 @@ pip install simctg --upgrade
 The source code and the detailed tutorial of the simctg package are provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
 
 
+****
+
+<span id='new_t5'/>
+
+### 2. T5: <a href='#new_tutorial'>[Back to Top]</a>
+
+
 <span id='new_t5_init'/>
 
 #### 2.1. Initialization:
