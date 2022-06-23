@@ -12,20 +12,20 @@
     * <a href='#new_t5_greedy_search'>2.3. Greedy Search</a>
     * <a href='#new_t5_beam_search'>2.4. Beam Search</a>
 
-
 ****
 
 <span id='install_simctg'/>
 
 ### 1. SimCTG Installation <a href='#new_tutorial'>[Back to Top]:
    
-To install the SimCTG via pip, please run the following command:
+To install the SimCTG via pip, please run the following command.
    
 ```yaml
 pip install simctg --upgrade
 ```
 
 The source code of the simctg package are provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
+
 
 <span id='new_t5_init'/>
 
