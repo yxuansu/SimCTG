@@ -39,10 +39,6 @@ model = SimCTGT5(model_name, special_token_list=[])
 ```   
 
 
-
-
-****
-
 ****
 
 :exclamation: :exclamation: :exclamation: **[Note]** As of [2022/06/22], the tutorials below are **OBSOLETE**. Please follow the tutorials on how to apply Contrastive Search on Seq2seq models as provided <a href='#new_tutorial'>[above] or provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
