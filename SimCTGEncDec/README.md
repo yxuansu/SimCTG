@@ -1,5 +1,7 @@
 ## Contrastive Search for Encoder-Decoder Models
 
+In this folder, we illustrate how to apply SimCTG and contrastive search on models (e.g. BART and T5) with encoder-decoder structure.
+
 ****
 
 <span id='new_tutorial'/>
