@@ -1,8 +1,25 @@
 ## Contrastive Search for Encoder-Decoder Models
 
+****
+### Catalogue:
+* <a href='#install_simctg'>1. SimCTG Installation</a>
+* <a href='#new_t5'>2. T5</a>
+    * <a href='#new_t5_contrastive_search'>2.1. Contrastive Search</a>
+    * <a href='#new_t5_greedy_search'>2.2. Greedy Search</a>
+    * <a href='#new_t5_beam_search'>2.3. Beam Search</a>
 
 
+****
 
+<span id='install_simctg'/>
+
+### 1. SimCTG Installation:
+To install the SimCTG via pip, please run the following command:
+```yaml
+pip install simctg --upgrade
+```
+
+The source code of the simctg package are provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
 
 
 
