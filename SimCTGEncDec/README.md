@@ -1,19 +1,23 @@
 ## Contrastive Search for Encoder-Decoder Models
 
 ****
+
+<span id='new_tutorial'/>
+
 ### Catalogue:
 * <a href='#install_simctg'>1. SimCTG Installation</a>
 * <a href='#new_t5'>2. T5</a>
-    * <a href='#new_t5_contrastive_search'>2.1. Contrastive Search</a>
-    * <a href='#new_t5_greedy_search'>2.2. Greedy Search</a>
-    * <a href='#new_t5_beam_search'>2.3. Beam Search</a>
+    * <a href='#new_t5_init'>2.1. Initialization</a>
+    * <a href='#new_t5_contrastive_search'>2.2. Contrastive Search</a>
+    * <a href='#new_t5_greedy_search'>2.3. Greedy Search</a>
+    * <a href='#new_t5_beam_search'>2.4. Beam Search</a>
 
 
 ****
 
 <span id='install_simctg'/>
 
-### 1. SimCTG Installation:
+### 1. SimCTG Installation <a href='#new_tutorial'>[Back to Top]:
 To install the SimCTG via pip, please run the following command:
 ```yaml
 pip install simctg --upgrade
@@ -21,6 +25,16 @@ pip install simctg --upgrade
 
 The source code of the simctg package are provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
 
+<span id='new_t5_init'/>
+
+#### 2.1. Initialization:
+   
+To initialize the model, please run the command as below:
+```python
+from simctg.simctgt5 import SimCTGT5
+model_name = "flax-community/t5-base-cnn-dm"
+model = SimCTGT5(model_name, special_token_list=[])
+```   
 
 
 
@@ -29,7 +43,7 @@ The source code of the simctg package are provided [[here]](https://github.com/y
 
 ****
 
-:exclamation: :exclamation: :exclamation: **[Note]** As of [2022/06/22], the tutorials below are **OBSOLETE**. Please follow the tutorials on how to apply Contrastive Search on Seq2seq models as provided above or provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
+:exclamation: :exclamation: :exclamation: **[Note]** As of [2022/06/22], the tutorials below are **OBSOLETE**. Please follow the tutorials on how to apply Contrastive Search on Seq2seq models as provided <a href='#new_tutorial'>[above] or provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
 
 ****
 
