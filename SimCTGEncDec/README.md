@@ -71,14 +71,37 @@ ids = torch.LongTensor(tokenizer.encode(ARTICLE, add_special_tokens=False, trunc
 <span id='new_t5_contrastive_search'/>
 
 #### 2.2. Contrastive Search:
-
 ```python
 output = model.fast_contrastive_search(input_ids=ids, beam_width=5, alpha=0.5, decoding_len=64)
 print (tokenizer.decode(output))
-    '''
+'''
     Liana Barrientos has been married 10 times, nine of them in the Bronx. Her husbands filed for permanent residence 
     after the marriages, prosecutors say.
-    '''
+'''
+```
+
+<span id='new_t5_greedy_search'/>
+
+#### 2.3. Greedy Search:
+```python
+output = model.greedy_search(input_ids=ids, decoding_len=64)
+print (tokenizer.decode(output))
+'''
+   Liana Barrientos has been married 10 times, nine of them in the Bronx. She is facing two criminal counts of "offering 
+   a false instrument for filing in the first degree" If convicted, Barrientos faces up to ten more counts of "offer
+'''
+```
+
+<span id='new_t5_beam_search'/>
+
+#### 2.4. Beam Search:
+```python
+output = model.beam_search(input_ids=ids, beam_width=5, decoding_len=64)
+print (tokenizer.decode(output))
+'''
+   Liana Barrientos has been married 10 times, nine of them in the Bronx. The marriages were part of an immigration scam, 
+   prosecutors say.
+'''
 ```
 
 
