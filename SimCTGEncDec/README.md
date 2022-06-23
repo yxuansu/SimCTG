@@ -24,7 +24,7 @@ To install the SimCTG via pip, please run the following command.
 pip install simctg --upgrade
 ```
 
-The source code of the simctg package are provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
+The source code and the detailed tutorial of the simctg package are provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
 
 
 <span id='new_t5_init'/>
