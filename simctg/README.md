@@ -24,6 +24,7 @@
     * <a href='#init_simctgt5'>4.1. Initialization</a>
       * <a href='#init_simctgt5_example_1'>4.1.1. Initialization without Self-Defining Model and Tokenizer</a>
       * <a href='#init_simctgt5_example_2'>4.1.2. Initialization with Self-Defining Model and Tokenizer</a>
+    * <a href='#forward_simctgt5'>4.2. Forward Computation</a>
 * <a href='#evaluation'>5. Evaluation</a>
    * <a href='#reptition_and_diversity'>5.1. Repetition and Diversity</a>
 
@@ -304,6 +305,29 @@ t5model = MT5ForConditionalGeneration.from_pretrained(model_name)
 # initialization
 model = SimCTGT5(model_name, user_defined_model=t5model, user_defined_tokenizer=tokenizer, special_token_list=[])
 ```
+
+<span id='forward_simctgt5'/>
+
+##### 4.2. Forward Computation:
+
+```python
+last_hidden_states, logits = model(encoder_inputs=encoder_inputs, encoder_mask=encoder_mask, 
+                                   decoder_inputs=decoder_inputs, decoder_labels=decoder_labels)
+```
+
+:bell: The inputs are as follows:
+* `input_ids`: The tensor of a batch input ids and its size is `bsz x seqlen`. The tensor should be right-padded with a padding token id.
+* `labels`: The tensor of a bacth labels and its size is `bsz x seqlen`. The labels is the input_ids right-shifted by one time step. And the padding token is should be replaced **-100** to prevent gradient update on padded positions.
+
+You can find an example on how to build the input tensors [[here]](https://github.com/yxuansu/SimCTG#423-create-example-training-data).
+
+:bell: The outputs are as follows:
+* `last_hidden_states`: The hidden states of the output layer of the language model and its size is `bsz x seqlen x embed_dim`.
+* `logits`: The output of the prediction linear layer of the language model and its size is `bsz x seqlen x vocab_size`. The `vocab_size = len(model.tokenizer)`.
+
+**[Note]** For more detailed definition of `last_hidden_states` and `logits`, please refer to the huggingface's documentation [[here]](https://huggingface.co/docs/transformers/model_doc/gpt2#transformers.GPT2LMHeadModel).
+
+
 
 ****
 
