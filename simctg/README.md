@@ -317,7 +317,7 @@ last_hidden_states, logits = model(encoder_inputs=encoder_inputs, encoder_mask=e
 
 :bell: The inputs are as follows:
 * `encoder_inputs`: The tensor of a batch input ids on the encoder side and its size is `bsz x src_len`. The tensor should be right-padded with a padding token id.
-* `encoder_mask`: Mask to avoid performing attention on padding token indices on the encoder side. Mask values selected in [0, 1]: (i) 1 for tokens that are not masked; and (ii) 0 for tokens that are masked.
+* `encoder_mask`: Mask to avoid performing attention on padding token indices on the encoder side. Mask values selected in [0, 1]: (i) 1 for tokens that are not masked; and (ii) 0 for tokens that are masked. Its size is `bsz x src_len`.
 
 
 * `input_ids`: The tensor of a batch input ids and its size is `bsz x seqlen`. The tensor should be right-padded with a padding token id.
@@ -337,11 +337,11 @@ You can find an example on how to build the input tensors [[here]](https://githu
 
 <span id='evaluation'/>
 
-#### 4. Evaluation: <a href='#catalogue'>[Back to Top]</a>
+#### 5. Evaluation: <a href='#catalogue'>[Back to Top]</a>
 
 <span id='reptition_and_diversity'/>
 
-##### 4.1. Repetition and Diversity:
+##### 5.1. Repetition and Diversity:
 Here, we show how to replicate the n-gram repetition and diversity results of contrastive search as reported in the paper.
 
 (1) First, download the prediction result of contrastive search as provided in our repo [[here]](https://github.com/yxuansu/SimCTG/blob/main/document_generation/simctg_contrasive.json).
