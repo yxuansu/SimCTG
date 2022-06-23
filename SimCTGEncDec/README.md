@@ -87,6 +87,8 @@ print (tokenizer.decode(output))
 '''
 ```
 
+**[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). 
+
 <span id='new_t5_greedy_search'/>
 
 #### 2.3. Greedy Search:
@@ -307,7 +309,7 @@ with torch.no_grad():
     '''
 ```
 
-**[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). We highly recommend the users to use SimCTG to train the BART model before applying contrastive search on it.
+**[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). We highly recommend the users to use SimCTG to train the T5 model before applying contrastive search on it.
 
 
 <span id='t5_greedy_search'/>
