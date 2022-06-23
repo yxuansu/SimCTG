@@ -40,7 +40,7 @@ model_name = "flax-community/t5-base-cnn-dm"
 model = SimCTGT5(model_name, special_token_list=[])
 ```   
 
-Next, we prepare the input article as
+Next, we prepare the input article as:
 ```python
 ARTICLE = """ New York (CNN)When Liana Barrientos was 23 years old, she got married in Westchester County, New York.
 A year later, she got married again in Westchester County, but to a different man and without divorcing her first husband.
