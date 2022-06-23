@@ -6,7 +6,7 @@ In this folder, we illustrate how to apply SimCTG and contrastive search on mode
 
 <span id='new_tutorial'/>
 
-### Catalogue:
+## Catalogue:
 * <a href='#install_simctg'>1. SimCTG Installation</a>
 * <a href='#new_t5'>2. T5</a>
     * <a href='#new_t5_init'>2.1. Initialization</a>
