@@ -95,20 +95,16 @@ print (tokenizer.decode(output))
 
 #### 2.3. Diverse Contrastive Search:
 ```python
-output = model.fast_contrastive_search(input_ids=ids, beam_width=5, alpha=0.5, decoding_len=64)
+output = model.diverse_contrastive_search(input_ids=ids, sample_step=3, nucleus_p=0.95, 
+                                          beam_width=5, alpha=0.5, decoding_len=64)
 print (tokenizer.decode(output))
 '''
-    Liana Barrientos has been married 10 times, nine of them in the Bronx. Her husbands filed for permanent residence 
-    after the marriages, prosecutors say.
+   Los Angeles woman faces criminal charges for allegedly sneaking into subway. Liana Barrientos married four men in New 
+   York, one in Bronx, the other in Westchester County.
 '''
 ```
 
 **[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). 
-
-
-
-
-
 
 
 <span id='new_t5_greedy_search'/>
