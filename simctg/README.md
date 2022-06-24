@@ -25,6 +25,7 @@
       * <a href='#init_simctgt5_example_1'>4.1.1. Initialization without Self-Defining Model and Tokenizer</a>
       * <a href='#init_simctgt5_example_2'>4.1.2. Initialization with Self-Defining Model and Tokenizer</a>
     * <a href='#forward_simctgt5'>4.2. Forward Computation</a>
+    * <a href='#save_simctgt5'>4.3. Save Model</a>
 * <a href='#evaluation'>5. Evaluation</a>
    * <a href='#reptition_and_diversity'>5.1. Repetition and Diversity</a>
 
@@ -326,6 +327,18 @@ last_hidden_states, logits = model(encoder_inputs=encoder_inputs, encoder_mask=e
 * `logits`: The output of the prediction linear layer of the model and its size is `bsz x tgt_len x vocab_size`. The `vocab_size = len(model.tokenizer)`.
 
 **[Note]** For more detailed definition of `last_hidden_states` and `logits`, please refer to the huggingface's documentation [[here]](https://huggingface.co/docs/transformers/model_doc/t5#transformers.TFT5ForConditionalGeneration).
+
+
+<span id='save_simctgt5'/>
+
+##### 4.3. Save Model:
+To save the model, please run the following command:
+```python
+model.save_model(ckpt_save_path=ckpt_save_path)
+```
+
+:bell: The parameter is as follows:
+* `ckpt_save_path`: The directory to save the model parameters and the tokenizer. The directory will be automatically created if it does not exist before saving the model.
 
 
 
