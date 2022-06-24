@@ -26,6 +26,13 @@
       * <a href='#init_simctgt5_example_2'>4.1.2. Initialization with Self-Defining Model and Tokenizer</a>
     * <a href='#forward_simctgt5'>4.2. Forward Computation</a>
     * <a href='#save_simctgt5'>4.3. Save Model</a>
+    * <a href='#decoding_simctgt5'>4.4. Decoding Methods</a>
+      * <a href='#contrastive_search_simctgt5'>4.4.1. Contrastive Search</a>
+      * <a href='#diverse_contrastive_search_simctgt5'>4.4.2. Diverse Contrastive Search</a>
+      * <a href='#greedy_search_simctgt5'>4.4.3. Greedy Search</a>
+      * <a href='#beam_search_simctgt5'>4.4.4. Beam Search</a>
+      * <a href='#nucleus_sampling_simctgt5'>4.4.5. Nucleus Sampling</a>
+      * <a href='#topk_sampling_simctgt5'>4.4.6. Top-k Sampling</a>
 * <a href='#evaluation'>5. Evaluation</a>
    * <a href='#reptition_and_diversity'>5.1. Repetition and Diversity</a>
 
@@ -339,6 +346,37 @@ model.save_model(ckpt_save_path=ckpt_save_path)
 
 :bell: The parameter is as follows:
 * `ckpt_save_path`: The directory to save the model parameters and the tokenizer. The directory will be automatically created if it does not exist before saving the model.
+
+
+<span id='decoding_simctgt5'/>
+
+##### 4.4. Decoding Methods:
+
+<span id='contrastive_search_simctgt5'/>
+
+###### 4.4.1. Contrastive Search:
+
+<span id='diverse_contrastive_search_simctgt5'/>
+
+###### 4.4.2. Diverse Contrastive Search:
+
+<span id='greedy_search_simctgt5'/>
+
+###### 4.4.3. Greedy Search:
+
+<span id='beam_search_simctgt5'/>
+
+###### 4.4.4. Beam Search:
+
+<span id='nucleus_sampling_simctgt5'/>
+
+###### 4.4.5. Nucleus Sampling:
+
+<span id='topk_sampling_simctgt5'/>
+
+###### 4.4.6. Top-k Sampling:
+
+
 
 
 
