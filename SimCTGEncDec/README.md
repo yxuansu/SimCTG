@@ -95,8 +95,7 @@ print (tokenizer.decode(output))
 
 #### 2.3. Diverse Contrastive Search:
 ```python
-output = model.diverse_contrastive_search(input_ids=ids, sample_step=3, nucleus_p=0.95, 
-                                          beam_width=5, alpha=0.5, decoding_len=64)
+output = model.diverse_contrastive_search(input_ids=ids, sample_step=3, nucleus_p=0.95, beam_width=5, alpha=0.5, decoding_len=64)
 print (tokenizer.decode(output))
 '''
    Los Angeles woman faces criminal charges for allegedly sneaking into subway. Liana Barrientos married four men in New 
