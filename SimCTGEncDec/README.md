@@ -11,8 +11,9 @@ In this folder, we illustrate how to apply SimCTG and contrastive search on mode
 * <a href='#new_t5'>2. T5</a>
     * <a href='#new_t5_init'>2.1. Initialization</a>
     * <a href='#new_t5_contrastive_search'>2.2. Contrastive Search</a>
-    * <a href='#new_t5_greedy_search'>2.3. Greedy Search</a>
-    * <a href='#new_t5_beam_search'>2.4. Beam Search</a>
+    * <a href='#new_t5_diverse_contrastive_search'>2.3. Diverse Contrastive Search</a>
+    * <a href='#new_t5_greedy_search'>2.4. Greedy Search</a>
+    * <a href='#new_t5_beam_search'>2.5. Beam Search</a>
 
 ****
 
@@ -88,6 +89,27 @@ print (tokenizer.decode(output))
 ```
 
 **[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). 
+
+
+<span id='new_t5_diverse_contrastive_search'/>
+
+#### 2.3. Diverse Contrastive Search:
+```python
+output = model.fast_contrastive_search(input_ids=ids, beam_width=5, alpha=0.5, decoding_len=64)
+print (tokenizer.decode(output))
+'''
+    Liana Barrientos has been married 10 times, nine of them in the Bronx. Her husbands filed for permanent residence 
+    after the marriages, prosecutors say.
+'''
+```
+
+**[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). 
+
+
+
+
+
+
 
 <span id='new_t5_greedy_search'/>
 
