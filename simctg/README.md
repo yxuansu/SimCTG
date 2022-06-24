@@ -32,7 +32,6 @@
       * <a href='#greedy_search_simctgt5'>4.4.3. Greedy Search</a>
       * <a href='#beam_search_simctgt5'>4.4.4. Beam Search</a>
       * <a href='#nucleus_sampling_simctgt5'>4.4.5. Nucleus Sampling</a>
-      * <a href='#topk_sampling_simctgt5'>4.4.6. Top-k Sampling</a>
 * <a href='#evaluation'>5. Evaluation</a>
    * <a href='#reptition_and_diversity'>5.1. Repetition and Diversity</a>
 
@@ -372,9 +371,6 @@ model.save_model(ckpt_save_path=ckpt_save_path)
 
 ###### 4.4.5. Nucleus Sampling:
 
-<span id='topk_sampling_simctgt5'/>
-
-###### 4.4.6. Top-k Sampling:
 
 
 
