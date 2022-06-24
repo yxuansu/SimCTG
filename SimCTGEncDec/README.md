@@ -109,7 +109,7 @@ print (tokenizer.decode(output))
 
 <span id='new_t5_greedy_search'/>
 
-#### 2.3. Greedy Search:
+#### 2.4. Greedy Search:
 ```python
 output = model.greedy_search(input_ids=ids, decoding_len=64)
 print (tokenizer.decode(output))
@@ -121,7 +121,7 @@ print (tokenizer.decode(output))
 
 <span id='new_t5_beam_search'/>
 
-#### 2.4. Beam Search:
+#### 2.5. Beam Search:
 ```python
 output = model.beam_search(input_ids=ids, beam_width=5, decoding_len=64)
 print (tokenizer.decode(output))
@@ -130,8 +130,6 @@ print (tokenizer.decode(output))
    prosecutors say.
 '''
 ```
-
-
 
 
 ****
