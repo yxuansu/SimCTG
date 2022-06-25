@@ -354,6 +354,22 @@ model.save_model(ckpt_save_path=ckpt_save_path)
 <span id='contrastive_search_simctgt5'/>
 
 ###### 4.4.1. Contrastive Search:
+```python
+output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, alpha=alpha, decoding_len=decoding_len, start_of_sequence_token_id=start_of_sequence_token_id, end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
+```
+
+:bell: The inputs are as follows:
+* `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
+* `beam_width`: The $k$ in contrastive search (See Eq. (5) of the paper).
+* `alpha`: The $\alpha$ in contrastive search and its range is within [0.0, 1.0] (See Eq. (5) of the paper).
+* `decoding_len`: The number of tokens to generate.
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
+
+:bell: The output is as follows:
+* `output`: A list of output token ids. If `early_stop` is False, then `len(output) = prefix_len + decoding_len`. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
+
+
 
 <span id='diverse_contrastive_search_simctgt5'/>
 
