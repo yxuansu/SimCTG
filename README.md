@@ -16,6 +16,9 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 ```
 
 ****
+
+<span id='all_catelogue'/>
+
 ### Catalogue:
 * <a href='#introduction'>1. Introduction</a>
 * <a href='#news'>2. News</a>
@@ -57,13 +60,13 @@ https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sh
 
 <span id='introduction'/>
 
-#### 1. Introduction:
+#### 1. Introduction: <a href='#all_catelogue'>[Back to Top]</a>
 Text generation is of great importance to many natural language processing applications. However, maximization-based decoding methods (e.g. beam search) of neural language models often lead to degenerate solutions---the generated text is unnatural and contains undesirable repetitions. Existing approaches introduce stochasticity via sampling or modify training objectives to decrease probabilities of certain tokens (e.g., unlikelihood training). However, they often lead to solutions that lack coherence. In this work, we show that an underlying reason for model degeneration is the anisotropic distribution of token representations. We present a contrastive solution: (i) SimCTG, a contrastive training objective to calibrate the model's representation space, and (ii) a decoding method---contrastive search---to encourage diversity while maintaining coherence in the generated text. Extensive experiments and analyses on three benchmarks from two languages demonstrate that our proposed approach outperforms state-of-the-art text generation methods as evaluated by both human and automatic metrics.
 ****
 
 <span id='news'/>
 
-#### 2. News:
+#### 2. News: <a href='#all_catelogue'>[Back to Top]</a>
 * [2022/06/03] :fire: We have released an easy-to-use library (i.e., simctg) which allows you to use SimCTG with a simple **pip install simctg** and **a few lines of code**. Check the comprehensive and huggingface-style tutorials [[here]](https://github.com/yxuansu/SimCTG#4-huggingface-style-tutorials)!
 * [2022/05/06] :star: We have released **_MAGIC_**, a follow up work of SimCTG, that is the SOTA method in zero-shot multi-modal text generation tasks (e.g., zero-shot image captioning and visually grounded story generation). Check it out! [[paper]](https://arxiv.org/abs/2205.02655) [[code]](https://github.com/yxuansu/MAGIC)
 * [2022/04/16] We have updated instructions on how to apply contrastive search on encoder-decoder models (e.g. BART and T5). More details can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec).
@@ -78,7 +81,7 @@ Text generation is of great importance to many natural language processing appli
 
 <span id='models'/>
 
-#### 3. Huggingface Models:
+#### 3. Huggingface Models: <a href='#all_catelogue'>[Back to Top]</a>
 
 |Model Name|Task|Language|Training Corpus (Size)|Model Size|Model Address|
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
@@ -93,7 +96,7 @@ Text generation is of great importance to many natural language processing appli
 
 <span id='tutorial'/>
 
-#### 4. Huggingface-Style Tutorials:
+#### 4. Huggingface-Style Tutorials: <a href='#all_catelogue'>[Back to Top]</a>
 We have encapsulated our work as an easy-to-use library (i.e., package). In the following, we provide huggingface-style tutorials on how to use SimCTG and contrastive search with just **a few lines of code**! 
 
 :star: **[Documentation]** We have provided detailed documentation of the (i) **source code** of the package and (ii) **instructions** on how to use it. Please refer to [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
@@ -359,7 +362,7 @@ print(tokenizer.decode(output))
 
 <span id='training_tutorial'/>
 
-##### 4.5. Detailed Tutorial of Training SimCTG on Wikitext-103:
+##### 4.5. Detailed Tutorial of Training SimCTG on Wikitext-103: 
 We also provide a comprehensive tutorial on how to reproduce our experiments on Wikitext-103 using the released package. Check it [[here]](https://github.com/yxuansu/SimCTG/tree/main/training_tutorial_on_wikitext103)!
 
 
@@ -375,7 +378,7 @@ We also provide a comprehensive tutorial on how to reproduce our experiments on 
 
 <span id='environment_setup'/>
 
-#### 5. Environment Setup:
+#### 5. Environment Setup: <a href='#all_catelogue'>[Back to Top]</a>
 ```yaml
 python version >= 3.6
 pip3 install -r requirements.txt
@@ -388,7 +391,7 @@ pip3 install -r requirements.txt
 ****
 <span id='example_usage'/>
 
-#### 6. Example Usage of Contrastive Search:
+#### 6. Example Usage of Contrastive Search: <a href='#all_catelogue'>[Back to Top]</a>
 
 <span id='example_usage_english_simctg'/>
 
@@ -685,7 +688,7 @@ print (model.greedy_search(input_ids, decoding_len, eos_token))
 
 :exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code still works!**). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
 
-#### 7. Document Generation:
+#### 7. Document Generation: <a href='#all_catelogue'>[Back to Top]</a>
 The detailed tutorial of experiment on document generation is provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_zPZRlbJo5iw_Q7FUhP113udPnciUxVF?usp=sharing)
@@ -696,7 +699,7 @@ The detailed tutorial of experiment on document generation is provided [[here]](
 
 :exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code still works!**). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
 
-#### 8. Open-domain Dialogue Generation:
+#### 8. Open-domain Dialogue Generation: <a href='#all_catelogue'>[Back to Top]</a>
 The detailed tutorial of experiment on open-domain dialogue generation provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/dialogue_generation).
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
@@ -706,7 +709,7 @@ https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sh
 
 <span id='pretraining'/>
 
-#### 9. Large-Scale Pre-training with SimCTG
+#### 9. Large-Scale Pre-training with SimCTG: <a href='#all_catelogue'>[Back to Top]</a>
 In addition to fine-tuning on downstream tasks (e.g. document generation and open-domain dialogue generation), we can also use a large-scale general domain corpus (i.e. Wikipedia) to pre-train a SimCTG model. [Here](https://github.com/yxuansu/SimCTG/tree/main/pretraining), we show the details of how to pre-train SimCTG using a large-scale English Wikipedia corpus.
 
 
@@ -714,7 +717,7 @@ In addition to fine-tuning on downstream tasks (e.g. document generation and ope
 
 <span id='story_generation'/>
 
-#### 10. Open-Ended Story Generation
+#### 10. Open-Ended Story Generation: <a href='#all_catelogue'>[Back to Top]</a>
 We also show how to adapt our approach to open-ended story generation task. The details are provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/story_generation).
 
 
@@ -722,7 +725,7 @@ We also show how to adapt our approach to open-ended story generation task. The 
 
 <span id='contrastive_for_encoder_decoder'/>
 
-#### 11. Contrastive Search on Encoder-Decoder Models
+#### 11. Contrastive Search on Encoder-Decoder Models: <a href='#all_catelogue'>[Back to Top]</a>
 
 Details on how to apply contrastive search on encoder-decoder models (e.g. BART and T5) can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec).
 
@@ -730,14 +733,14 @@ Details on how to apply contrastive search on encoder-decoder models (e.g. BART 
 
 <span id='contact'/>
 
-#### 12. Contact
+#### 12. Contact: <a href='#all_catelogue'>[Back to Top]</a>
 If you have any questions, feel free to contact me via (ys484 at cam.ac.uk).
 
 ****
 
 <span id='simctg_elsewhere'/>
 
-#### 13. SimCTG Elsewhere
+#### 13. SimCTG Elsewhere: <a href='#all_catelogue'>[Back to Top]</a>
 
 We thank the community's effort for extending SimCTG!
 
