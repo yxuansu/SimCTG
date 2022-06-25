@@ -351,6 +351,8 @@ model.save_model(ckpt_save_path=ckpt_save_path)
 
 ##### 4.4. Decoding Methods:
 
+In the following, we illustrate how to generate text with SimCTGT5.
+
 <span id='contrastive_search_simctgt5'/>
 
 ###### 4.4.1. Contrastive Search:
