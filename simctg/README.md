@@ -364,8 +364,8 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 
 :bell: The inputs are as follows:
 * `input_ids`: The input token ids of the encoder with size of `1 x src_len`.
-* `beam_width`: The $k$ in contrastive search (See Eq. (5) of the paper).
-* `alpha`: The $\alpha$ in contrastive search and its range is within [0.0, 1.0] (See Eq. (5) of the paper).
+* `beam_width`: The $k$ in contrastive search.
+* `alpha`: The $\alpha$ in contrastive search and its range is within [0.0, 1.0].
 * `decoding_len`: The number of tokens to generate.
 * `start_of_sequence_token_id`: The start token id of the decoder to start generation. If it is set as `None`, then we use the default start token id. Otherwise, the user can self-define the start token id of the model. The default value of this argument is `None`.
 * `end_of_sequence_token_id`: The end token id of the decoder that indicates the end of generation. If it is set as `None`, then we use the default end token id of the model. Otherwise, the user can self-define the end token id. The default value of this argument is `None`.
