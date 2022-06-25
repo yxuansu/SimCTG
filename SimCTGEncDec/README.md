@@ -14,6 +14,7 @@ In this folder, we illustrate how to apply SimCTG and contrastive search on mode
     * <a href='#new_t5_diverse_contrastive_search'>2.3. Diverse Contrastive Search</a>
     * <a href='#new_t5_greedy_search'>2.4. Greedy Search</a>
     * <a href='#new_t5_beam_search'>2.5. Beam Search</a>
+    * <a href='#new_t5_nucleus_sampling'>2.6. Nucleus Sampling</a>
 
 ****
 
@@ -130,6 +131,19 @@ print (tokenizer.decode(output))
    prosecutors say.
 '''
 ```
+
+
+<span id='new_t5_nucleus_sampling'/>
+
+#### 2.6. Nucleus Sampling:
+```python
+output = model.nucleus_sampling(input_ids=ids, nucleus_p=0.95, decoding_len=64)
+print (tokenizer.decode(output))
+'''
+   Lesley Barrientos has been married 10 times, more than any other man. Her husbands also filed for permanent residence, 
+   prosecutors say. The immigration scam involved two men seeking residence, prosecutors say.
+'''
+'''
 
 
 ****
