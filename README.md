@@ -67,7 +67,7 @@ Text generation is of great importance to many natural language processing appli
 <span id='news'/>
 
 #### 2. News: <a href='#all_catelogue'>[Back to Top]</a>
-* [2022/06/03] :fire: We have released an easy-to-use library (i.e., simctg) which allows you to use SimCTG with a simple **pip install simctg** and **a few lines of code**. Check the comprehensive and huggingface-style tutorials [[here]](https://github.com/yxuansu/SimCTG#4-huggingface-style-tutorials)!
+* [2022/06/03] :fire: We have released an easy-to-use library (i.e., simctg) which allows you to use SimCTG with a simple **pip install simctg** and **a few lines of code**. Check the comprehensive and huggingface-style tutorials [[here]](https://github.com/yxuansu/SimCTG#4-huggingface-style-tutorials-back-to-top) and [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg)!
 * [2022/05/06] :star: We have released **_MAGIC_**, a follow up work of SimCTG, that is the SOTA method in zero-shot multi-modal text generation tasks (e.g., zero-shot image captioning and visually grounded story generation). Check it out! [[paper]](https://arxiv.org/abs/2205.02655) [[code]](https://github.com/yxuansu/MAGIC)
 * [2022/04/16] We have updated instructions on how to apply contrastive search on encoder-decoder models (e.g. BART and T5). More details can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec).
 * [2022/04/07] SimCTG has been publicly deployed in the **AI sentence completion** module of [Tencent's Effidit platform (腾讯智能创作助手)](https://effidit.qq.com/). Check it out and have fun!
