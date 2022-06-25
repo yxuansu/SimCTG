@@ -380,6 +380,7 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 <span id='diverse_contrastive_search_simctgt5'/>
 
 ###### 4.4.2. Diverse Contrastive Search:
+**[Definition]** The definition of diverse contrastive search can be found <a href='#diverse_contrastive_search_simctggpt'>[here]</a>.
 ```python
 output = model.diverse_contrastive_search(input_ids=input_ids, sample_step=sample_step, nucleus_p=nucleus_p, beam_width=beam_width, 
                                           alpha=alpha, decoding_len=decoding_len, start_of_sequence_token_id=start_of_sequence_token_id,
