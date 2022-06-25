@@ -149,6 +149,7 @@ print (tokenizer.decode(output))
 '''
 ```
 
+**[Note]** More detailed tutorial of nucleus sampling is provided [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#445-nucleus-sampling).
 
 ****
 
