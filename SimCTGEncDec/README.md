@@ -104,7 +104,7 @@ print (tokenizer.decode(output))
 '''
 ```
 
-**[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). 
+**[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). More detailed tutorial of diverse contrastive search are provided [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#442-diverse-contrastive-search).
 
 
 <span id='new_t5_greedy_search'/>
