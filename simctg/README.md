@@ -406,6 +406,22 @@ output = model.diverse_contrastive_search(input_ids=input_ids, sample_step=sampl
 <span id='greedy_search_simctgt5'/>
 
 ###### 4.4.3. Greedy Search:
+```python
+output = model.greedy_search(input_ids=input_ids, decoding_len=decoding_len, start_of_sequence_token_id=start_of_sequence_token_id, 
+                             end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
+```
+
+:bell: The inputs are as follows:
+* `input_ids`: The input token ids of the encoder with size of `1 x src_len`.
+* `decoding_len`: The number of tokens to generate.
+* `start_of_sequence_token_id`: The start token id of the decoder to start generation. If it is set as `None`, then we use the default start token id. Otherwise, the user can self-define the start token id of the model. The default value of this argument is `None`.
+* `end_of_sequence_token_id`: The end token id of the decoder that indicates the end of generation. If it is set as `None`, then we use the default end token id of the model. Otherwise, the user can self-define the end token id. The default value of this argument is `None`.
+* `early_stop`: Whether to truncate and early-stop the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `True`.
+
+:bell: The output is as follows:
+* `output`: A list of output token ids. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
+
+**[Example]** One example usage of greedy search can be found [[here]](https://github.com/yxuansu/SimCTG/blob/main/SimCTGEncDec/README.md#24-greedy-search).
 
 <span id='beam_search_simctgt5'/>
 
