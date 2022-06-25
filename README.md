@@ -686,7 +686,7 @@ print (model.greedy_search(input_ids, decoding_len, eos_token))
 
 <span id='wikitext103_tutorial'/>
 
-:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code still works!**). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
+:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code still works!**). Check it [[here]](https://github.com/yxuansu/SimCTG#4-huggingface-style-tutorials-back-to-top)!
 
 #### 7. Document Generation: <a href='#all_catelogue'>[Back to Top]</a>
 The detailed tutorial of experiment on document generation is provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/document_generation).
@@ -697,7 +697,7 @@ The detailed tutorial of experiment on document generation is provided [[here]](
 
 <span id='dialogue_tutorial'/>
 
-:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code still works!**). Check it [[here]](https://github.com/yxuansu/SimCTG/blob/main/README.md#4-huggingface-style-tutorials)!
+:exclamation::exclamation::exclamation: **[Note]** The following instructions were originally used in the experiments of our paper. Now we have provided an easy-to-use library which helps you to implement SimCTG with just a few lines of code (**Of course, the original code still works!**). Check it [[here]](https://github.com/yxuansu/SimCTG#4-huggingface-style-tutorials-back-to-top)!
 
 #### 8. Open-domain Dialogue Generation: <a href='#all_catelogue'>[Back to Top]</a>
 The detailed tutorial of experiment on open-domain dialogue generation provided [[here]](https://github.com/yxuansu/SimCTG/tree/main/dialogue_generation).
