@@ -374,6 +374,7 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 :bell: The output is as follows:
 * `output`: A list of output token ids. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
 
+**[Examples]** Two example usages of contrastive search can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec#22-contrastive-search) and [[here]](https://github.com/yxuansu/SimCTG/issues/5#issuecomment-1163309924).
 
 
 <span id='diverse_contrastive_search_simctgt5'/>
