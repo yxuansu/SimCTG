@@ -356,7 +356,8 @@ model.save_model(ckpt_save_path=ckpt_save_path)
 ###### 4.4.1. Contrastive Search:
 ```python
 output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, alpha=alpha, decoding_len=decoding_len, 
-start_of_sequence_token_id=start_of_sequence_token_id, end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
+                                       start_of_sequence_token_id=start_of_sequence_token_id, 
+                                       end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
 ```
 
 :bell: The inputs are as follows:
