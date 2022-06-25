@@ -159,7 +159,7 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 * `beam_width`: The $k$ in contrastive search (See Eq. (5) of the paper).
 * `alpha`: The $\alpha$ in contrastive search and its range is within [0.0, 1.0] (See Eq. (5) of the paper).
 * `decoding_len`: The number of tokens to generate.
-* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`.
 * `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
 
 :bell: The output is as follows:
@@ -185,7 +185,7 @@ output = model.diverse_contrastive_search(input_ids=input_ids, sample_step=sampl
 * `beam_width`: The $k$ in contrastive search (See Eq. (5) of the paper).
 * `alpha`: The $\alpha$ in contrastive search and its range is within [0.0, 1.0] (See Eq. (5) of the paper).
 * `decoding_len`: The total number of tokens to generate.
-* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`.
 * `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
 
 :bell: The output is as follows:
@@ -202,7 +202,7 @@ output = model.greedy_search(input_ids=input_ids, decoding_len=decoding_len,
 :bell: The inputs are as follows:
 * `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
 * `decoding_len`: The number of tokens to generate.
-* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`.
 * `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
 
 :bell: The output is as follows:
@@ -220,7 +220,7 @@ output = model.beam_search(input_ids=input_ids, beam_width=beam_width, decoding_
 * `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
 * `beam_width`: The beam width of beam search.
 * `decoding_len`: The number of tokens to generate.
-* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`.
 * `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
 
 :bell: The output is as follows:
@@ -239,7 +239,7 @@ output = model.nucleus_sampling(input_ids=input_ids, nucleus_p=nucleus_p, decodi
 * `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
 * `nucleus_p`: The probability $p$ in nucleus sampling.
 * `decoding_len`: The number of tokens to generate.
-* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`.
 * `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
 
 :bell: The output is as follows:
@@ -257,7 +257,7 @@ output = model.topk_sampling(input_ids=input_ids, topk=topk, decoding_len=decodi
 * `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
 * `topk`: The $k$ in top-k sampling.
 * `decoding_len`: The number of tokens to generate.
-* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
+* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`.
 * `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [`True`, `False`] and its default value is `False`.
 
 :bell: The output is as follows:
@@ -363,15 +363,16 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 ```
 
 :bell: The inputs are as follows:
-* `input_ids`: The token ids of the prefix text with size of `1 x prefix_len`.
+* `input_ids`: The input token ids of the encoder with size of `1 x src_len`.
 * `beam_width`: The $k$ in contrastive search (See Eq. (5) of the paper).
 * `alpha`: The $\alpha$ in contrastive search and its range is within [0.0, 1.0] (See Eq. (5) of the paper).
 * `decoding_len`: The number of tokens to generate.
-* `end_of_sequence_token_id`: The id of the end of sequence token and its default value is `None`:
-* `early_stop`: Whether to truncate the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `False`.
+* `start_of_sequence_token_id`: The start token id of the decoder to start generation. If it is set as `None`, then we use the default start token id. Otherwise, the user can self-define the start token id of the model. The default value of this argument is `None`.
+* `end_of_sequence_token_id`: The end token id of the decoder that indicates the end of generation. If it is set as `None`, then we use the default end token id of the model. Otherwise, the user can self-define the end token id. The default value of this argument is `None`.
+* `early_stop`: Whether to truncate and early-stop the generated output with the end_of_sequence_token_id. The early_stop $\in$ [True, False] and its default value is `True`.
 
 :bell: The output is as follows:
-* `output`: A list of output token ids. If `early_stop` is False, then `len(output) = prefix_len + decoding_len`. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
+* `output`: A list of output token ids. The output can be easily transformed into the corresponding raw text with `model.tokenizer.decode(output)`.
 
 
 
