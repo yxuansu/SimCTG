@@ -369,7 +369,7 @@ We also provide a comprehensive tutorial on how to reproduce our experiments on 
 <span id='T5_tutorial'/>
 
 ##### 4.6. Apply SimCTG on T5:
-
+We also provide detailed tutorials on how to apply SimCTG and contrastive search on T5 model. For more details, please refer to [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg#4-simctgt5-class-back-to-top) and [[here]](https://github.com/yxuansu/SimCTG/blob/main/SimCTGEncDec/README.md#2-t5-back-to-top).
 
 
 
