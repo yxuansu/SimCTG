@@ -89,7 +89,7 @@ print (tokenizer.decode(output))
 '''
 ```
 
-**[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). More detailed tutorial of contrastive search are provided [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#441-contrastive-search).
+**[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). More detailed tutorial of contrastive search is provided [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#441-contrastive-search).
 
 
 <span id='new_t5_diverse_contrastive_search'/>
@@ -105,7 +105,7 @@ print (tokenizer.decode(output))
 '''
 ```
 
-**[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). More detailed tutorial of diverse contrastive search are provided [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#442-diverse-contrastive-search).
+**[Note]** In this example, we only apply an **off-the-shelf** T5 model from huggingface and it was **not** trained with contrastive training (i.e. SimCTG). More detailed tutorial of diverse contrastive search is provided [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#442-diverse-contrastive-search).
 
 
 <span id='new_t5_greedy_search'/>
@@ -120,6 +120,8 @@ print (tokenizer.decode(output))
 '''
 ```
 
+**[Note]** More detailed tutorial of greedy search is provided [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#443-greedy-search).
+
 <span id='new_t5_beam_search'/>
 
 #### 2.5. Beam Search:
@@ -131,6 +133,8 @@ print (tokenizer.decode(output))
    prosecutors say.
 '''
 ```
+
+**[Note]** More detailed tutorial of beam search is provided [[here]](https://github.com/yxuansu/SimCTG/blob/main/simctg/README.md#444-beam-search).
 
 
 <span id='new_t5_nucleus_sampling'/>
