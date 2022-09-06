@@ -33,6 +33,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 ### Catalogue:
 * <a href='#introduction'>1. Introduction</a>
 * <a href='#contrastive_search_with_LMs'>2. Contrastive Search with GPT and OPT :fire:</a>
+    * <a href='#install_simctg_package'>2.1. Environment Setup</a>
 * <a href='#models'>3. Huggingface Models</a>
 * <a href='#tutorial'>4. Huggingface-Style Tutorials</a> :star: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ImvR-ldHf9rJyFzOCMJ_zjAGK8n1iTW7?usp=sharing)
     * <a href='#install_simctg'>4.1. Install and Load SimCTG</a>
@@ -79,7 +80,15 @@ Text generation is of great importance to many natural language processing appli
 <span id='contrastive_search_with_LMs'/>
 
 #### 2. Contrastive Search with GPT and OPT: <a href='#all_catelogue'>[Back to Top]</a>
+In this section, we illustrate how to apply contrastive search on GPT-2 models and the [OPT](https://arxiv.org/abs/2205.01068) models released by Meta.
 
+<span id='install_simctg_package'/>
+
+##### 2.1. Environment Setup:
+To install our simctg package, simply using the command below. More details of the simctg package can be found <a href='#tutorial'>[here]</a> and [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg).
+```yaml
+pip install simctg --upgrade
+```
 
 ****
 
