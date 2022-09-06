@@ -124,7 +124,7 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
                                       end_of_sequence_token_id = eos_token_id, early_stop = True) 
 print("Output:\n" + 100 * '-')
 print(tokenizer.decode(output))
-print("Output:\n" + 100 * '-')
+print("" + 100 * '-')
 ```
 
 
