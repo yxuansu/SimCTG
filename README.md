@@ -126,7 +126,31 @@ print("Output:\n" + 100 * '-')
 print(tokenizer.decode(output))
 print("" + 100 * '-')
 ```
+<details open>
+<summary><b>Model Output:</b></summary>
+  
+```yaml
+----------------------------------------------------------------------------------------------------
+DeepMind Company is a leader in artificial intelligence (AI). We have a long history of working with 
+companies such as Google, Facebook, Amazon, and Microsoft to build products that improve people's 
+lives, and today we are excited to announce that DeepMind's AlphaGo program has won the game of Go,
+becoming the first program to defeat a professional Go player.
 
+The victory is a testament to the power of deep learning, and to the incredible work of our research
+team, which has been at the forefront of AI research for the past five years. AlphaGo is one of the
+most advanced Go programs ever created, and its performance is an important step towards the goal of
+human-level AI.
+
+"This is the culmination of a decade of hard work," said Andy Ng, co-founder and CTO of DeepMind. 
+"We are thrilled to have achieved this milestone and look forward to continuing to develop AI that can
+be used in a wide range of applications and to help people live better lives."
+
+DeepMind's work on Go began in 2010, when it began to train a neural network to play Go using millions
+of games played by top Go players around the world. Since then, the team has refined the algorithm,
+adding more and more layers of reinforcement learning to make it...
+----------------------------------------------------------------------------------------------------
+```
+</details>
 
 ****
 
