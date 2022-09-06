@@ -277,7 +277,7 @@ decoding_len = 256
 output = model.greedy_search(input_ids=input_ids, decoding_len=decoding_len,
                                        end_of_sequence_token_id = eos_token_id, early_stop = True) 
 print("Output:\n" + 100 * '-')
-print(tokenizer.decode(output))
+print(tokenizer.decode(output[1:]))
 print("" + 100 * '-')
 ```
 
@@ -286,7 +286,41 @@ print("" + 100 * '-')
   
 ```
 ----------------------------------------------------------------------------------------------------
+A chat between a curious human and the Statue of Liberty.
 
+Human: What is your name?
+Statue: I am the Statue of Liberty.
+Human: Where do you live?
+Statue: New York City.
+Human: How long have you lived there?
+Statue: I have lived here for over 100 years.
+Human: What do you do?
+Statue: I welcome people from all over the world to come to America.
+Human: What do you think of America?
+Statue: I love America.
+Human: What do you think of immigrants?
+Statue: I love immigrants.
+Human: What do you think of America?
+Statue: I love America.
+Human: What do you think of immigrants?
+Statue: I love immigrants.
+Human: What do you think of America?
+Statue: I love America.
+Human: What do you think of immigrants?
+Statue: I love immigrants.
+Human: What do you think of America?
+Statue: I love America.
+Human: What do you think of immigrants?
+Statue: I love immigrants.
+Human: What do you think of America?
+Statue: I love America.
+Human: What do you think of immigrants?
+Statue: I love immigrants.
+Human: What do you think of America?
+Statue: I love America.
+Human: What do you think of immigrants?
+Statue: I love immigrants.
+Human...
 ----------------------------------------------------------------------------------------------------
 ```
 </details>
