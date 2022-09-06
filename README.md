@@ -553,6 +553,22 @@ print("Output:\n" + 100 * '-')
 print(tokenizer.decode(output))
 ```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+Output:
+----------------------------------------------------------------------------------------------------
+Butt criticized Donald's controls in certain situations in the game, as well as the difficulty of some
+levels and puzzles. Buchanan also criticized the controls, calling them " unimpressive " and a " nightmare "
+of an experience to play with players unfamiliar with Tetris. On the other hand, his opinion was shared by
+other reviewers, and some were critical of the game's technical design for the Wii version of Tetris.
+In addition, Tintin's review included a quote from Roger Ebert, who said that Tetris was better than the
+original game due to its simplicity and ease of play. Ebert's comments were included in the game's DVD
+commentary, released on March 22, 2010. It is unclear if any of the video commentary was taken from the DVD...
+```
+</details>
+
 <span id='example_dialogue_generation'/>
 
 ###### 4.3.2. Open-Domain Dialogue Generation:
@@ -584,6 +600,16 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 print("Output:\n" + 100 * '-')
 print(tokenizer.decode(output))
 ```
+
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+Output:
+----------------------------------------------------------------------------------------------------
+刺猬很可爱！以前别人送了只没养，味儿太大！[SEP]是很可爱但是非常臭[SEP]是啊，没办法养[SEP]那个怎么养哦不会扎手吗[SEP]我觉得还好，就是有点臭
+```
+</details>
 
 <span id='example_off_the_shelf_generation'/>
 
@@ -617,7 +643,6 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
                                        early_stop=True) 
 print("Output:\n" + 100 * '-')
 print(tokenizer.decode(output))
-print("Output:\n" + 100 * '-')
 
 # Example 2
 prefix_text = '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华'
