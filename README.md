@@ -877,42 +877,71 @@ input_ids = torch.LongTensor(input_ids).view(1,-1)
 beam_width, alpha, decoding_len = 3, 0.6, 128
 eos_token = '[SEP]'
 print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
-'''
-   '苹果公司在中国市场推出的iphone7，不仅在外观设计上有所改变，在配置上也进行了升级。苹果还宣布，新一代iphone将采用
-   5.7英寸屏幕，分辨率达到2560×1440像素，显示效果非常出色。此外，该机还支持指纹识别功能，可实现手指快速扫描、人脸识
-   别等功能。'
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+苹果公司在中国市场推出的iphone7，不仅在外观设计上有所改变，在配置上也进行了升级。苹果还宣布，新一代iphone将采用
+5.7英寸屏幕，分辨率达到2560×1440像素，显示效果非常出色。此外，该机还支持指纹识别功能，可实现手指快速扫描、人脸识
+别等功能。
+```
+</details>
+
+```python 
 # (2) use nucleus sampling to generate the result
 nucleus_p, decoding_len = 0.95, 128
 eos_token = '[SEP]'
 print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
-'''
-   '苹果公司的设计套件。2.不同的颜色设计有不同的热塑性材质。热塑性材质中的ca34bc是真正能够让人感觉舒适的材质。3.比利
-   时家具建筑师埃莉诺特·夏格和大家举一些非常实用又非常普遍的例子在这里艾格的设计师们会简单介绍一下为什么美国家具是比利
-   时建筑的一个分支或一个分支，他们'
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+苹果公司的设计套件。2.不同的颜色设计有不同的热塑性材质。热塑性材质中的ca34bc是真正能够让人感觉舒适的材质。3.比利
+时家具建筑师埃莉诺特·夏格和大家举一些非常实用又非常普遍的例子在这里艾格的设计师们会简单介绍一下为什么美国家具是比利
+时建筑的一个分支或一个分支，他们
+```
+</details>
+
+```python 
 # (3) use greedy search to generate the result
 decoding_len = 128
 eos_token = '[SEP]'
 print (model.greedy_search(input_ids, decoding_len, eos_token))
-'''
-   '苹果公司的一个重要客户，他们的产品在全球范围内都有着非常高的知名度。[UNK]我们的产品在全球范围内都有着非常高的知名度，
-   我们的产品在全球范围内都有着非常高的知名度。[UNK]在这样的背景下，苹果公司的产品在全球范围内都有着非常高的知名度。[UNK]
-   我们的产品在全球范围内都有着非常高的知'
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+苹果公司的一个重要客户，他们的产品在全球范围内都有着非常高的知名度。[UNK]我们的产品在全球范围内都有着非常高的知名度，
+我们的产品在全球范围内都有着非常高的知名度。[UNK]在这样的背景下，苹果公司的产品在全球范围内都有着非常高的知名度。[UNK]
+我们的产品在全球范围内都有着非常高的知
+```
+</details>
+
+```python 
 # (4) use beam search to generate the result
 beam_width, decoding_len = 10, 128
 eos_token = '[SEP]'
 print (model.beam_search(input_ids, 10, decoding_len, eos_token))
-'''
-  '苹果公司总裁兼首席执行官蒂姆·库克（timcook）表示：[UNK]苹果公司是全球最大的智能手机制造商之一，苹果公司是全球最大的
-  智能手机制造商之一，苹果公司是全球最大的智能手机制造商之一，苹果公司是全球最大的智能手机制造商之一，苹果公司是全球最大
-  的智能手机制造商之一，苹果公司是全球'
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+苹果公司总裁兼首席执行官蒂姆·库克（timcook）表示：[UNK]苹果公司是全球最大的智能手机制造商之一，苹果公司是全球最大的
+智能手机制造商之一，苹果公司是全球最大的智能手机制造商之一，苹果公司是全球最大的智能手机制造商之一，苹果公司是全球最大
+的智能手机制造商之一，苹果公司是全球
+```
+</details>
+
+
+```python
 # ------------------------------------------ Another Example --------------------------------------------- #
 # prepare text prefix input
 text = r'百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华'
@@ -924,40 +953,67 @@ input_ids = torch.LongTensor(input_ids).view(1,-1)
 beam_width, alpha, decoding_len = 3, 0.6, 128
 eos_token = '[SEP]'
 print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
-'''
-  '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华文化精髓，也表现了人民群众生活水平的提高和对美好生活的向往。'
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华文化精髓，也表现了人民群众生活水平的提高和对美好生活的向往。
+```
+</details>
+
+```python
 # (2) use nucleus sampling to generate the result
 nucleus_p, decoding_len = 0.95, 128
 eos_token = '[SEP]'
 print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
-'''
-  '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华传统文化，更是经济、政治、文化上的一个精神机能的全面发展。
-   人们在生活中不仅能够充分认识到这个民族的非物质文化遗产，而且能够在此基础上追求书面化的概念。中国历史上有许多著名的「人物」
-   ，他们深深地扎根于中国历史的传统历史文化中，热爱中华文化，热爱中华文化的传承'
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华传统文化，更是经济、政治、文化上的一个精神机能的全面发展。
+人们在生活中不仅能够充分认识到这个民族的非物质文化遗产，而且能够在此基础上追求书面化的概念。中国历史上有许多著名的「人物」
+，他们深深地扎根于中国历史的传统历史文化中，热爱中华文化，热爱中华文化的传承
+```
+</details>
+
+```python
 # (3) use greedy search to generate the result
 decoding_len = 128
 eos_token = '[SEP]'
 print (model.greedy_search(input_ids, decoding_len, eos_token))
-'''
-  '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华民族的传统美德，也体现了中华民族的传统文化。[UNK]中华民族
-   的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传
-   统美德。[UNK]中华民族的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传'
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华民族的传统美德，也体现了中华民族的传统文化。[UNK]中华民族
+的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传
+统美德。[UNK]中华民族的传统美德，是中华民族的传统美德。[UNK]中华民族的传统美德，是中华民族的传
+```
+</details>
+
+```python
 # (4) use beam search to generate the result
 beam_width, decoding_len = 10, 128
 eos_token = '[SEP]'
 print (model.beam_search(input_ids, 10, decoding_len, eos_token))
-'''
-  '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历史使命。
-   中华民族伟大复兴的历史使命，不仅体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历史使命。中华民族伟大复兴的历
-   史使命，不仅体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历'
-'''
 ```
+
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历史使命。
+中华民族伟大复兴的历史使命，不仅体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历史使命。中华民族伟大复兴的历
+史使命，不仅体现了中华民族伟大复兴的历史使命，也体现了中华民族伟大复兴的历
+```
+</details>
+
 More details on how to use different decoding methods to generate the result can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
 
 
@@ -989,46 +1045,77 @@ input_ids = torch.LongTensor(input_ids).view(1,-1)
 beam_width, alpha, decoding_len = 5, 0.6, 128
 eos_token = model.tokenizer.eos_token
 print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
-'''
-   臥龍桜(がりゅうざくら)は、岐阜県高山市一之宮町にある一本桜。龍が地中に染みつく様子を図案化したもので、樹齢400年
-   を越す日本さくら名所100選に選定されている。一之宮町指定天然記念物。岐阜県飛騨地方(東濃地方)の山間地に生育し、約
-   1万年前に絶滅したと考えられている。「花の本」とも称され、開花期は5月上旬から下旬までで、桜の枝張りは濃緑色である。
-   花は直径約10cmの花弁を咲かせる八重咲きで、花弁の色は紅紫色で、雄しべは4本、雌しべは1本ある。雄しべの先
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+臥龍桜(がりゅうざくら)は、岐阜県高山市一之宮町にある一本桜。龍が地中に染みつく様子を図案化したもので、樹齢400年
+を越す日本さくら名所100選に選定されている。一之宮町指定天然記念物。岐阜県飛騨地方(東濃地方)の山間地に生育し、約
+1万年前に絶滅したと考えられている。「花の本」とも称され、開花期は5月上旬から下旬までで、桜の枝張りは濃緑色である。
+花は直径約10cmの花弁を咲かせる八重咲きで、花弁の色は紅紫色で、雄しべは4本、雌しべは1本ある。雄しべの先
+```
+</details>
+
+
+
+```python
 # (2) use nucleus sampling to generate the result
 nucleus_p, decoding_len = 0.95, 128
 eos_token = model.tokenizer.eos_token
 print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
-'''
-   臥龍桜(がりゅうざくら)は、岐阜県高山市一之宮町にある一本桜。龍が地中に棲む奇岩に由来する。毎年5月上旬には多くの花見
-   客が訪れている。かつて、雪見の藩お抱え家臣、雲口である長久城主長久竜泰が祭っている「月輪寺」には手水鉢が2つあり、長
-   久氏の勢力が強まると同時に関連する寺もあり、山を挟むように吉野側の赤峰山から北へ順に樹齢250年を越してきたが、江戸時
-   代に廃材が搬出されてから薪が取れなくなっている。古い株は毎年12月の初午に燃えつき風雨が吹き荒れて朽ち果てる。根は分枝
-'''
+```
 
+
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+臥龍桜(がりゅうざくら)は、岐阜県高山市一之宮町にある一本桜。龍が地中に棲む奇岩に由来する。毎年5月上旬には多くの花見
+客が訪れている。かつて、雪見の藩お抱え家臣、雲口である長久城主長久竜泰が祭っている「月輪寺」には手水鉢が2つあり、長
+久氏の勢力が強まると同時に関連する寺もあり、山を挟むように吉野側の赤峰山から北へ順に樹齢250年を越してきたが、江戸時
+代に廃材が搬出されてから薪が取れなくなっている。古い株は毎年12月の初午に燃えつき風雨が吹き荒れて朽ち果てる。根は分枝
+```
+</details>
+
+
+```python
 # (3) use greedy search to generate the result
 decoding_len = 128
 eos_token = model.tokenizer.eos_token
 print (model.greedy_search(input_ids, decoding_len, eos_token))
-'''
-   臥龍桜(がりゅうざくら)は、岐阜県高山市一之宮町にある一本桜。龍が地中に棲む龍の棲むとされる桜で、樹齢は1000年以上。樹
-   高は10mほどで、幹周りは8mほどになる。樹齢は300年ほどで、樹高は20mほどになる。樹形が整っており、枝張りも良く、樹勢も
-   旺盛である。樹形は、樹高が1mほどで、幹周りは4mほどになる。枝張りはよく発達し、樹勢は旺盛である。冬になると、幹周りの
-   樹冠が紅葉する。また、紅葉の時期には、樹冠が赤く紅葉する。樹
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+臥龍桜(がりゅうざくら)は、岐阜県高山市一之宮町にある一本桜。龍が地中に棲む龍の棲むとされる桜で、樹齢は1000年以上。樹
+高は10mほどで、幹周りは8mほどになる。樹齢は300年ほどで、樹高は20mほどになる。樹形が整っており、枝張りも良く、樹勢も
+旺盛である。樹形は、樹高が1mほどで、幹周りは4mほどになる。枝張りはよく発達し、樹勢は旺盛である。冬になると、幹周りの
+樹冠が紅葉する。また、紅葉の時期には、樹冠が赤く紅葉する。樹
+```
+</details>
+
+
+```python
 # (4) use beam search to generate the result
 beam_width, decoding_len = 10, 128
 eos_token = model.tokenizer.eos_token
 print (model.beam_search(input_ids, 10, decoding_len, eos_token))
-'''
-   臥龍桜(がりゅうざくら)は、岐阜県高山市一之宮町にある一本桜。龍が地中深くに咲く桜で、岐阜県の天然記念物に指定されている。
-   岐阜県高山市一之宮町一之宮(いちのみやちょういちのみや)は、岐阜県高山市一之宮町一之宮にある一本桜である。龍が地中深くに
-   咲く桜で、岐阜県の天然記念物に指定されている。岐阜県高山市一之宮町一之宮(いちのみやちょういちのみや)は、岐阜県高山市一
-   之宮町一之宮(いちのみやちょういちのみや)は、岐阜県高山市一之宮町一之宮(いちのみやちょういちのみや)は、岐阜県高山
-'''
 ```
+
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+臥龍桜(がりゅうざくら)は、岐阜県高山市一之宮町にある一本桜。龍が地中深くに咲く桜で、岐阜県の天然記念物に指定されている。
+岐阜県高山市一之宮町一之宮(いちのみやちょういちのみや)は、岐阜県高山市一之宮町一之宮にある一本桜である。龍が地中深くに
+咲く桜で、岐阜県の天然記念物に指定されている。岐阜県高山市一之宮町一之宮(いちのみやちょういちのみや)は、岐阜県高山市一
+之宮町一之宮(いちのみやちょういちのみや)は、岐阜県高山市一之宮町一之宮(いちのみやちょういちのみや)は、岐阜県高山
+```
+</details>
 
 **[Note]** Sadly, I do not speak Japanese (I wish I do!), so I can only judge the quality of the generated text using [Google translate](https://translate.google.com/). It would be great if anyone could tell me whether the generated text is good or not. Thank you in advance!
 
@@ -1062,31 +1149,53 @@ beam_width, alpha, decoding_len = 5, 0.6, 64
 # because this model is pretty large, so we set the generation length (decoding_len) as 64
 eos_token = model.tokenizer.eos_token
 print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
-'''
-   인간처럼생각하고,행동하는\'지능\'을통해인류가이제까지풀지못했던난제를해결하려한다.이책의제목이기도한'슈퍼인텔리전스'는인공지능
-   (AI)의등장으로야기된사회변화를일컫는말로,이책을관통하는키워드이기도하다.저자는"기술과인간사이의경계가무너지고있다"고지적한다.
-   AI가인간의사고방식과행동을모방할뿐만
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+인간처럼생각하고,행동하는\'지능\'을통해인류가이제까지풀지못했던난제를해결하려한다.이책의제목이기도한'슈퍼인텔리전스'는인공지능
+(AI)의등장으로야기된사회변화를일컫는말로,이책을관통하는키워드이기도하다.저자는"기술과인간사이의경계가무너지고있다"고지적한다.
+AI가인간의사고방식과행동을모방할뿐만
+```
+</details>
+
+```python
 # (2) use nucleus sampling to generate the result
 nucleus_p, decoding_len = 0.95, 64
 eos_token = model.tokenizer.eos_token
 print (model.nucleus_sampling(input_ids, nucleus_p, decoding_len, eos_token))
-'''
-  '인간처럼생각하고,행동하는\'지능\'을통해인류가이제까지풀지못했던큰수수께끼를풀수있다.'지능\'은인공두뇌그자체이기도하지만그공간의
-  반영이라는해석도가능하다.예를들면시간부등호처럼복잡한수식을쉽게떠올릴수있다는이야기다.마치구글에검색창에'Quick'이라는단어를입력하
-  면자동으로'중력'은일정한법칙에따라'
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+인간처럼생각하고,행동하는\'지능\'을통해인류가이제까지풀지못했던큰수수께끼를풀수있다.'지능\'은인공두뇌그자체이기도하지만그공간의
+반영이라는해석도가능하다.예를들면시간부등호처럼복잡한수식을쉽게떠올릴수있다는이야기다.마치구글에검색창에'Quick'이라는단어를입력하
+면자동으로'중력'은일정한법칙에따라
+```
+</details>
+
+```python
 # (3) use greedy search to generate the result
 decoding_len = 64
 eos_token = model.tokenizer.eos_token
 print (model.greedy_search(input_ids, decoding_len, eos_token))
-'''
-  '인간처럼생각하고,행동하는\'지능\'을통해인류가이제까지풀지못했던문제를해결할수있다고주장한다.이지능은\'지능\'그자체라기보다\'지능\'
-  그자체를구성하는\'지능\'그자체라고할수있다.이지능은\'지능\'그자체라기보다\'지능\'그자체를구성하는\'지능\'그자체라고'
-'''
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+인간처럼생각하고,행동하는\'지능\'을통해인류가이제까지풀지못했던문제를해결할수있다고주장한다.이지능은\'지능\'그자체라기보다\'지능\'
+그자체를구성하는\'지능\'그자체라고할수있다.이지능은\'지능\'그자체라기보다\'지능\'그자체를구성하는\'지능\'그자체라고
+```
+</details>
+
+
+```python
 # (4) use beam search to generate the result
 # We do not print the result, because beam search stops generation immediately.
 ```
