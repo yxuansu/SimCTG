@@ -210,7 +210,7 @@ bos_token_id = tokenizer.bos_token_id
 eos_token_id = tokenizer.eos_token_id
 ```
 
-(ii) Then, we use the same example from the original [[paper]](https://arxiv.org/abs/2205.01068) (see Figure 9 in the Appendix E) to show how to generate text with contrastive search. The prefix text is provided as
+(ii) Then, we use the same example from the original [paper](https://arxiv.org/abs/2205.01068) (see Figure 9 in the Appendix E) to show how to generate text with contrastive search. The prefix text is provided as
 ```python
 prefix_text = r"""A chat between a curious human and the Statue of Liberty.
 
