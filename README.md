@@ -422,8 +422,9 @@ eos_token = '<|endoftext|>'
 print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
 ```
 <details>
-<summary>Model Output:</summary>
-```python
+<summary><b>Model Output:</b></summary>
+  
+```yaml
 Insect farming is the practice of raising and breeding insects as livestock, also referred to as minilivestock
 or micro stock. Insects may be farmed for the  commodities they produce, such as honey, corn, sorghum, and 
 other crops. In some cases, the production of insects is a way to increase income for the owner or his family. 
