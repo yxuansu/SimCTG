@@ -287,7 +287,7 @@ output = model.topk_sampling(input_ids=input_ids, topk=topk, decoding_len=decodi
 ##### 4.1. Initialization:
 Initializing the model and the tokenizer
 ```python
-from simctg.simctggpt import SimCTGGPT
+from simctg.simctgopt import SimCTGOPT
 model = SimCTGGPT(model_name=model_name, special_token_list=special_token_list)
 tokenizer = model.tokenizer
 ```
