@@ -20,20 +20,31 @@
       * <a href='#beam_search_simctggpt'>3.4.4. Beam Search</a>
       * <a href='#nucleus_sampling_simctggpt'>3.4.5. Nucleus Sampling</a>
       * <a href='#topk_sampling_simctggpt'>3.4.6. Top-k Sampling</a>
-* <a href='#simctgt5'>4. SimCTGT5 Class</a>
-    * <a href='#init_simctgt5'>4.1. Initialization</a>
-      * <a href='#init_simctgt5_example_1'>4.1.1. Initialization without Self-Defining Model and Tokenizer</a>
-      * <a href='#init_simctgt5_example_2'>4.1.2. Initialization with Self-Defining Model and Tokenizer</a>
-    * <a href='#forward_simctgt5'>4.2. Forward Computation</a>
-    * <a href='#save_simctgt5'>4.3. Save Model</a>
-    * <a href='#decoding_simctgt5'>4.4. Decoding Methods</a>
-      * <a href='#contrastive_search_simctgt5'>4.4.1. Contrastive Search</a>
-      * <a href='#diverse_contrastive_search_simctgt5'>4.4.2. Diverse Contrastive Search</a>
-      * <a href='#greedy_search_simctgt5'>4.4.3. Greedy Search</a>
-      * <a href='#beam_search_simctgt5'>4.4.4. Beam Search</a>
-      * <a href='#nucleus_sampling_simctgt5'>4.4.5. Nucleus Sampling</a>
-* <a href='#evaluation'>5. Evaluation</a>
-   * <a href='#reptition_and_diversity'>5.1. Repetition and Diversity</a>
+* <a href='#simctgopt'>4. SimCTGOPT Class</a>
+    * <a href='#init_simctgopt'>4.1. Initialization</a>
+    * <a href='#forward_simctgopt'>4.2. Forward Computation</a>
+    * <a href='#save_simctgopt'>4.3. Save Model</a>
+    * <a href='#decoding_simctgopt'>4.4. Decoding Methods</a>
+      * <a href='#contrastive_search_simctgopt'>4.4.1. Contrastive Search</a>
+      * <a href='#diverse_contrastive_search_simctgopt'>4.4.2. Diverse Contrastive Search</a>
+      * <a href='#greedy_search_simctgopt'>4.4.3. Greedy Search</a>
+      * <a href='#beam_search_simctgopt'>4.4.4. Beam Search</a>
+      * <a href='#nucleus_sampling_simctgopt'>4.4.5. Nucleus Sampling</a>
+      * <a href='#topk_sampling_simctgopt'>4.4.6. Top-k Sampling</a>
+* <a href='#simctgt5'>5. SimCTGT5 Class</a>
+    * <a href='#init_simctgt5'>5.1. Initialization</a>
+      * <a href='#init_simctgt5_example_1'>5.1.1. Initialization without Self-Defining Model and Tokenizer</a>
+      * <a href='#init_simctgt5_example_2'>5.1.2. Initialization with Self-Defining Model and Tokenizer</a>
+    * <a href='#forward_simctgt5'>5.2. Forward Computation</a>
+    * <a href='#save_simctgt5'>5.3. Save Model</a>
+    * <a href='#decoding_simctgt5'>5.4. Decoding Methods</a>
+      * <a href='#contrastive_search_simctgt5'>5.4.1. Contrastive Search</a>
+      * <a href='#diverse_contrastive_search_simctgt5'>5.4.2. Diverse Contrastive Search</a>
+      * <a href='#greedy_search_simctgt5'>5.4.3. Greedy Search</a>
+      * <a href='#beam_search_simctgt5'>5.4.4. Beam Search</a>
+      * <a href='#nucleus_sampling_simctgt5'>5.4.5. Nucleus Sampling</a>
+* <a href='#evaluation'>6. Evaluation</a>
+   * <a href='#reptition_and_diversity'>6.1. Repetition and Diversity</a>
 
 
 ****
@@ -268,11 +279,11 @@ output = model.topk_sampling(input_ids=input_ids, topk=topk, decoding_len=decodi
 
 <span id='simctgt5'/>
 
-#### 4. SimCTGT5 Class: <a href='#catalogue'>[Back to Top]</a>
+#### 5. SimCTGT5 Class: <a href='#catalogue'>[Back to Top]</a>
 
 <span id='init_simctgt5'/>
 
-##### 4.1. Initialization:
+##### 5.1. Initialization:
 Initializing the model and the tokenizer
 ```python
 from simctg.simctgt5 import SimCTGT5
@@ -290,7 +301,7 @@ Below are two examples of how to initialize the model.
 
 <span id='init_simctgt5_example_1'/>
 
-###### 4.1.1. Initialization without Self-Defining Model and Tokenizer:
+###### 5.1.1. Initialization without Self-Defining Model and Tokenizer:
 ```python
 from simctg.simctgt5 import SimCTGT5
 model_name = "flax-community/t5-base-cnn-dm"
@@ -299,7 +310,7 @@ model = SimCTGT5(model_name, special_token_list=[])
 
 <span id='init_simctgt5_example_2'/>
 
-###### 4.1.2. Initialization with Self-Defining Model and Tokenizer:
+###### 5.1.2. Initialization with Self-Defining Model and Tokenizer:
 ```python
 from simctg.simctgt5 import SimCTGT5
 model_name = r'imxly/t5-pegasus'
@@ -315,7 +326,7 @@ model = SimCTGT5(model_name, user_defined_model=t5model, user_defined_tokenizer=
 
 <span id='forward_simctgt5'/>
 
-##### 4.2. Forward Computation:
+##### 5.2. Forward Computation:
 
 ```python
 last_hidden_states, logits = model(encoder_inputs=encoder_inputs, encoder_mask=encoder_mask, 
@@ -337,7 +348,7 @@ last_hidden_states, logits = model(encoder_inputs=encoder_inputs, encoder_mask=e
 
 <span id='save_simctgt5'/>
 
-##### 4.3. Save Model:
+##### 5.3. Save Model:
 To save the model, please run the following command:
 ```python
 model.save_model(ckpt_save_path=ckpt_save_path)
@@ -349,13 +360,13 @@ model.save_model(ckpt_save_path=ckpt_save_path)
 
 <span id='decoding_simctgt5'/>
 
-##### 4.4. Decoding Methods:
+##### 5.4. Decoding Methods:
 
 In the following, we illustrate how to generate text with SimCTGT5.
 
 <span id='contrastive_search_simctgt5'/>
 
-###### 4.4.1. Contrastive Search:
+###### 5.4.1. Contrastive Search:
 ```python
 output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, alpha=alpha, decoding_len=decoding_len, 
                                        start_of_sequence_token_id=start_of_sequence_token_id, 
@@ -379,7 +390,7 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
 
 <span id='diverse_contrastive_search_simctgt5'/>
 
-###### 4.4.2. Diverse Contrastive Search:
+###### 5.4.2. Diverse Contrastive Search:
 **[Definition]** The definition of diverse contrastive search can be found <a href='#diverse_contrastive_search_simctggpt'>[here]</a>.
 ```python
 output = model.diverse_contrastive_search(input_ids=input_ids, sample_step=sample_step, nucleus_p=nucleus_p, beam_width=beam_width, 
@@ -405,7 +416,7 @@ output = model.diverse_contrastive_search(input_ids=input_ids, sample_step=sampl
 
 <span id='greedy_search_simctgt5'/>
 
-###### 4.4.3. Greedy Search:
+###### 5.4.3. Greedy Search:
 ```python
 output = model.greedy_search(input_ids=input_ids, decoding_len=decoding_len, start_of_sequence_token_id=start_of_sequence_token_id, 
                              end_of_sequence_token_id=end_of_sequence_token_id, early_stop=early_stop)
@@ -425,7 +436,7 @@ output = model.greedy_search(input_ids=input_ids, decoding_len=decoding_len, sta
 
 <span id='beam_search_simctgt5'/>
 
-###### 4.4.4. Beam Search:
+###### 5.4.4. Beam Search:
 ```python
 output = model.beam_search(input_ids=input_ids, beam_width=beam_width, decoding_len=decoding_len, 
                            start_of_sequence_token_id=start_of_sequence_token_id, 
@@ -447,7 +458,7 @@ output = model.beam_search(input_ids=input_ids, beam_width=beam_width, decoding_
 
 <span id='nucleus_sampling_simctgt5'/>
 
-###### 4.4.5. Nucleus Sampling:
+###### 5.4.5. Nucleus Sampling:
 ```python
 output = model.nucleus_sampling(input_ids=input_ids, nucleus_p=nucleus_p, decoding_len=decoding_len, 
                            start_of_sequence_token_id=start_of_sequence_token_id, 
@@ -474,11 +485,11 @@ output = model.nucleus_sampling(input_ids=input_ids, nucleus_p=nucleus_p, decodi
 
 <span id='evaluation'/>
 
-#### 5. Evaluation: <a href='#catalogue'>[Back to Top]</a>
+#### 6. Evaluation: <a href='#catalogue'>[Back to Top]</a>
 
 <span id='reptition_and_diversity'/>
 
-##### 5.1. Repetition and Diversity:
+##### 6.1. Repetition and Diversity:
 Here, we show how to replicate the n-gram repetition and diversity results of contrastive search as reported in the paper.
 
 (1) First, download the prediction result of contrastive search as provided in our repo [[here]](https://github.com/yxuansu/SimCTG/blob/main/document_generation/simctg_contrasive.json).
