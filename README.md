@@ -598,7 +598,7 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
                                        decoding_len=decoding_len, end_of_sequence_token_id=eos_token_id,
                                        early_stop=True) 
 print("Output:\n" + 100 * '-')
-print(tokenizer.decode(output))
+print(''.join(tokenizer.decode(output).split()))
 ```
 
 <details>
@@ -642,8 +642,21 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
                                        decoding_len=decoding_len, end_of_sequence_token_id=eos_token_id,
                                        early_stop=True) 
 print("Output:\n" + 100 * '-')
-print(tokenizer.decode(output))
+print(''.join(tokenizer.decode(output).split()))
+```
 
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+Output:
+----------------------------------------------------------------------------------------------------
+苹果公司在中国市场推出的iphone7，不仅在外观设计上有所改变，在配置上也进行了升级。苹果还宣布，新一代iphone将采用5.7英寸
+屏幕，分辨率达到2560×1440像素，显示效果非常出色。此外，该机还支持指纹识别功能，可实现手指快速扫描、人脸识别等功能。
+```
+</details>
+
+```python
 # Example 2
 prefix_text = '百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华'
 print ('Prefix is: {}'.format(prefix_text))
@@ -656,8 +669,18 @@ output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_widt
                                        decoding_len=decoding_len, end_of_sequence_token_id=eos_token_id,
                                        early_stop=True) 
 print("Output:\n" + 100 * '-')
-print(tokenizer.decode(output))
+print(''.join(tokenizer.decode(output).split()))
 ```
+
+<details>
+<summary><b>Model Output:</b></summary> 
+
+```
+Output:
+----------------------------------------------------------------------------------------------------
+百节年为首，春节是中华民族最隆重的传统佳节。它不仅集中体现了中华文化精髓，也表现了人民群众生活水平的提高和对美好生活的向往。
+```
+</details>
 
 <span id='japanese_example_off_the_shelf_generation'/>
 
