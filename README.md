@@ -18,7 +18,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 ****
 
 ### News:
-* [2022/09/06] :fire: We have added supports for the newly released OPT models (see ["OPT: Open Pre-trained Transformer Language Models"](https://arxiv.org/abs/2205.01068)) by Meta. To see how to apply contrastive search on OPT models, check it [here]!
+* [2022/09/06] :fire: We have added supports for the newly released OPT models (see ["OPT: Open Pre-trained Transformer Language Models"](https://arxiv.org/abs/2205.01068)) by Meta. To see how to apply contrastive search on OPT models, check it [here](#contrastive_search_with_opt)!
 * [2022/06/03] :fire: We have released an easy-to-use library (i.e., simctg) which allows you to use SimCTG with a simple **pip install simctg** and **a few lines of code**. Check the comprehensive and huggingface-style tutorials <a href='#tutorial'>[here]</a> and [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg)!
 * [2022/05/06] :star: We have released **_MAGIC_**, a follow up work of SimCTG, that is the SOTA method in zero-shot multi-modal text generation tasks (e.g., zero-shot image captioning and visually grounded story generation). Check it out! [[paper]](https://arxiv.org/abs/2205.02655) [[code]](https://github.com/yxuansu/MAGIC)
 * [2022/04/16] We have updated instructions on how to apply contrastive search on encoder-decoder models (e.g. BART and T5). More details can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec).
@@ -36,6 +36,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 * <a href='#contrastive_search_with_LMs'>2. Contrastive Search with GPT-2 and OPT :fire:</a>
     * <a href='#install_simctg_package'>2.1. Environment Setup</a>
     * <a href='#contrastive_search_with_gpt2'>2.2. Contrastive Search with GPT-2</a>
+    * <a href='#contrastive_search_with_opt'>2.3. Contrastive Search with OPT</a>
 * <a href='#models'>3. Huggingface Models</a>
 * <a href='#tutorial'>4. Huggingface-Style Tutorials</a> :star: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ImvR-ldHf9rJyFzOCMJ_zjAGK8n1iTW7?usp=sharing)
     * <a href='#install_simctg'>4.1. Install and Load SimCTG</a>
@@ -190,6 +191,29 @@ DeepMind's research is also used by the UK government to develop new technologie
 ----------------------------------------------------------------------------------------------------
 ```
 </details>
+
+
+<span id='contrastive_search_with_opt'/>
+
+##### 2.3. Contrastive Search with OPT:
+Let's see how to produce text with contrastive search using OPT models. More details can be found [here]((https://github.com/yxuansu/SimCTG/tree/main/simctg)).
+
+(i) First, we load the OPT model as
+```python
+import torch
+from simctg.simctgopt import SimCTGOPT
+model_name = 'facebook/opt-6.7b'
+model = SimCTGOPT(model_name)
+tokenizer = model.tokenizer
+model.eval()
+bos_token_id = tokenizer.bos_token_id
+eos_token_id = tokenizer.eos_token_id
+```
+
+
+
+
+
 
 ****
 
