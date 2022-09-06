@@ -95,7 +95,7 @@ pip install simctg --upgrade
 <span id='contrastive_search_with_gpt2'/>
 
 ##### 2.2. Contrastive Search with GPT-2:
-Let's see how to produce text with contrastive search using GPT-2 models. 
+Let's see how to produce text with contrastive search using GPT-2 models. More details can be found [here]((https://github.com/yxuansu/SimCTG/tree/main/simctg)).
 
 (i) First, we load the GPT-2 model as
 ```python
@@ -117,8 +117,15 @@ input_ids = torch.LongTensor(input_ids).view(1,-1)
 ```
 
 (iii) Last, we generate the text with contrastive search as
-
-
+```python
+beam_width, alpha, decoding_len = 4, 0.6, 256
+output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, 
+                                       alpha=alpha, decoding_len=decoding_len,
+                                      end_of_sequence_token_id = eos_token_id, early_stop = True) 
+print("Output:\n" + 100 * '-')
+print(tokenizer.decode(output))
+print("Output:\n" + 100 * '-')
+```
 
 
 ****
