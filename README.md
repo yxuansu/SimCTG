@@ -17,6 +17,17 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 
 ****
 
+### News:
+* [2022/06/03] :fire: We have released an easy-to-use library (i.e., simctg) which allows you to use SimCTG with a simple **pip install simctg** and **a few lines of code**. Check the comprehensive and huggingface-style tutorials <a href='#tutorial'>[here]</a> and [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg)!
+* [2022/05/06] :star: We have released **_MAGIC_**, a follow up work of SimCTG, that is the SOTA method in zero-shot multi-modal text generation tasks (e.g., zero-shot image captioning and visually grounded story generation). Check it out! [[paper]](https://arxiv.org/abs/2205.02655) [[code]](https://github.com/yxuansu/MAGIC)
+* [2022/04/16] We have updated instructions on how to apply contrastive search on encoder-decoder models (e.g. BART and T5). More details can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/SimCTGEncDec).
+* [2022/04/07] SimCTG has been publicly deployed in the **AI sentence completion** module of [Tencent's Effidit platform (腾讯智能创作助手)](https://effidit.qq.com/). Check it out and have fun!
+* [2022/04/02] Add support on another benchmark (ROCStories) for the task of open-ended story generation.
+* [2022/03/06] Example of how to adapt our approach to open-ended story generation is released.
+* [2022/02/15] SimCTG is publicly released!
+
+****
+
 <span id='all_catelogue'/>
 
 ### Catalogue:
@@ -64,6 +75,7 @@ https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sh
 Text generation is of great importance to many natural language processing applications. However, maximization-based decoding methods (e.g. beam search) of neural language models often lead to degenerate solutions---the generated text is unnatural and contains undesirable repetitions. Existing approaches introduce stochasticity via sampling or modify training objectives to decrease probabilities of certain tokens (e.g., unlikelihood training). However, they often lead to solutions that lack coherence. In this work, we show that an underlying reason for model degeneration is the anisotropic distribution of token representations. We present a contrastive solution: (i) SimCTG, a contrastive training objective to calibrate the model's representation space, and (ii) a decoding method---contrastive search---to encourage diversity while maintaining coherence in the generated text. Extensive experiments and analyses on three benchmarks from two languages demonstrate that our proposed approach outperforms state-of-the-art text generation methods as evaluated by both human and automatic metrics.
 ****
 
+
 <span id='news'/>
 
 #### 2. News: <a href='#all_catelogue'>[Back to Top]</a>
@@ -74,7 +86,6 @@ Text generation is of great importance to many natural language processing appli
 * [2022/04/02] Add support on another benchmark (ROCStories) for the task of open-ended story generation.
 * [2022/03/06] Example of how to adapt our approach to open-ended story generation is released.
 * [2022/02/15] SimCTG is publicly released!
-
 
 
 ****
