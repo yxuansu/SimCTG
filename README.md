@@ -420,17 +420,21 @@ input_ids = torch.LongTensor(input_ids).view(1,-1)
 beam_width, alpha, decoding_len = 5, 0.6, 128
 eos_token = '<|endoftext|>'
 print (model.fast_contrastive_search(input_ids, beam_width, alpha, decoding_len, eos_token))
-
-'''
-   Insect farming is the practice of raising and breeding insects as livestock, also referred to as minilivestock
-   or micro stock. Insects may be farmed for the  commodities they produce, such as honey, corn, sorghum, and 
-   other crops. In some cases, the production of insects is a way to increase income for the owner or his family. 
-   This type of farming has been described as "an economic system that benefits all people regardless of race, sex, 
-   or social status" (p.\xa09). A large number of farmers in North America, Europe, and South America have used the 
-   method of farming for food production in order to feed their families and livestock. The most common method of 
-   farming is by hand-cropping, which consists of cutting a hole in the ground and using a saw
-'''
 ```
+<details>
+<summary>Model Output:</summary>
+```python
+Insect farming is the practice of raising and breeding insects as livestock, also referred to as minilivestock
+or micro stock. Insects may be farmed for the  commodities they produce, such as honey, corn, sorghum, and 
+other crops. In some cases, the production of insects is a way to increase income for the owner or his family. 
+This type of farming has been described as "an economic system that benefits all people regardless of race, sex, 
+or social status" (p.\xa09). A large number of farmers in North America, Europe, and South America have used the 
+method of farming for food production in order to feed their families and livestock. The most common method of 
+farming is by hand-cropping, which consists of cutting a hole in the ground and using a saw
+```
+</details>
+
+
 More details on how to pre-train SimCTG on large-scale corpus and the details of the argument setup in contrastive search can be found [[here]](https://github.com/yxuansu/SimCTG/tree/main/pretraining).
 
 
