@@ -210,10 +210,46 @@ bos_token_id = tokenizer.bos_token_id
 eos_token_id = tokenizer.eos_token_id
 ```
 
+(ii) Then, we use the same example from the original [[paper]](https://arxiv.org/abs/2205.01068) (see Figure 9 in the Appendix E) to show how to generate text with contrastive search. The prefix text is provided as
+```python
+prefix_text = r"""A chat between a curious human and the Statue of Liberty.
 
+Human: What is your name?
+Statue: I am the Statue of Liberty.
+Human: Where do you live?
+Statue: New York City.
+Human: How long have you lived there?"""
+```
 
+(iii) We prepare the input ids as
 
+**[Important Tip]** As the authors suggested in their [[tutorial]](https://huggingface.co/docs/transformers/model_doc/opt), in contrastive to GPT2, OPT adds the EOS token </s> to the beginning of every prompt. So make sure the special token is added at the front of the prompt.
 
+```python
+tokens = tokenizer.tokenize(prefix_text)
+input_ids = [bos_token_id] + tokenizer.convert_tokens_to_ids(tokens) # adds </s> to the beginning of every prompt
+input_ids = torch.LongTensor(input_ids).view(1,-1)
+```
+
+(iv) Last, we generate the text with contrastive search as
+```python
+beam_width, alpha, decoding_len = 5, 0.6, 256
+output = model.fast_contrastive_search(input_ids=input_ids, beam_width=beam_width, 
+                                       alpha=alpha, decoding_len=decoding_len,
+                                       end_of_sequence_token_id = eos_token_id, early_stop = True) 
+print("Output:\n" + 100 * '-')
+print(tokenizer.decode(output[1:]))
+print("" + 100 * '-')
+```
+
+<details open>
+<summary><b>Model Output:</b></summary>
+  
+```yaml
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+```
+</details>
 
 ****
 
