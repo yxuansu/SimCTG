@@ -353,11 +353,18 @@ Statue: Because there are many people trying to steal her.
 
 a comparison about an unexpressed thought
 
-I would also share the story of “A Humble Fear.” At a conference in New York the Dalai Lama gave a speech to the International Thinkers Congress in New York. The whole thing was recorded, and the video is quite interesting. (on a side note, I love the fact that there were some people who laughed when he described himself as a humble being… I think the video is hilarious, there is a reason why I put up the video. Because if you cannot find the humor in this you’re sadly lacking…)
+I would also share the story of “A Humble Fear.” At a conference in New York the Dalai Lama gave a 
+speech to the International Thinkers Congress in New York. The whole thing was recorded, and the 
+video is quite interesting. (on a side note, I love the fact that there were some people who laughed
+when he described himself as a humble being… I think the video is hilarious, there is a reason why
+I put up the video. Because if you cannot find the humor in this you’re sadly lacking…)
 
-In the speech, the Dalai Lama compares the search for truth to searching for treasure. He says: “However there is a huge difference between being a thief and a collector. A thief simply takes things, whereas a collector looks for the beauty, even if it is just a single object.”
+In the speech, the Dalai Lama compares the search for truth to searching for treasure. He says: 
+“However there is a huge difference between being a thief and a collector. A thief simply takes things, 
+whereas a collector looks for the beauty, even if it is just a single object.”
 
-The above quote is perhaps the most cliched Buddhist philosophy of our times. However the comparison between a collector and a thief is quite interesting. I like to think that the Buddha...
+The above quote is perhaps the most cliched Buddhist philosophy of our times. However the comparison
+between a collector and a thief is quite interesting. I like to think that the Buddha...
 ----------------------------------------------------------------------------------------------------
 ```
 </details>
