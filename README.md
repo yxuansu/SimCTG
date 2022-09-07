@@ -131,6 +131,7 @@ print("" + 100 * '-')
 <summary><b>Model Output:</b></summary>
   
 ```
+Output:
 ----------------------------------------------------------------------------------------------------
 DeepMind Company is a leader in artificial intelligence (AI). We have a long history of working with 
 companies such as Google, Facebook, Amazon, and Microsoft to build products that improve people's 
@@ -167,6 +168,7 @@ print("" + 100 * '-')
 <summary><b>Model Output:</b></summary>
   
 ```
+Output:
 ----------------------------------------------------------------------------------------------------
 DeepMind Company is a leading AI research company, with a focus on deep learning and deep learning-based systems.
 
@@ -206,6 +208,7 @@ print("" + 100 * '-')
 <summary><b>Model Output:</b></summary>
   
 ```
+Output:
 ----------------------------------------------------------------------------------------------------
 DeepMind Company is a Cardiff-based start-up with an exclusive mission to build the world’s largest ever
 deep-learning system to analyse the world’s digital content and in particular, super-sized image content.
@@ -286,6 +289,7 @@ print("" + 100 * '-')
 <summary><b>Model Output:</b></summary> 
 
 ```
+Output:
 ----------------------------------------------------------------------------------------------------
 A chat between a curious human and the Statue of Liberty.
 
@@ -325,6 +329,7 @@ print("" + 100 * '-')
 <summary><b>Model Output:</b></summary>
   
 ```
+Output:
 ----------------------------------------------------------------------------------------------------
 A chat between a curious human and the Statue of Liberty.
 
@@ -379,6 +384,7 @@ print("" + 100 * '-')
 <summary><b>Model Output:</b></summary>
   
 ```
+Output:
 ----------------------------------------------------------------------------------------------------
 A chat between a curious human and the Statue of Liberty.
 
