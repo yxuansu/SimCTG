@@ -5,9 +5,9 @@ six
 wheel
 progressbar
 sklearn
-torch==1.6.0 
-torchvision==0.7.0
-transformers==4.7.0
+torch
+torchvision
+transformers
 pyyaml
 nltk
 sentencepiece
