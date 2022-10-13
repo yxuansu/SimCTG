@@ -47,7 +47,7 @@ For each step during the autoregressive decoding, contrastive search conduct the
    assert next_input_ids.size() == torch.Size([beam_width, seqlen+1])
    ```
    
-   This small batch is fed into the language models again to get their next-turn hidden states.
+   This small batch is fed into the language models again to get their next step hidden states.
    
    ```python
    # feed these candidates into next round to get their hidden states
@@ -59,7 +59,7 @@ For each step during the autoregressive decoding, contrastive search conduct the
    assert next_hidden.size() == torch.Size([beam_width, 1, embed_dim])
    ```
    
-   The `next_hidden` contains the hidden states of each candidate token, and will be used to calculate the degeneration penalty (maximum cosine similarity with previous tokens `context_hidden`).
+   The `next_hidden` contains the hidden states of each candidate token, and will be used to calculate the degeneration penalty (maximum cosine similarity with respect to previous tokens `context_hidden`).
    
    ```python
    def ranking(context_hidden, next_hidden, next_top_k_ids, next_top_k_probs, alpha):
@@ -87,7 +87,7 @@ For each step during the autoregressive decoding, contrastive search conduct the
        return next_id
    ```
    
-   As shown in above codes, the degeneration penalty and the model confidence are added to re-rank these candidate tokens, which follows this formulation:
+   As shown in the above code, the degeneration penalty and the model confidence are added to re-rank these candidate tokens, which follows this formulation:
    
    ![](https://user-images.githubusercontent.com/27548710/192125120-ca0ddb4d-70da-4489-b65d-885a0c8f96fc.png)
    
