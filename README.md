@@ -18,7 +18,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 ****
 
 ### News:
-* [2022/10/13] We add a concise explanation on the implementations of contrastive search. Please find it [[here]](https://github.com/yxuansu/SimCTG/tree/main/contrastive_search_explanation).
+* [2022/10/13] We have added a concise explanation on the implementations of contrastive search. Please find it [[here]](https://github.com/yxuansu/SimCTG/tree/main/contrastive_search_explanation).
 * [2022/09/14] :blush: SimCTG is accepted to NeurIPS 2022!
 * [2022/09/06] :fire: We have added supports for the newly released OPT models (see ["OPT: Open Pre-trained Transformer Language Models"](https://arxiv.org/abs/2205.01068)) by Meta. To see how to apply contrastive search on OPT models, check it [[here]](#contrastive_search_with_opt)!
 * [2022/06/03] :fire: We have released an easy-to-use library (i.e., simctg) which allows you to use SimCTG with a simple **pip install simctg** and **a few lines of code**. Check the comprehensive and huggingface-style tutorials <a href='#tutorial'>[here]</a> and [[here]](https://github.com/yxuansu/SimCTG/tree/main/simctg)!
