@@ -31,7 +31,7 @@ For each step during the autoregressive decoding, contrastive search conduct the
    assert top_k_probs.size() == top_k_ids.size()
    ```
    
-   As shown in above codes, `top_k_ids` contaisn the indexes of Top-`k` candidate tokens, and `top_k_probs` saves their model confidence.
+   As shown in the above code, `top_k_ids` contaisn the indexes of Top-`k` candidate tokens, and `top_k_probs` saves their model confidence.
 
 2. Candidate re-ranking
    
