@@ -4,7 +4,7 @@ In this section, we briefly describe the motivation and the details of our propo
 
 
 
-For each step during the autoregressive decoding, contrastive search conduct the following two steps to select the most appropriate token to generate. The overall implementation can be found [here](https://github.com/yxuansu/SimCTG/blob/main/pretraining/utlis.py#L66).
+For each step during the autoregressive decoding, contrastive search conduct the following two steps to select the most appropriate token to generate. The overall implementation can be found [here](https://github.com/yxuansu/SimCTG/blob/7d7bac2109752a62ef26ba8abe97bf02b507d1c3/simctg/utlisgpt.py#L31).
 
 1. Candidates collection
    
