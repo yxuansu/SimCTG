@@ -116,12 +116,12 @@ class SimCTGOPT(nn.Module):
 
         #generated = [[] for _ in range(batch_size)]
         generated = [item for item in input_ids.tolist()]
+        stop_flags = [False]*batch_size
         past_key_values = None
         last_hidden_states = None
         logits = None
-        stop_flag = False
         for step in range(decoding_len):
-            if stop_flag:
+            if all(stop_flags):
                 break
             input_ids, past_key_values, last_hidden_states, logits = ContrastiveDecodingOneStepFast(
                 self.model,
@@ -137,17 +137,18 @@ class SimCTGOPT(nn.Module):
                 block_context_span=block_context_span
             )
             tokens = input_ids.squeeze(dim=-1).tolist()
-            for idx, t in enumerate(tokens):
+            for b_idx, t in enumerate(tokens):
                 if early_stop:
                     if t == end_of_sequence_token_id:
-                        stop_flag = True
-                        break
+                        stop_flags[b_idx] = True
+                        if all(stop_flags):
+                            break
                     else:
-                        generated[idx].append(t)
+                        if not stop_flags[b_idx]:
+                            generated[b_idx].append(t)
                 else:
-                    generated[idx].append(t)
-        output = generated[0]
-        return output
+                    generated[b_idx].append(t)
+        return generated
 
     def diverse_contrastive_search(self, input_ids, sample_step, nucleus_p, beam_width, alpha, decoding_len,
         end_of_sequence_token_id = None, early_stop = False, block_context_degeneration_penalty=False):

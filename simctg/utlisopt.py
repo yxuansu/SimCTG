@@ -69,7 +69,7 @@ def ContrastiveDecodingOneStepFast(
     past_key_values = enlarge_past_key_values(past_key_values, beam_width)
     #print (past_key_values)
 
-    attention_mask = torch.ones(top_k_ids.shape[-1], seqlen+1) 
+    attention_mask = torch.ones(top_k_ids.shape[0]*top_k_ids.shape[1], seqlen+1)
     if top_k_ids.is_cuda:
         attention_mask = attention_mask.cuda(top_k_ids.get_device())
     output = model(
