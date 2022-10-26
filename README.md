@@ -3,6 +3,10 @@
 
 This repository contains code, models, and other related resources of our paper ["A Contrastive Framework for Neural Text Generation"](https://arxiv.org/abs/2202.06417).
 
+:star2: Check out this awesome [[demo]](https://huggingface.co/spaces/joaogante/contrastive_search_generation) generously supported by Huggingface ([@huggingface](https://github.com/huggingface) :hugs:) which compares contrastive search with other popular decoding methods. Many thanks to Huggingface :hugs:! 
+
+In this [tutorial](https://github.com/yxuansu/Contrastive_Search_Is_What_You_Need#21-using-huggingface-transformers-back-to-top), we demonstrate how to use contrastive search in Huggingface `transformers`.
+
 ****
 If you find our paper and resources useful, please kindly leave a star and cite our papers. Thanks!
 
