@@ -4,7 +4,7 @@
 This repository contains code, models, and other related resources of our paper ["A Contrastive Framework for Neural Text Generation"](https://arxiv.org/abs/2202.06417).
 
 ****
-If you find our paper and resources useful, please kindly leave a star and cite our paper. Thanks!
+If you find our paper and resources useful, please kindly leave a star and cite our papers. Thanks!
 
 ```bibtex
 @article{su2022contrastive,
