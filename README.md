@@ -21,7 +21,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 @article{su2022contrastiveiswhatyouneed,
   title={Contrastive Search Is What You Need For Neural Text Generation},
   author={Su, Yixuan and Collier, Nigel},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv:2210.14140},
   year={2022}
 }
 ```
