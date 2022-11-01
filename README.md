@@ -12,12 +12,12 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 
 ```bibtex
 @inproceedings{su2022a,
-title={A Contrastive Framework for Neural Text Generation},
-author={Yixuan Su and Tian Lan and Yan Wang and Dani Yogatama and Lingpeng Kong and Nigel Collier},
-booktitle={Advances in Neural Information Processing Systems},
-editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
-year={2022},
-url={https://openreview.net/forum?id=V88BafmH9Pj}
+  title={A Contrastive Framework for Neural Text Generation},
+  author={Yixuan Su and Tian Lan and Yan Wang and Dani Yogatama and Lingpeng Kong and Nigel Collier},
+  booktitle={Advances in Neural Information Processing Systems},
+  editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
+  year={2022},
+  url={https://openreview.net/forum?id=V88BafmH9Pj}
 }
 
 @article{su2022contrastiveiswhatyouneed,
