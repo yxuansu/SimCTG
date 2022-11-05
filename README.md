@@ -94,7 +94,7 @@ https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sh
 <span id='contrastive_in_transformers'/>
 
 #### Apply Contrastive Search in Huggingface Transformers:
-Here, we demonstrate how to use contrastive in Huggingface `transformers`.
+Here, we demonstrate how to use contrastive search in Huggingface `transformers`.
 
 ##### (1) Install Environment:
 First, to install the required packages, please run the following commands:
