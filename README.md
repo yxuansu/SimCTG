@@ -5,7 +5,8 @@ This repository contains code, models, and other related resources of our paper 
 
 :star2: Check out this awesome [[demo]](https://huggingface.co/spaces/joaogante/contrastive_search_generation) generously supported by Huggingface ([@huggingface](https://github.com/huggingface) :hugs:) which compares contrastive search with other popular decoding methods. Many thanks to Huggingface :hugs:! 
 
-**[Use contrastive search in Huggingface transformers]** In this [tutorial](https://github.com/yxuansu/Contrastive_Search_Is_What_You_Need#21-using-huggingface-transformers-back-to-top), we demonstrate how to use contrastive search in Huggingface `transformers`.
+**[Use contrastive search in Huggingface transformers]** In this <a href='#contrastive_in_transformers'>tutorial</a>, we demonstrate how to use contrastive search in Huggingface `transformers`.
+
 
 ****
 If you find our paper and resources useful, please kindly leave a star and cite our papers. Thanks!
@@ -48,6 +49,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 <span id='all_catelogue'/>
 
 ### Catalogue:
+* <a href='#contrastive_in_transformers'>Apply Contrastive Search in Huggingface Transformers</a>
 * <a href='#introduction'>1. Introduction</a>
 * <a href='#contrastive_search_with_LMs'>2. Contrastive Search with GPT-2 and OPT :fire:</a>
     * <a href='#install_simctg_package'>2.1. Environment Setup</a>
@@ -86,6 +88,90 @@ https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sh
 * <a href='#contact'>12. Contact</a>
 * <a href='#simctg_elsewhere'>13. SimCTG Elsewhere</a>
 
+
+****
+
+<span id='contrastive_in_transformers'/>
+
+#### Apply Contrastive Search in Huggingface Transformers:
+In this section, we demonstrate how to use contrastive in Huggingface `transformers`.
+
+##### (1) Install Environment:
+To install the required packages, please run the following commands:
+```yaml
+pip install torch
+pip install "transformers>=4.24.0"
+```
+
+##### (2) Generate Text with Contrastive Search:
+Here, we show how to reproduce the result as in <a href='#contrastive_search_with_gpt2'>Section 2.2</a>
+
+```python
+# load the LMs
+import torch
+from transformers import GPT2Tokenizer, GPT2LMHeadModel
+model_name = 'gpt2-large'
+tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+model = GPT2LMHeadModel.from_pretrained(model_name)
+model.eval()
+
+# prepare the prefix
+prefix_text = r"DeepMind Company is"
+input_ids = tokenizer(prefix_text, return_tensors='pt').input_ids
+
+# generate the result with contrastive search
+output = model.generate(input_ids, penalty_alpha=0.6, top_k=4, max_length=512)
+print("Output:\n" + 100 * '-')
+print(tokenizer.decode(output[0], skip_special_tokens=True))
+print("" + 100 * '-')
+```
+
+<details>
+<summary><b>Model Output: [click to expand]</b></summary>
+  
+```
+Output:
+----------------------------------------------------------------------------------------------------  
+DeepMind Company is a leader in artificial intelligence (AI). We have a long history of working
+with companies such as Google, Facebook, Amazon, and Microsoft to build products that improve
+people's lives, and today we are excited to announce that DeepMind's AlphaGo program has won the
+game of Go, becoming the first program to defeat a professional Go player.
+
+The victory is a testament to the power of deep learning, and to the incredible work of our
+research team, which has been at the forefront of AI research for the past five years. AlphaGo
+is one of the most advanced Go programs ever created, and its performance is an important step
+towards the goal of human-level AI.
+
+"This is the culmination of a decade of hard work," said Andy Ng, co-founder and CTO of DeepMind.
+"We are thrilled to have achieved this milestone and look forward to continuing to develop AI that
+can be used in a wide range of applications and to help people live better lives."
+
+DeepMind's work on Go began in 2010, when it began to train a neural network to play Go using
+millions of games played by top Go players around the world. Since then, the team has refined the
+algorithm, adding more and more layers of reinforcement learning to make it better at recognizing
+patterns and making decisions based on those patterns. In the past year and a half, the team has
+made significant progress in the game, winning a record-tying 13 games in a row to move into the
+top four of the world rankings.
+
+"The game of Go is a complex game in which players have to be very careful not to overextend their
+territory, and this is something that we have been able to improve over and over again," said
+Dr. Demis Hassabis, co-founder and Chief Scientific Officer of DeepMind. "We are very proud of our
+team's work, and we hope that it will inspire others to take the next step in their research and
+apply the same techniques to other problems."
+
+In addition to the win in Go, DeepMind has also developed an AI system that can learn to play a
+number of different games, including poker, Go, and chess. This AI system, called Tarsier, was
+developed in partnership with Carnegie Mellon University and the University of California, 
+Berkeley, and is being used to teach computer vision and machine learning to identify objects in
+images and recognize speech in natural language. Tarsier has been trained to play the game of Go
+and other games on a number of different platforms...
+----------------------------------------------------------------------------------------------------
+```
+</details>
+
+##### (3) Huggingface Demo:
+
+Also check out this awesome [[demo]](https://huggingface.co/spaces/joaogante/contrastive_search_generation) generously supported by Huggingface ([@huggingface](https://github.com/huggingface) :hugs:) which compares contrastive search with other popular decoding methods. Many thanks to Huggingface!
 
 ****
 
