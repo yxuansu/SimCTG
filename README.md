@@ -94,17 +94,17 @@ https://colab.research.google.com/drive/1_55LEg2caLM-lYDVIhWjxgv75IWkEry6?usp=sh
 <span id='contrastive_in_transformers'/>
 
 #### Apply Contrastive Search in Huggingface Transformers:
-In this section, we demonstrate how to use contrastive in Huggingface `transformers`.
+Here, we demonstrate how to use contrastive in Huggingface `transformers`.
 
 ##### (1) Install Environment:
-To install the required packages, please run the following commands:
+First, to install the required packages, please run the following commands:
 ```yaml
 pip install torch
 pip install "transformers>=4.24.0"
 ```
 
 ##### (2) Generate Text with Contrastive Search:
-Here, we show how to reproduce the result as in <a href='#contrastive_search_with_gpt2'>Section 2.2</a>
+Next, we show how to reproduce the result as in <a href='#contrastive_search_with_gpt2'>Section 2.2</a>
 
 ```python
 # load the LMs
