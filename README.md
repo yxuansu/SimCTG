@@ -3,7 +3,7 @@
 
 This repository contains code, models, and other related resources of our paper ["A Contrastive Framework for Neural Text Generation"](https://arxiv.org/abs/2202.06417).
 
-:star2: Check out this awesome [[demo]](https://huggingface.co/spaces/joaogante/contrastive_search_generation) generously supported by Huggingface ([@huggingface](https://github.com/huggingface) :hugs:) which compares contrastive search with other popular decoding methods. Many thanks to Huggingface :hugs:! 
+:star2: Check out this great [[blog]](https://huggingface.co/blog/introducing-csearch) as well as this awesome [[demo]](https://huggingface.co/spaces/joaogante/contrastive_search_generation) that are generously supported by Huggingface ([@huggingface](https://github.com/huggingface) :hugs:) which compares contrastive search with other popular decoding methods. Many thanks to Huggingface :hugs:! 
 
 **[Use contrastive search in Huggingface transformers]** In this <a href='#contrastive_in_transformers'>tutorial</a>, we demonstrate how to use contrastive search in Huggingface `transformers`.
 
@@ -32,6 +32,7 @@ If you find our paper and resources useful, please kindly leave a star and cite 
 ****
 
 ### News:
+* [2022/11/08] :fire: Contrastive Search has now officially supported by HuggingFace for both PyTorch and TensorFlow platforms! Check out this great [blog]](https://huggingface.co/blog/introducing-csearch) as well as this awesome [[demo]] (https://huggingface.co/spaces/joaogante/contrastive_search_generation) that are generously supported by Huggingface ([@huggingface](https://github.com/huggingface) :hugs:)
 * [2022/10/26] :fire: We have released a new manuscript ["Contrastive Search Is What You Need For Neural Text Generation"](https://arxiv.org/abs/2210.14140) which has two takeaways: (1) Autoregressive language models are naturally isotropic, therefore *SimCTG training may not be necessary*; (2) Contrastive search works exceptionally well on **off-the-shelf** language models across 16 languages. On 12 out of the 16 evaluated languages, it even performs comparably with human-written text! [Paper](https://arxiv.org/abs/2210.14140) and [code](https://github.com/yxuansu/Contrastive_Search_Is_What_You_Need) are all released. Check it out!
 * [2022/10/13] We have added a concise explanation on the implementations of contrastive search. Please find it [[here]](https://github.com/yxuansu/SimCTG/tree/main/contrastive_search_explanation).
 * [2022/09/14] :blush: SimCTG is accepted to NeurIPS 2022!
