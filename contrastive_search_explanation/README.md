@@ -23,7 +23,7 @@ For each step during the autoregressive decoding, contrastive search conduct the
    next_probs = F.softmax(logit_for_next_step, dim = -1)
    assert next_probs.size() == logit_for_next_step.size()
    
-   # collecte top-k candidate tokens and their logis (model confidence)
+   # collecte top-k candidate tokens and their logits (model confidence)
    _, top_k_ids = torch.topk(logit_for_next_step, dim = -1, k = beam_width)
    assert top_k_ids.size() == torch.Size([1, beam_width])
            
