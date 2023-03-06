@@ -21,11 +21,13 @@ If you find our paper and resources useful, please kindly leave a star and cite 
   url={https://openreview.net/forum?id=V88BafmH9Pj}
 }
 
-@article{su2022contrastiveiswhatyouneed,
+@article{su2023contrastive,
   title={Contrastive Search Is What You Need For Neural Text Generation},
   author={Yixuan Su and Nigel Collier},
-  journal={arXiv preprint arXiv:2210.14140},
-  year={2022}
+  journal={Transactions on Machine Learning Research},
+  issn={2835-8856},
+  year={2023},
+  url={https://openreview.net/forum?id=GbkWw3jwL9}
 }
 ```
 
